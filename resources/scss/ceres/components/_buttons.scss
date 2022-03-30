@@ -1,0 +1,274 @@
+.btn {
+    // colors are set in _widget-appearance.scss
+    word-break: break-word;
+    touch-action: manipulation; // disables double-tap zoom on iOS - needed for qty-btns for example
+    outline: 0 !important; // stylelint-disable-line declaration-no-important
+    @include font-interactive-element();
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    border-width: 2px;
+    min-height: $input-btn-height;
+    padding: 0 calc(#{$spacer} * 1.5);
+
+    &.btn-block {
+        > .fa {
+            margin-top: 0;
+            line-height: initial;
+        }
+    }
+
+    & > .fa {
+        line-height: initial;
+        margin-right: $spacer;
+        margin-left: 0 !important;
+        order: 1;
+    }
+
+    &[disabled],
+    &.disabled {
+        cursor: not-allowed;
+    }
+
+    &.btn-icon {
+        .fa {
+            margin: 0;
+        }
+
+        &.btn-circle {
+            @include border-radius(50%);
+            width: 33px;
+            height: 33px;
+        }
+    }
+
+    &.btn-default {
+        @include button-variant($gray-300, $gray-300);
+    }
+
+    &.btn-xs-max-width {
+        @include media-breakpoint-down(xs) {
+            width: 100% !important; // stylelint-disable-line declaration-no-important
+        }
+    }
+
+    &.btn-link {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    // ie11 fix so that align-items: center works
+    &::after {
+        content: '';
+        min-height: calc(#{$input-btn-height} - 4px); // subtract vertical border-height
+        font-size: 0;
+    }
+
+    &.btn-sm {
+        min-height: $input-btn-height-sm;
+        padding: 0 calc(#{$spacer} * 1);
+
+        // ie11 fix so that align-items: center works
+        &::after {
+            content: '';
+            min-height: calc(#{$input-btn-height-sm} - 4px); // subtract vertical border-height
+            font-size: 0;
+        }
+    }
+
+    // This is for @extension purposes
+    &.btn-md {
+        min-height: $input-btn-height;
+        padding: 0 calc(#{$spacer} * 1.5);
+
+        // ie11 fix so that align-items: center works
+        &::after {
+            content: '';
+            min-height: calc(#{$input-btn-height} - 4px); // subtract vertical border-height
+            font-size: 0;
+        }
+    }
+
+    &.btn-lg {
+        min-height: $input-btn-height-lg;
+        padding: 0 calc(#{$spacer} * 2);
+
+        // ie11 fix so that align-items: center works
+        &::after {
+            content: '';
+            min-height: calc(#{$input-btn-height-lg} - 4px); // subtract vertical border-height
+            font-size: 0;
+        }
+    }
+}
+
+.btn-collapse {
+    padding: 0 calc(#{$spacer} * 1.5);
+    position: relative;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    font-size: 85%;
+    text-align: center;
+    cursor: pointer;
+
+    &::before {
+        display: block;
+        width: 100%;
+        height: 1.5em;
+        content: "";
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr="#00ffffff", endColorstr="#ffffff", GradientType=0);
+        border-bottom: 1px solid $gray-300;
+    }
+
+    &::after {
+        position: relative;
+        top: -.8em;
+        display: inline-block;
+        padding: 0 .5em;
+        font-weight: 700;
+        color: $gray-500;
+        content: attr(data-show-more);
+        @include theme() { background-color: theme-get('white'); }
+    }
+
+    i {
+        position: absolute;
+        top: 1.5em;
+        right: 0;
+        left: 0;
+        color: $gray-500;
+    }
+
+    &.opened,
+    &:not(.collapsed) {
+        &::after {
+            content: attr(data-show-less);
+        }
+
+        i {
+            top: 0;
+            bottom: 1.5em;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+// stylelint-disable
+@each $bp in map-keys($grid-breakpoints) {
+    .btn-only-icon-#{$bp}-up {
+        @include media-breakpoint-up($bp) {
+            & span {
+                display: none !important;
+            }
+            i {
+                margin: 0 !important;
+            }
+        }
+    }
+    .btn-only-icon-#{$bp}-down {
+        @include media-breakpoint-down($bp) {
+            & span {
+                display: none !important;
+            }
+            i {
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+.input-group {
+    .input-unit + .input-group-btn {
+        padding-bottom: $grid-gutter-width / 2;
+
+        .btn {
+            height: calc(2.8em + 1px); // stylelint-disable-line function-blacklist
+        }
+    }
+
+    &.vert {
+        .input-group-btn {
+            display: block;
+            width: 100%;
+
+            .btn {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        // stylelint-disable selector-max-class
+        //.form-control:not(:last-child),
+        .input-group-addon:not(:last-child),
+        .input-group-btn:not(:last-child) > .btn,
+        .input-group-btn:not(:last-child) > .btn-group > .btn,
+        .input-group-btn:not(:last-child) > .dropdown-toggle,
+        .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+        .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
+            @include border-bottom-radius(0);
+            @include border-top-radius($border-radius);
+            border-bottom: none;
+        }
+        .input-group-addon:not(:last-child) {
+            border-bottom: 0;
+        }
+        .input-group .form-control:not(:first-child),
+        .input-group-addon:not(:first-child),
+        .input-group-btn:not(:first-child) > .btn,
+        .input-group-btn:not(:first-child) > .btn-group > .btn,
+        .input-group-btn:not(:first-child) > .dropdown-toggle,
+        .input-group-btn:not(:last-child) > .btn:not(:first-child),
+        .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
+            @include border-bottom-radius($border-radius);
+            @include border-top-radius(0);
+            border-top: none;
+        }
+        // stylelint-enable selector-max-class
+        .form-control + .input-group-addon:not(:first-child) {
+            border-top: 0;
+        }
+
+        .form-control {
+            display: block;
+            float: none;
+            border-radius: 0 !important; // stylelint-disable-line declaration-no-important, property-blacklist
+        }
+    }
+}
+
+button {
+    
+    &.close {
+        @include theme() { color: theme-get('gray-800'); }
+        box-shadow: none;
+        text-shadow: none;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+
+// button combinations
+.btn-group.extended,
+.input-group.extended {
+    display: flex;
+
+    .extended {
+        flex: 1;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .input-group-btn {
+        width: auto;
+    }
+}

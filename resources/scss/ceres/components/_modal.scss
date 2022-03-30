@@ -1,0 +1,77 @@
+.modal-content {
+    
+    @include theme() { background-color: theme-get('white'); }
+    
+    a {
+        &.text-appearance {
+            @include link-primary;
+        }
+    }
+
+    .btn {
+        &.btn-primary {
+            @include btn-appearance($color: $dark, $outline: false); // override utility class/markup
+        }
+
+        &.btn-secondary {
+            @include btn-appearance($color: $transparent, $outline: false); // override utility class/markup
+        }
+
+        &.btn-outline-primary {
+            @include btn-appearance($color: $dark, $outline: true); // override utility class/markup
+        }
+
+        &.btn-block {
+            float: right;               // override utility class/markup
+            width: initial !important;  // override utility class/markup
+        }
+    }
+
+    .modal-header {
+        align-items: center;
+        .close {
+            margin: map_get($spacers, 2) * -1;
+        }
+    }
+    
+    .modal-body {
+        .border-top.mt-2.text-right {
+            border: none !important; // override utility class for register modal
+        }
+    }
+    
+    .modal-footer {
+        .btn {
+            // override utility class
+            &.btn-block {
+                display: inline-flex !important;
+                width: initial;
+            }
+        }
+    }
+}
+
+// stylelint-disable
+@include media-breakpoint-down(xs) {
+    html.facebook {
+        .checkout .modal.show,
+        .myaccount .modal.show {
+            position: absolute !important;
+            min-height: 100vh;
+            transform: translateZ(0);
+        }
+        body.modal-open {
+            position: relative !important;
+            overflow: auto !important;
+        }
+    }
+}
+
+.modal-multi-row {
+    .row {
+        @include theme() { background-color: theme-get('gray-100'); }
+        border: 1px solid $gray-300;
+        margin: 0 0 1rem 0;
+        padding-top: 1rem;
+    }
+}

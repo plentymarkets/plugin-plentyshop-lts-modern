@@ -1,0 +1,3 @@
+.card {
+    @include theme() { background-color: theme-get('white'); }
+}

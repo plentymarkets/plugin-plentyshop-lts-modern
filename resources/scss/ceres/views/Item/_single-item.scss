@@ -1,0 +1,430 @@
+.single,
+.page-singleitem {
+    .list-item-carousel {
+        .list-control-special {
+            position: absolute;
+            top: 40%;
+            width: 5%;
+            height: 5%;
+        }
+    }
+
+    .item-bg-gray {
+        .single-carousel {
+            @include theme() { background-color: theme-get('gray-100'); }
+        }
+    }
+
+    .item-border {
+        .single-carousel {
+            border: 2px solid;
+            @include theme() { border-color: theme-get('gray-100'); }
+        }
+    }
+
+    .single-carousel {
+        @include theme() { background-color: theme-get('white'); }
+    }
+
+    .main-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .title-outer {
+        h1 {
+            @include font-h1();
+        }
+    }
+
+    .producer {
+        @include font-h5();
+        text-transform: unset;
+    }
+
+    .single-description {
+        font-size: .85rem;
+    }
+
+    .crossprice {
+        @include font-h4();
+    }
+
+    .price {
+        @include font-h4();
+        @include theme() { color: theme-get('font-color-secondary'); }
+    }
+
+    .base-price {
+        @include font-paragraph();
+        margin: map-get($spacers, 2) 0 !important; // override uitility-class/markup
+    }
+
+    .input-number {
+        text-align: center;
+    }
+
+    .articlenumber {
+        @include font-paragraph();
+    }
+
+    .widget-item-bundle {
+        .small {
+            font-size: initial; // Overwrite utility class in template
+        }
+    }
+
+    .crosssellers {
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+
+        .special-tags {
+            padding: .3rem;
+        }
+    }
+
+    .graduated-prices-table {
+        td:first-child {
+            padding-right: 1rem;
+            font-style: italic;
+        }
+
+        i {
+            color: $success;
+            margin-left: map-get($spacers, 2);
+        }
+    }
+
+    .graduated-base-price {
+        font-style: normal !important; // stylelint-disable-line declaration-no-important
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+        @include transition(opacity .3s ease-out);
+    }
+
+    .fade-enter,
+    .fade-leave-to {
+        opacity: 0;
+    }
+
+    .order-property-input {
+        @include transition(border-color .3s ease-out);
+
+        &.active {
+            border-color: $success;
+        }
+    }
+
+    .pt-2 {
+        .position-relative {
+            display: flex;
+            justify-content: space-between;
+
+            .form-check {
+                margin: map-get($spacers, 1) 0;
+            }
+
+            .order-property-selection-info-popper {
+                position: relative !important;
+                margin-left: map-get($spacers, 1);
+
+                .btn {
+                    @extend .btn-md;
+                    @include btn-appearance($color: $dark, $outline: true);
+                    border-radius: 0;
+                    width: inherit;
+                    height: inherit;
+                    min-width: $input-btn-height;
+                    margin-bottom: map-get($spacers, 2);
+                }
+            }
+
+            > .d-flex,
+            > div[class=""] {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.availability-1 {
+    @include context-bg($success);
+}
+
+.availability-2 {
+    @include context-bg($success);
+}
+
+.availability-3 {
+    @include context-bg($warning);
+}
+
+.availability-4 {
+    @include context-bg($warning);
+}
+
+.availability-5 {
+    @include context-bg($danger);
+}
+
+.availability-6 {
+    @include context-bg($danger);
+}
+
+.availability-7 {
+    @include context-bg($danger);
+}
+
+.availability-8 {
+    @include context-bg($danger);
+}
+
+.availability-9 {
+    @include context-bg($gray-900);
+}
+
+.availability-10 {
+    @include context-bg($gray-900);
+}
+
+
+.rating {
+    .tag,
+    .badge {
+        padding-right: 0;
+        overflow: hidden;
+        cursor: pointer;
+
+        .amount {
+            padding: .2rem .6rem .2rem .4rem;
+            margin-left: .2rem;
+            background-color: #4d5154;
+        }
+    }
+}
+
+.rezension {
+    display: inline-block;
+}
+
+.img-thumbnail {
+    padding: .75rem .45rem .25rem 0;
+    border: none;
+    border-radius: 0; // stylelint-disable-line property-blacklist
+}
+
+.order-property-slider {
+    overflow: hidden;
+
+    .order-property-slider-inner {
+        display: flex;
+        @include transition(transform 300ms ease);
+
+        > div {
+            display: inline-block;
+            min-width: 100%;
+            height: 0;
+            width: 0;
+            visibility: hidden;
+
+            &.active { // stylelint-disable-line selector-no-qualifying-type
+                visibility: visible;
+                height: 100%;
+
+                // all overflowing slides do not take any space and cause a horizontal scroll bar on iPad
+                ~ div {
+                    display: none;
+                }
+            }
+        }
+
+        .form-check {
+            padding-left: map-get($spacers, 1);
+
+            input:checked+label {
+                color: inherit !important;
+            }
+        }
+    }
+
+    .order-property-slider-controls {
+        display: flex;
+        flex-direction: row;
+
+        .btn {
+            @include btn-appearance($color: $dark, $outline: true);
+
+            &.disabled {
+                opacity: .5;
+
+                &:hover {
+                    border-color: $dark;
+                }
+            }
+
+            .fa {
+                margin: 0;
+            }
+        }
+
+        .slider-nav {
+            display: inline-flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                display: inline-block;
+                position: relative;
+                width: 10px;
+                height: 10px;
+                margin: 0 map-get($spacers, 2);
+                cursor: pointer;
+                background-color: #fff;
+                border: 2px solid $dark;
+                @include border-radius(50%);
+                @include transition(all .3s ease);
+
+                // increases click-area
+                &::before {
+                    content: '';
+                    position: absolute;
+                    margin: auto;
+                    width: 36px;
+                    height: 36px;
+                    left: -15px;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                // stylelint-disable selector-no-qualifying-type
+                &.error {
+                    border-color: $danger;
+                }
+
+                &.active {
+                    background-color: $dark;
+
+                    &.error {
+                        background-color: $danger;
+                        border-color: $danger;
+                    }
+                }
+
+                &:hover {
+                    border-color: $primary;
+                    &.active {
+                        background-color: $primary;
+                    }
+                }
+                // stylelint-enable selector-no-qualifying-type
+            }
+        }
+    }
+
+
+    .form-check input:checked + label {
+        @extend .text-success;
+    }
+}
+
+.add-to-basket-container {
+    display: flex;
+
+    .quantity-input-container {
+        margin-right: map-get($spacers, 2);
+    }
+
+    .btn-block {
+        width: auto; // overwrite utility class in template
+        margin: 0;
+
+        @include media-breakpoint-down(md) {
+            font-size: 0;
+            width: $input-btn-height;
+
+            i {
+                font-size: initial;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.v-s-boxes {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+
+    .v-s-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+        min-height: 40px;
+        margin: .5rem;
+        cursor: pointer;
+        border: 1px solid $gray-300;
+        @include border-radius($border-radius);
+
+        &.active {
+            border-width: 2px !important;
+        }
+
+        &.invalid {
+            position: relative;
+            border-style: dashed;
+
+            & > span,
+            img {
+                opacity: .5;
+            }
+
+            // stylelint-disable function-blacklist
+            &::after {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                content: "";
+                background:
+                    linear-gradient(
+                        to top left,
+                        rgba(0, 0, 0, 0) 0%,
+                        rgba(0, 0, 0, 0) calc(50% - .8px),
+                        $gray-300 50%,
+                        rgba(0, 0, 0, 0) calc(50% + .8px),
+                        rgba(0, 0, 0, 0) 100%
+                    );
+            }
+            // stylelint-enable function-blacklist
+        }
+    }
+
+    &.images {
+        .v-s-box:not(.empty-option) {
+            width: 40px;
+            height: 40px;
+
+            > img {
+                width: 100%;
+                height: 100%;
+                @include border-radius($border-radius);
+                object-fit: contain;
+                font-family: 'object-fit: contain;'; // IE polyfill
+            }
+        }
+    }
+}
+
+html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qualifying-type
+    &::after {
+        background: rgba(255, 255, 255, .7);
+    }
+}

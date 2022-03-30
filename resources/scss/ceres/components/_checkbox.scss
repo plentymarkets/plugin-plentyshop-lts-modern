@@ -1,0 +1,97 @@
+$checkbox-height: 16px;
+$checkbox-bg-color-checked: $primary;
+$checkbox-border-color-checked: $primary;
+$checkbox-bg-color-unchecked: transparent;
+$checkbox-border-color-unchecked:  $font-color-secondary;
+
+@mixin checkbox-structure($width: $checkbox-height, $height: $checkbox-height, $border-color: '', $background-color: '', $checkbox-top: 0, $checkbox-left: 0) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  border-radius: 2px;
+  transition: .2s;
+  top: $checkbox-top;
+  left: $checkbox-left;
+
+  @if $border-color!='' {
+    border: 2px solid $border-color;
+  }
+
+  @if $background-color!='' {
+    background-color: $background-color;
+  }
+}
+
+.form-check {
+  margin-bottom: .75rem;
+  transition: all .3s ease;
+  padding: 0;
+
+  &.error {
+    color: $danger !important;
+    transition: all .3s ease;
+
+    input[type="checkbox"] {
+      &:not(:checked) + label::before {
+        @include checkbox-structure($border-color: $danger, $background-color: $checkbox-bg-color-unchecked, $checkbox-top: 5px, $checkbox-left: 0);
+      }
+    }
+
+    & .text-muted {
+      color: $danger !important;
+    }
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+    display: none;
+
+    &:not(:checked) + label::before {
+      @include checkbox-structure($border-color: $checkbox-border-color-unchecked, $background-color: $checkbox-bg-color-unchecked, $checkbox-top: 5px, $checkbox-left: 0);
+    }
+
+    &:checked + label {
+      &::before {
+        @include checkbox-structure($border-color: $checkbox-border-color-checked, $background-color: $checkbox-bg-color-checked, $checkbox-top: 5px, $checkbox-left: 0);
+      }
+
+      &::after {
+        @include checkbox-structure($width: 5px, $height: 9px, $checkbox-top: 5px, $checkbox-left: 0px);
+        margin-left: 5px;
+        margin-top: 2px;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        -webkit-transform: rotate(36deg);
+        -ms-transform: rotate(36deg);
+        transform: rotate(36deg);
+        animation: fade-in .5s;
+      }
+    }
+
+    &:disabled {
+      + label {
+        opacity: 0.7;
+        cursor: default;
+      }
+    }
+  }
+
+  &.small {
+    input[type="checkbox"] {
+      &:not(:checked) + label::before,
+      &:checked + label::before,
+      &:checked + label::after {
+        top: 3px; // correct vertical alignment for small labels
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 24px;
+  }
+}

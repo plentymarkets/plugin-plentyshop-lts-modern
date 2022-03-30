@@ -1,0 +1,49 @@
+.breadcrumbs {
+    position: relative;
+    left: 0;
+    right: 0;
+    
+    &.bg-transparent {
+        .breadcrumb {
+            background-color: transparent;
+        }
+    }
+    
+    .breadcrumb {
+        @include fade-transition(background-color);
+        padding-top: map-get($spacers, 2) !important;
+        padding-right: $breadcrumb-padding-y !important;
+        padding-bottom: map-get($spacers, 2) !important;
+        padding-left: $breadcrumb-padding-y !important;
+        @include theme() { background-color: theme-get('white'); }
+        
+        
+        .breadcrumb-item {
+            &:before,
+            a,
+            span {
+                @include font-navigation();
+                text-transform: capitalize;
+            }
+            a {
+                &:hover {
+                    color: $primary !important;
+                }
+
+                i {
+                    font-size: 1rem;
+                    line-height: 1.5;
+                }
+            }
+            span {
+                @include theme() { color: theme-get('font-color-secondary'); }
+            }
+            &:not(:first-child)
+            {
+                &:before {
+                    content: '–';
+                }
+            }
+        }
+    }
+}

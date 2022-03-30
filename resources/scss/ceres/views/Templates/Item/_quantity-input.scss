@@ -1,0 +1,42 @@
+.qty-box {
+    width: fit-content;
+    margin-left: auto;
+
+    .qty-input {
+        width: 60px !important;
+    }
+
+    &.qty-set {
+        width: auto;
+    }
+
+    .qty-btn-container {
+        margin-left: map-get($spacers, 1);
+
+        &.flex-column {
+            flex-direction: row !important; // overwrite utility class in template
+        }
+
+        .qty-btn {
+            @include btn-appearance($color: $transparent, $outline: false);
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            align-items: center; /* FF */
+            width: $input-btn-height-sm;
+
+            &.disabled {
+                color: $gray-500;
+                cursor: not-allowed;
+            }
+
+            i {
+                &.fa {
+                    margin-right: inherit;
+                }
+            }
+        }
+    }
+}

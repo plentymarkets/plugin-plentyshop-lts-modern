@@ -1,0 +1,90 @@
+@mixin img-cover {
+    position: relative;
+    overflow: hidden;
+
+    & > img {
+        position: absolute;
+        top: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        min-width: 100%;
+        min-height: 100%;
+        margin: auto;
+    }
+}
+
+@mixin img-contain {
+    position: relative;
+    overflow: hidden;
+
+    & > noscript,
+    a img,
+    .owl-carousel {
+        position: absolute;
+        top: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        margin: auto;
+    }
+
+    & .owl-carousel,
+    & .owl-stage-outer,
+    & .owl-stage,
+    & .owl-item {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+@mixin reset-list() {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin context-bg($color) {
+    color: color-contrast($color);
+    background-color: $color;
+}
+
+@mixin fade-transition($property) {
+    transition: $property ease .4s;
+}
+
+@mixin btn-appearance($color: $dark, $outline: false) {
+    // if transparent is passed to button-variant, color-yiq will create an error on old sass compiler
+    @if ($color == $transparent) {
+        @include button-variant($white, $white, $primary, $primary, $primary, $primary);
+        background: transparent;
+        border-color: transparent;
+    }
+    @else if($color == $dark) {
+        @include button-variant($color, $color, $primary, $primary, $primary, $primary);
+        @include theme() { background-color: theme-get('button-bg-color'); }
+        @include theme() { border-color: theme-get('button-bg-color'); }
+        &:hover {
+            @include theme() { color: theme-get('white-static-important'); }
+            @include theme() { background-color: theme-get('link-primary-hover'); }
+            @include theme() { border-color: theme-get('link-primary-hover'); }
+        }
+    }
+    @else {
+        @include button-variant($color, $color, $primary, $primary, $primary, $primary);
+    }
+    @if $outline == true {
+        @include theme() { background-color: theme-get('transparent'); }
+        @include button-outline-variant($color, $color-hover: color-contrast($primary), $active-background: $primary, $active-border: $primary);
+        @if($color == $dark) {
+            @include theme() { color: theme-get('button-bg-color-important'); }
+            &:hover {
+                @include theme() { color: theme-get('white-static-important'); }
+            }
+        }
+    }
+}

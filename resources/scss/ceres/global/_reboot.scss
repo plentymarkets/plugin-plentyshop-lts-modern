@@ -1,0 +1,84 @@
+html {
+    font-size: $font-size-base;
+
+    // prevent iOS standard zoom on input elements on focus
+    &.ios { // stylelint-disable-line selector-no-qualifying-type
+        input,
+        select,
+        textarea {
+            font-size: 16px !important; // stylelint-disable-line declaration-no-important
+        }
+    }
+}
+
+body {
+    overflow-x: hidden;
+    .main {
+        > .container-max {
+            padding: 0 $grid-gutter-width; // adds double gutter width on the sides
+        }
+    }
+
+    .footer {
+        &.container-max {
+            padding: 0 $grid-gutter-width; // adds double gutter width on the sides
+        }
+    }
+}
+
+.container-max {
+    @extend .container-fluid;
+    z-index: auto;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+// additional compatibility scss to bootstrap's reboot
+dt {
+    font-weight: 400;
+}
+
+a {
+    overflow-wrap: break-word;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.tooltip {
+    z-index: $zindex-9;
+}
+
+.center-xy {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; // center on the x axys
+
+    img,
+    .owl-stage-outer {
+        align-self: center; // center on the y axys
+    }
+}
+
+// 404 page
+.not-found-text {
+    font-size: 115px;
+}
+
+.lozad {
+    display: block;
+    min-height: 1px;
+}
+
+// stylelint-disable selector-type-no-unknown
+[v-cloak],
+script2,
+style2,
+tab-list {
+    display: none !important; // stylelint-disable-line declaration-no-important
+}

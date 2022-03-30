@@ -1,0 +1,88 @@
+.cmp-order-item {
+    position: relative;
+    margin-bottom: 1em;
+
+    .item-main {
+        display: table;
+    }
+
+    .item-image {
+        display: table-cell;
+        vertical-align: top;
+
+        @include img-contain();
+    }
+
+    .item-details {
+        display: table-cell;
+        padding-left: .5rem;
+        vertical-align: top;
+
+        .row {
+            margin-bottom: map-get($spacers, 2);
+
+            strong {
+                font-weight: $font-weight-normal !important; // override utility-class/markup
+            }
+
+            strong, span {
+                line-height: 1.2;
+            }
+        }
+    }
+
+    & .item-bundle {
+        width: 300px;
+    }
+
+    .item-total-price {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-align: right;
+    }
+
+    .item-remove {
+        position: absolute;
+        right: 0;
+        bottom: 1em;
+        line-height: 1;
+        color: $gray-300;
+        cursor: pointer;
+        @include transition(color 250ms);
+
+        &:hover {
+            color: $danger;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+
+        .item-unit-price,
+        .item-total-price {
+            width: auto !important; // stylelint-disable-line declaration-no-important
+            text-align: right;
+        }
+
+    }
+
+    .item-word-break {
+        word-wrap: break-word;
+
+        @include media-breakpoint-down(xs) {
+            word-break: break-all;
+        }
+    }
+
+}
+
+// stylelint-disable declaration-no-important
+.payment-link-style {
+    padding: 0 15px !important;
+    color: $primary !important;
+    cursor: pointer !important;
+
+    span {
+        text-decoration: underline !important;
+    }
+}
+// stylelint-enable declaration-no-important

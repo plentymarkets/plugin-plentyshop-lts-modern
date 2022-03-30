@@ -1,0 +1,6 @@
+{% set theme = config('plentyShopLight.theme') %}
+<script src="{{ plugin_path('plentyShopLight') }}/js/object-fit-images.min.js?v={{ buildHash }}"></script>
+<script src="{{ plugin_path('plentyShopLight') }}/js/plenty-shop-light.js?v={{ buildHash }}"></script>
+<script>
+    document.body.classList.add("{{theme}}");
+</script>

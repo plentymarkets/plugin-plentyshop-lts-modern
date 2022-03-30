@@ -1,0 +1,50 @@
+.widget-toolbar {
+    .title,
+    .card .form-check-label,
+    .item-filter-price {
+        padding: .75rem;
+    }
+
+    .form-check-input:checked + label,
+    .form-check-input:hover + label {
+        padding-left: .75rem !important; // stylelint-disable-line declaration-no-important
+    }
+
+    .widget {
+        margin-bottom: 0;
+    }
+
+    .list-controls-inner {
+        .flex-fill {
+            > div {
+                @include media-breakpoint-up(sm) {
+                    display: inline-block !important; // stylelint-disable-line declaration-no-important
+                }
+            }
+        }
+    }
+
+    .filter-collapse {
+        > div {
+            padding: $grid-gutter-width;
+            @include theme() { background-color: theme-get('white'); }
+            box-shadow: $box-shadow;
+        }
+    }
+
+    .collapse-container:empty {
+        &::after {
+            display: block;
+            padding: .75rem;
+            color: $gray-700;
+            text-align: center;
+            content: attr(data-translation-empty);
+        }
+    }
+
+    .collapse-container {
+        .widget-grid {
+            column-span: all;
+        }
+    }
+}

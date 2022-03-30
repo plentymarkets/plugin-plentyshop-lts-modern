@@ -1,0 +1,415 @@
+@import "_anicon.scss";
+.top-bar {
+    position: relative;
+    right: 0; // ToDo: Consider removing this class in markup
+    left: 0;  // ToDo: left:0 and right:0 initially come from .header-fw which is now not in use anymore
+    @include theme() {
+        color: theme-get('top-bar-color');
+        background-color: theme-get('top-bar-bg-color');
+    }
+    padding: 0 map-get($spacers, 3);
+    @include fade-transition(background-color);
+
+    &.fixed-top {
+        position: fixed;
+    }
+    
+    &.bg-transparent {
+        &:not(.default-font-color) {
+            .controls-list {
+                .list-inline-item {
+                    .nav-link {
+                        @include theme() { color: theme-get('top-bar-transparent-color'); }
+                        &:hover,
+                        &[aria-expanded="true"] {
+                            @include theme() { color: theme-get('link-primary-hover'); }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    > .container-max {
+        &.pr-lg-3 { // ToDo: remove utility class from template?
+            padding-right: 0 !important; // override utility class that makes it disappear
+        }
+    }
+
+    .controls-list {
+    
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        min-height: map-get($spacers, 3) * 3;
+    
+        @include media-breakpoint-up(md) {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+        
+        .list-inline-item {
+            margin-right: 0;
+            font-size: .8rem;
+            display: inline-flex;
+            align-items: stretch;
+
+            .fa-user, .fa-user-plus, .fa-sign-out {
+                ~ span {
+                    display: none !important; // override utility class that makes it disappear
+                }
+            }
+            .fa-user {
+                &.d-sm-none {
+                    display: inline-block !important; // override utility class that makes it disappear
+                }
+            }
+
+            .nav-link {
+                @include theme() { color: theme-get('top-bar-color'); }
+                font-weight: $font-weight-bolder;
+                text-decoration: none;
+                outline: none;
+                display: inline-flex;
+                align-items: center;
+                padding: map-get($spacers, 1) map-get($spacers, 3);
+                text-align: center;
+    
+                @include media-breakpoint-up(md) {
+                    padding: map-get($spacers, 3);
+                }
+
+                i {
+                    font-size: $font-size-lg;
+                    min-width: 20px;
+                }
+
+                &:hover,
+                &[aria-expanded="true"] {
+                    @include theme() { color: theme-get('link-primary-hover'); }
+                }
+            }
+
+            &.control-user {
+                
+                .position-relative {
+                    display: flex;
+                    align-items: center;
+                }
+                
+                .dropdown {
+                    .dropdown-toggle {
+                        @include transition(all .1s);
+
+                        @include media-breakpoint-up(sm) {
+                            &::after {
+                                margin-left: 7px;
+                            }
+                        }
+                    }
+
+                    &.show {
+                        .dropdown-menu {
+                            max-height: initial;
+                        }
+                    }
+
+                    .dropdown-menu {
+                        z-index: 2000;
+                        display: block;
+                        max-height: 0;
+                        white-space: nowrap;
+                        min-width: initial;
+                        max-width: initial !important; // override utility-class
+                        overflow: hidden;
+                        border: none;
+                        box-shadow: $box-shadow;
+                        @include transition(all .3s);
+
+                        a {
+                            padding: calc(#{$spacer} * 1.5) calc(#{$spacer} * 2);
+                            @include theme() { color: theme-get('font-color-primary'); }
+                            border: 0;
+                            @include font-navigation();
+
+                            i {
+                                font-size: $font-size-lg;
+                                width: $font-size-lg;
+                                margin-right: $spacer;
+                                vertical-align: middle;
+                            }
+
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.control-languages {
+                .flag-icon {
+                    font-size: 1rem;
+                }
+            }
+
+            &.control-wish-list {
+                position: relative;
+
+                span.badge-right {
+                    position: absolute;
+                    z-index: 1;
+                    background: $gray-200;
+                    @include theme() { color: theme-get('gray-800'); }
+                    border-radius: 19px;
+                    width: 19px;
+                    height: 19px;
+                    line-height: 19px;
+                    text-align: center;
+                    font-weight: $font-weight-bold;
+                    top: 14px;
+                    left: 32px;
+                    margin: 0 !important;
+                }
+
+                .fa-heart-o {
+                    font-weight: $font-weight-bolder;
+                }
+            }
+
+            &.control-basket {
+                .toggle-basket-preview {
+                    > span:not(.badge) {
+                        position: absolute;
+                        z-index: 1;
+                        background: $primary;
+                        color: color-contrast($primary);
+                        border-radius: 19px;
+                        width: 19px;
+                        height: 19px;
+                        line-height: 19px;
+                        text-align: center;
+                        font-weight: $font-weight-bold;
+                        top: 14px;
+                        left: 32px;
+                        margin: 0 !important;
+                    }
+
+                    .badge {
+                        font-size: inherit;
+                        font-weight: inherit;
+                        line-height: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    .cmp {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: $zindex-7;
+        width: 100%;
+        @include theme() { background-color: theme-get('white'); }
+
+        &.collapsing {
+            overflow: hidden;
+        }
+
+        // Currency & Country Select
+        &.cmp-country-settings,
+        &.cmp-currency-select {
+
+            box-shadow: $box-shadow-bottom;
+
+            .shipping-settings {
+                @include media-breakpoint-down(md) {
+                    margin-top: 1rem;
+                }
+            }
+
+            ul {
+                @include reset-list();
+                max-height: 50vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+
+            li {
+                a {
+                    display: inline-block;
+                    padding: .4rem;
+                    @include theme() { color: theme-get('font-color-primary'); }
+                    @include font-subnavigation();
+
+                    &:hover {
+                        color: $primary;
+                    }
+
+                    i.flag-icon {
+                        margin-right: map-get($spacers, 1);
+                    }
+                }
+
+                &.active { // stylelint-disable-line selector-no-qualifying-type
+                    a {
+                        color: $primary;
+                    }
+                }
+
+                &.is-disabled { // stylelint-disable-line selector-no-qualifying-type
+                    a {
+                        cursor: not-allowed;
+
+                        &:hover {
+                            @include theme() { color: theme-get('font-color-secondary'); }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Searchbox
+        &.cmp-search-box {
+            @include theme() { background-color: theme-get('white'); }
+            box-shadow: $box-shadow-bottom;
+
+            .container-max {
+                padding: 0 $grid-gutter-width;
+            }
+
+            .autocomplete-suggestions {
+                position: absolute;
+                top: 100%;
+                z-index: $zindex-7;
+                max-height: 80vh;
+                -webkit-overflow-scrolling: touch;
+                overflow-x: hidden;
+            }
+
+            .autocomplete-suggestion {
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                white-space: nowrap;
+                cursor: pointer;
+                outline: none;
+
+                &:hover {
+                    @include theme() { background-color: theme-get('gray-100'); }
+                }
+
+                .label {
+                    flex: 1;
+                    @include theme() { color: theme-get('font-color-primary'); }
+
+                    .small {
+                        color: $gray-600;
+                    }
+
+                    &.compact .small {
+                        line-height: .85;
+                    }
+
+                    strong.text-appearance {
+                        @include theme() { color: theme-get('font-color-primary-important'); }
+                    }
+                }
+
+                .image {
+                    position: relative;
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+
+                }
+
+                img {
+                    max-width: 100%;
+                    object-fit: contain;
+                    font-family: 'object-fit: contain;'; // IE polyfill
+                }
+
+                .count span {
+                    display: inline-block;
+                    min-width: 3em;
+                    padding: .1rem 0;
+                    font-size: .85rem;
+                    color: $gray-600;
+                    text-align: center;
+                    background: $gray-200;
+                }
+            }
+
+            .autocomplete-suggestion:nth-child(n + #{$autocomplete-max-items + 1}),
+            .widget-inner-stacked .autocomplete-suggestion:nth-child(n + #{($autocomplete-max-items / 2)}) {
+                display: none;
+            }
+
+            .search-input {
+                font-size: 1.3rem;
+                line-height: 1;
+                border: none;
+                outline: none;
+                @include theme() { background-color: theme-get('gray-100'); }
+                padding-right: map-get($spacers, 2) !important; // override utility-class
+
+                &::-webkit-search-cancel-button {
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
+
+            .search-submit {
+                font-size: 1.3rem;
+                line-height: 1;
+                @include theme() { background-color: theme-get('gray-100'); }
+                @include theme() { color: theme-get('font-color-primary'); }
+                border: none;
+                outline: none;
+                @include transition(all .3s);
+                width: 60px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                &::after {
+                    @include theme() { color: theme-get('font-color-primary'); }
+                    pointer-events: none;
+                    content: "✕";
+                    right: calc(60px + #{map-get($spacers, 2)});
+                    width: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    position: absolute;
+                }
+            }
+
+            .search-permanent {
+                @include media-breakpoint-up(md) {
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .controls {
+                        .nav-link {
+                            padding: 1.2rem .8rem;
+                        }
+                    }
+                }
+            }
+
+            html.ie .always-visible-search { // stylelint-disable-line selector-no-qualifying-type
+                min-height: 32px;
+            }
+        }
+    }
+}
+
+
+// fix inconsistent padding
+// stylelint-disable-next-line selector-no-qualifying-type
+html.safari { // stylelint-disable-next-line selector-no-qualifying-type
+    .controls-list i {
+        font-size: 100%;
+    }
+}

@@ -1,0 +1,3 @@
+{% set defaultCSS = plugin_path("plentyShopLight") ~ "/css/" ~ assetName ~ ".css?v=" ~ buildHash %}
+{% set defaultSCSS = plugin_path("plentyShopLight") ~ "/css/" ~ assetName ~ ".scss?v=" ~ buildHash %}
+<link rel="stylesheet" href="{{ defaultCSS }}"{% if isShopBuilder %} data-sass-root="{{ plugin_path('plentyShopLight') }}" data-sass-original="{{ defaultSCSS }}"{% endif %}>

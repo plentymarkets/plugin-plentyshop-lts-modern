@@ -1,0 +1,5 @@
+.idea/
+node_modules
+## resources/css/*.css
+resources/css/*.css.map
+.yo-rc.json

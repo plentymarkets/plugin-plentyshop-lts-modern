@@ -1,0 +1,26 @@
+@mixin widget-bg-variant($color) {
+  color: color-contrast($color);
+  background-color: $color;
+
+  a {
+    color: color-contrast($color);
+  }
+}
+
+@mixin widget-color-variant($color, $opacity: 1) {
+  color: $color;
+  background-color: rgba(color-contrast($color), $opacity);
+
+  a {
+    color: $color;
+  }
+
+  @if ($color == $transparent) {
+    background-color: $transparent;
+    color: color-contrast($transparent);
+
+    a {
+      color: color-contrast($transparent);
+    }
+  }
+}

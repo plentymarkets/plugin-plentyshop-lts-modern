@@ -1,0 +1,123 @@
+// stylelint-disable
+.mkt-homepage {
+    margin-bottom: 2rem;
+
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 70%;
+        margin: auto;
+    }
+
+    .flex-item {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        padding: 0;
+        margin-top: 15px;
+        overflow: hidden;
+        background: #fff;
+
+        &:hover {
+            & a {
+                & .flex-align-bottom {
+                    padding-bottom: .4em;
+                    background: rgba(0, 142, 189, 1);
+
+                    & .flex-text {
+                        font-size: 14px;
+                        line-height: 110%;
+                        color: rgba(255, 255, 255, 1);
+                        @include transition(transform 1s, line-height 1s, color 1s);
+                        transform: scale(1, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    .flex-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .flex-align-bottom {
+        position: absolute;
+        bottom: 0;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0;
+        padding-right: .3em;
+        padding-left: .3em;
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 101%;
+        text-align: left;
+        background: rgba(0, 142, 189, .7);
+        @include transition(all 1s);
+    }
+
+    .flex-title {
+        display: block;
+        height: 1.6em;
+        margin: 0;
+        font-size: 17px;
+        font-weight: normal;
+        line-height: 1.6em;
+        color: #fff;
+        text-align: center;
+    }
+
+    .flex-text {
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        font-weight: normal;
+        line-height: 0%;
+        color: rgba(0, 142, 189, 0);
+        text-align: left;
+        @include transition(transform 1s, line-height 1s, font-size 1s);
+        -webkit-transform: scale(1, 0);
+        -o-transform: scale(1, 0);
+        transform: scale(1, 0); /* W3C */
+
+        /* Safari and Chrome */
+        -moz-transform: scale(1, 0); /* Firefox */
+        -ms-transform: scale(1, 0); /* IE 9 */
+
+        /* Opera */
+    }
+
+    .flex-container {
+        position: relative;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0 30px 25px;
+        list-style: none;
+    }
+
+    #welcome-text {
+        font-size: 3rem;
+    }
+
+    #recommend-text {
+        text-align: center;
+    }
+
+    .mt-xs-0_5 {
+        margin-top: 6px;
+    }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}

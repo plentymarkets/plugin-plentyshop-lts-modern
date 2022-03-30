@@ -1,0 +1,34 @@
+@include media-breakpoint-down(md) {
+    .filter-collapse {
+        .widget-filter-price {
+            .item-filter-price {
+                display: block;
+                text-align: right;
+            }
+
+            .input-group {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.widget-none {
+    .widget-filter-price {
+        .btn-appearance {
+            color: $gray-700;
+            background-color: $gray-200;
+            border-color: $gray-400;
+        }
+    }
+}
+
+.widget-filter-price {
+    .item-filter-price {
+        .btn {
+            i {
+                margin-right: 0;
+            }
+        }
+    }
+}

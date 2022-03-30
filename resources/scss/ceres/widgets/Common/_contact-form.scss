@@ -1,0 +1,11 @@
+.widget-contact-form.widget-dark {
+  .btn-primary {
+    @include btn-appearance($color: $dark, $outline: false);
+  }
+}
+
+.widget-print-button.widget-dark {
+  .btn-primary {
+    @include btn-appearance($color: $dark, $outline: false);
+  }
+}

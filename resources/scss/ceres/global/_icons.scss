@@ -1,0 +1,361 @@
+$root-directory:    ".." !default;
+$psl-font-path:     "#{$root-directory}/documents/fonts" !default;
+
+@font-face {
+  font-family: 'plentyshop-icons';
+  src:  url('#{$psl-font-path}/plentyshop-icons.eot?e0266c');
+  src:  url('#{$psl-font-path}/plentyshop-icons.eot?e0266c#iefix') format('embedded-opentype'),
+        url('#{$psl-font-path}/plentyshop-icons.ttf?e0266c') format('truetype'),
+        url('#{$psl-font-path}/plentyshop-icons.woff?e0266c') format('woff'),
+        url('#{$psl-font-path}/plentyshop-icons.svg?e0266c#plentyshop-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@mixin plentyshop-icon($icon: '\e900') {
+  content: "#{$icon}";
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'plentyshop-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon jingle animation */
+@keyframes icon-jingle {
+  
+  0% {
+    animation-timing-function: cubic-bezier(0.146, 0.2111, 0.5902, 1.3204);
+    transform: rotate(0);
+  }
+  11% {
+    animation-timing-function: cubic-bezier(0.1079, 0.1992, -0.6462, 0.828);
+    transform: rotate(7.61deg);
+  }
+  23% {
+    animation-timing-function: cubic-bezier(0.0504, 0.0951, 0.0163, 0.9677);
+    transform: rotate(-5.79deg);
+  }
+  36% {
+    animation-timing-function: cubic-bezier(0.0475, 0.0921, 0.3134, 1.0455);
+    transform: rotate(3.35deg);
+  }
+  49% {
+    animation-timing-function: cubic-bezier(0.0789, 0.1565, 0.3413, 1.0972);
+    transform: rotate(-1.93deg);
+  }
+  62% {
+    animation-timing-function: cubic-bezier(0.141, 0.2885, 0.406, 1.1519);
+    transform: rotate(1.12deg);
+  }
+  75% {
+    animation-timing-function: cubic-bezier(0.226, 0.4698, 0.5031, 1.1722);
+    transform: rotate(-0.64deg);
+  }
+  88% {
+    animation-timing-function: cubic-bezier(0.3121, 0.5521, 0.5655, 0.8997);
+    transform: rotate(0.37deg);
+  }
+  100% {
+    transform: rotate(-0.28deg);
+  }
+}
+
+/* Icon bounce animation */
+@keyframes icon-bounce-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+@keyframes icon-bounce-left {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-3px);
+  }
+}
+
+/* Carousel control arrow right */
+@keyframes carousel-arrow-right {
+  0%, 100% {
+    transform: translateX(0) translateY(-50%);
+  }
+  50% {
+    transform: translateX(3px) translateY(-50%);
+  }
+}
+
+/* Carousel control arrow left */
+@keyframes carousel-arrow-left {
+  0%, 100% {
+    transform: translateX(0) translateY(-50%);
+  }
+  50% {
+    transform: translateX(-3px) translateY(-50%);
+  }
+}
+
+/* Assign icon animation to certain elements */
+.control-basket {
+  &:hover {
+    > a {
+      > i {
+        animation:icon-jingle 1s linear;
+      }
+    }
+  }
+}
+button,
+.btn {
+  &:not(.disabled)
+  {
+    &:hover {
+      > i {
+        &.fa-user,
+        &.fa-shield,
+        &.fa-user-plus,
+        &.fa-heart,
+        &.fa-trash-o,
+        &.fa-gift,
+        &.fa-paper-plane-o,
+        &.fa-shopping-cart,
+        &.fa-sign-out {
+          animation: icon-jingle 1s linear;
+        }
+        &.fa-arrow-right {
+          animation: icon-bounce-right 1s linear infinite;
+        }
+        &.fa-arrow-left {
+          animation: icon-bounce-left 1s linear infinite;
+        }
+      }
+    }
+  }
+}
+
+.carousel-control {
+  &.right {
+    &:hover {
+      .fa-chevron-right {
+        animation: carousel-arrow-right 1s linear infinite;
+      }
+    }
+  }
+}
+
+.carousel-control {
+  &.left {
+    &:hover {
+      .fa-chevron-left {
+        animation: carousel-arrow-left 1s linear infinite;
+      }
+    }
+  }
+}
+
+button {
+  &.close {
+    padding: 0 !important; // stylelint-disable-line declaration-no-important
+    margin: 0;
+    font-size: 0;
+    width: map-get($spacers, 4);
+    height: map-get($spacers, 4);
+    transform: rotate(0deg);
+    transition: .25s ease all;
+    
+    &:hover {
+      transform: rotate(90deg);
+      transition: .5s ease all;
+      color: $primary;
+      opacity: 1 !important; // stylelint-disable-line declaration-no-important
+    }
+    
+    &::before {
+      visibility: visible;
+      @include plentyshop-icon('\e90a');
+      font-size: $font-size-base;
+      width: map-get($spacers, 4);
+      height: map-get($spacers, 4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.fa-eye::before {
+  @include plentyshop-icon('\e924');
+}
+
+.fa-eye-slash::before {
+  @include plentyshop-icon('\e925');
+}
+
+.fa-user::before {
+  @include plentyshop-icon('\e901');
+}
+
+.fa-user-plus::before {
+  @include plentyshop-icon('\e900');
+}
+
+.fa-shopping-cart::before {
+  @include plentyshop-icon('\e909');
+}
+
+.fa-cart-plus::before {
+  @include plentyshop-icon('\e908');
+}
+
+.fa-arrow-up::before {
+  @include plentyshop-icon('\e905');
+}
+
+.fa-arrow-right::before {
+  @include plentyshop-icon('\e904');
+}
+
+.fa-arrow-down::before {
+  @include plentyshop-icon('\e902');
+}
+
+.fa-arrow-left::before {
+  @include plentyshop-icon('\e903');
+}
+
+.fa-shield::before {
+  @include plentyshop-icon('\e920');
+}
+
+.widget-newsletter .fa-paper-plane-o::before {
+  @include plentyshop-icon('\e923');
+}
+
+.fa-paper-plane::before,
+.fa-paper-plane-o::before {
+  @include plentyshop-icon('\e922');
+}
+
+.fa-gift::before {
+  @include plentyshop-icon('\e90f');
+}
+
+.fa-times::before,
+.btn-close::before {
+  @include plentyshop-icon('\e90a');
+  opacity: 1;
+}
+
+.fa-trash::before,
+.fa-trash-o::before {
+  @include plentyshop-icon('\e90b');
+}
+
+.fa-pencil::before,
+.fa-pencil-square-o::before {
+  @include plentyshop-icon('\e90d');
+}
+
+.fa-search::before {
+  @include plentyshop-icon('\e921');
+}
+
+.fa-plus::before,
+.fa-plus-square::before {
+  @include plentyshop-icon('\e919');
+}
+
+.fa-minus::before {
+  @include plentyshop-icon('\e918');
+}
+
+.fa-envelope::before,
+.fa-envelope-o::before {
+  @include plentyshop-icon('\e917');
+}
+
+.fa-sliders::before {
+  @include plentyshop-icon('\e90e');
+}
+
+.fa-home::before {
+  @include plentyshop-icon('\e910');
+}
+
+.fa-lock::before {
+  @include plentyshop-icon('\e911');
+}
+
+.fa-sign-out::before {
+  @include plentyshop-icon('\e912');
+}
+
+.fa-bars::before {
+  @include plentyshop-icon('\e906');
+}
+
+.fa-caret-down::before {
+  @include plentyshop-icon('\e907');
+}
+
+.fa-caret-right::before {
+  @include plentyshop-icon('\e91b');
+}
+
+.fa-caret-up::before {
+  @include plentyshop-icon('\e91c');
+}
+
+.fa-caret-left::before {
+  @include plentyshop-icon('\e91a');
+}
+
+.fa-long-arrow-right::before,
+.fa-chevron-right::before {
+  @include plentyshop-icon('\e915');
+}
+
+.fa-long-arrow-down::before,
+.fa-chevron-down::before {
+  @include plentyshop-icon('\e913');
+}
+
+.fa-long-arrow-left::before,
+.fa-level-up::before,
+.fa-chevron-left::before {
+  @include plentyshop-icon('\e914');
+}
+
+.fa-long-arrow-up::before,
+.fa-chevron-up::before {
+  @include plentyshop-icon('\e916');
+}
+
+.fa-print::before {
+  @include plentyshop-icon('\e91e');
+}
+
+.fa-check::before,
+.fa-check-circle-o::before {
+  @include plentyshop-icon('\e91d');
+}
+
+i.fa-lg {
+  line-height: initial;
+}
+
+.fa-spin {
+  -webkit-font-smoothing: initial; // corrects wobbling
+  text-rendering: initial;
+}

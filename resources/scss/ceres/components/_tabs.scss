@@ -1,0 +1,37 @@
+.nav-tabs {
+    justify-content: center;
+    .nav-item {
+        .nav-link {
+            @include font-navigation;
+            padding: 0;
+            margin: map-get($spacers, 3) map-get($spacers, 2);
+            
+            &:not(.active) {
+                box-shadow: none;
+                border-bottom: none;
+            }
+        }
+    }
+    
+    .nav-link {
+        &.active {
+            @include theme() { background-color: theme-get('white'); }
+        }
+    }
+    
+    .tab-content {
+        img {
+            max-width: 100%;
+        }
+    }
+    @include media-breakpoint-only(xs) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .nav-item {
+            .nav-link {
+                margin: map-get($spacers, 2) 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "name"              :   "plentyShopLight",
+    "namespace"         :   "plentyShopLight",
+    "marketplaceName"   :   {"de": "plentyShopLight","en": "plentyShopLight"},
+    "type"              :   "theme",
+    "version"           :   "1.0.0",
+    "pluginIcon"        :   "icon_plugin_xs.png",
+    "price"             :   0.00,
+    "description"       :   "Official theme plugin for plentyShop LTS",
+    "author"            :   "plentysystems AG",
+    "license"           :   "AGPL-3.0",
+    "authorIcon"        :   "icon_author_xs.png",
+    "email"             :   "sales@plentymarkets.com",
+    "phone"             :   "+49 561 98 681 100",
+    "require"           :   {
+        "IO": "~5.0.48",
+        "Ceres": "~5.0.48"
+    },
+    "keywords"          :   ["plentymarkets", "plentyShopLight", "theme", "plentyShop LTS", "template", "light", "design"],
+    "serviceProvider"   :   "plentyShopLight\\Providers\\plentyShopLightServiceProvider",
+    "dataProviders"         :
+    [
+        {
+            "key"           :"plentyShopLight\\Containers\\plentyShopLightStylesContainer",
+            "name"          :"plentyShopLight Styles",
+            "description"   :"Replaces plentyShop LTS styles with styles from the plentyShopLight theme"
+        },
+        {
+            "key"           :"plentyShopLight\\Containers\\plentyShopLightScriptsContainer",
+            "name"          :"plentyShopLight Scripts",
+            "description"   :"Loads additional javascript for the plentyShopLight theme"
+        }
+    ]
+}

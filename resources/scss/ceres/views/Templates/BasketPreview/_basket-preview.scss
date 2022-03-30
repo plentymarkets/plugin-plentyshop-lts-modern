@@ -1,0 +1,187 @@
+.basket-preview-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zindex-modal + 1;
+    display: block;
+    transform: translateX(100%);
+    @include transition(all .3s ease-in-out);
+
+    @include media-breakpoint-up(md) {
+        .item-list {
+            min-height: 200px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        left: auto;
+        width: $aside-columns-width;
+    }
+
+    .basket-open & {
+        transform: translateX(0);
+    }
+
+    .basket-preview-overlay {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        bottom: -100vh;
+        left: -100vw;
+        z-index: -1;
+        display: none;
+        content: "";
+        background-color: rgba(0, 0, 0, .5);
+
+        .basket-open & {
+            display: block;
+        }
+    }
+}
+
+.basket-preview {
+    position: absolute;
+    height: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 1rem;
+
+    a,
+    a span {
+        &.text-appearance {
+            &:not(.btn) {
+                @include link-primary();
+            }
+        }
+    }
+}
+
+.basket-preview-header {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: map-get($spacers, 2) map-get($spacers, 3) !important; // override utility-class
+
+    &.border-bottom {
+        border-bottom: none !important; // override utility class
+    }
+
+    .h3 {
+        @include font-h2();
+    }
+}
+
+.basket-preview-content {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .totals {
+        border-top: 1px solid;
+        @include theme() { border-color: theme-get('gray-400'); }
+    }
+
+    .basket-list-item {
+        .image-container {
+            width: 100px;
+            padding-top: 100px;
+        }
+    }
+}
+
+.basket-preview-footer {
+    flex-wrap: wrap;
+    margin: 0 calc(#{map-get($spacers, 1)} * (-1));
+
+    > a.btn {
+        width: initial;
+        flex-grow: 1;
+        margin: map-get($spacers, 1) map-get($spacers, 1) 0 map-get($spacers, 1);
+    }
+
+    .btn-outline-primary {
+        @include btn-appearance($color: $dark, $outline: true); // override utility class/markup
+    }
+
+    .btn-primary {
+        @include btn-appearance($color: $dark, $outline: false); // override utility class/markup
+    }
+}
+
+@include media-breakpoint-between(sm, md) {
+    // horizontal view on small devices
+    .basket-preview-content {
+        flex-direction: row;
+
+        .item-list {
+            flex-basis: 55%;
+            max-width: 55%;
+        }
+
+        .totals {
+            flex-basis: 45%;
+            max-width: 45%;
+            @include theme() { background-color: theme-get('white'); }
+            border-top: none;
+            border-left: 1px solid $gray-300;
+        }
+    }
+}
+
+
+// hover style basket preview
+@include media-breakpoint-up(lg) {
+    .basket-preview-wrapper.open-hover {
+        position: absolute;
+        top: 72px;
+        display: none;
+        max-width: 440px;
+        max-height: calc(100vh - 120px);
+
+        .no-touch .control-basket:hover &,
+        .basket-open & {
+            display: block;
+            transform: translateX(0%);
+        }
+
+        .basket-preview {
+            height: auto;
+            max-height: calc(100vh - 120px);
+        }
+
+        .basket-preview-header {
+            display: none;
+        }
+
+        &.empty .item-list {
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .totals {
+            @include theme() { background-color: theme-get('white'); }
+        }
+
+        .basket-preview-overlay {
+            background-color: transparent;
+        }
+    }
+}
+
+.basket-open {
+    overflow: hidden;
+    [data-header-offset] {
+        > * {
+            z-index: auto !important; // stylelint-disable-line declaration-no-important
+        }
+    }
+}
+
+html.safari .basket-preview-content .totals { // stylelint-disable-line selector-no-qualifying-type
+    display: block !important; // stylelint-disable-line declaration-no-important
+}
+html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no-qualifying-type
+    display: block !important; // stylelint-disable-line declaration-no-important
+}

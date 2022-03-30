@@ -1,0 +1,67 @@
+
+/// Default behaviour and styling for base component class.
+/// It has .wait and .done states while working for example
+/// with REST Calls
+///
+/// @author Bruno Fenzl
+///
+/// @example scss - Basic Usage HTML
+/// 	<div class="cmp">
+/// 		component markup here
+/// 	</div>
+///
+@mixin cmp() {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: $zindex-8;
+        width: 0;
+        height: 0;
+        content: "";
+        background-color: rgba(0, 0, 0, .6);
+        opacity: 0;
+
+        @include transition(opacity 300ms, width 0ms 310ms, height 0ms 310ms);
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: $zindex-9;
+        display: inline-block;
+        font-weight: 700;
+        @include theme() { color: theme-get('white'); }
+        visibility: hidden;
+        content: "Loading…";
+        opacity: 0;
+
+        @include transition(opacity 300ms, visibility 0ms 310ms);
+        transform: translate(-50%, -50%);
+    }
+
+    &.wait {
+        pointer-events: none;
+
+        &::before {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+
+            @include transition(width 0ms, height 0ms, opacity 300ms 10ms);
+        }
+
+        &::after {
+            visibility: visible;
+            opacity: 1;
+            @include transition(visibility 0ms, opacity 300ms 100ms);
+        }
+    }
+}
+
+.cmp {
+    @include cmp();
+}

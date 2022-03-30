@@ -1,0 +1,23 @@
+.table {
+    &.table-striped {
+        tbody {
+            @include theme() { color: theme-get('gray-800'); }
+            tr {
+                &:nth-of-type(odd) {
+                    @include theme() { background-color: theme-get('gray-100'); }
+                }
+            }
+        }
+    }
+    &.table-hover {
+        tbody {
+            tr {
+                &:hover {
+                    @include theme() { color: theme-get('gray-800'); }
+                    @include theme() { background-color: theme-get('gray-200'); }
+                }
+            }
+        }
+    }
+}
+

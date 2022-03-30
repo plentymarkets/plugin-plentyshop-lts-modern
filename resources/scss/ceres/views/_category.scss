@@ -1,0 +1,62 @@
+// ==========================================================================
+// Bootstrap & Variable overrides
+// ==========================================================================
+@import "~bootstrap/scss/functions";
+@import "../global/variables";
+@import "~bootstrap/scss/bootstrap";
+
+// ==========================================================================
+// Custom styles
+// ==========================================================================
+
+// global
+@import "../global/themes";
+@import "../global/icons";
+@import "../global/mixins";
+@import "../global/utilities";
+@import "../global/reboot";
+@import "../global/typography";
+
+// External plugins overrides
+@import "../plugins/owl-carousel";
+
+// Components
+@import "../components/buttons";
+@import "../components/card";
+@import "../components/alerts";
+@import "../components/modal";
+@import "../components/component-base";
+@import "../components/notifications";
+@import "../components/popover";
+@import "../components/cookie-bar";
+@import "../components/dropdown";
+@import "../components/tooltip";
+@import "../components/inputs";
+@import "../components/list-group";
+@import "../components/table";
+@import "../components/tabs";
+@import "../components/pagination";
+
+// Page Design / Global components
+@import "../views/PageDesign/footer";
+@import "../views/PageDesign/body";
+@import "../views/PageDesign/header";
+
+// Templates
+@import "../views/Templates/BasketItemList/basket-list-item";
+@import "../views/Templates/BasketPreview/basket-preview";
+@import "../views/Templates/BasketTotalSum/basket-total-sum";
+@import "../views/Templates/CategoryListItem/category-list-item";
+@import "../views/Templates/Common/component-loading";
+@import "../views/Templates/Item/quantity-input";
+
+// Pages
+@import "../views/Category/category-list";
+@import "../views/Category/category-list-controls";
+@import "../views/Item/set-item";
+@import "../views/Item/single-item";
+@import "../views/ItemList/loading-animation";
+
+// Widgets
+@import "../widgets/widgets";
+

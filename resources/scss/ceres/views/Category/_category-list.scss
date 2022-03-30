@@ -1,0 +1,195 @@
+.page-infos {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    .product-count {
+        flex: 1;
+    }
+}
+
+.product-list {
+
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+category-item,
+.category-item-placeholder {
+    display: block;
+    width: 100%;
+    height: 145px;
+    margin-bottom: 15px;
+    @include theme() { background-color: theme-get('white'); }
+
+    a {
+        display: block;
+        padding-top: 100%;
+        color: $gray-600;
+
+        &:hover {
+            color: $gray-600;
+        }
+
+        span { // stylelint-disable-line selector-max-type
+            display: block;
+            padding: .8rem .8rem 74px;
+        }
+    }
+
+    .fa {
+        position: absolute;
+        top: 48px;
+        right: 0;
+        left: 0;
+        font-size: 160px;
+        @include theme() { color: theme-get('gray-100'); }
+        text-align: center;
+    }
+
+    @include media-breakpoint-up(sm) {
+        height: unset;
+        margin-bottom: 30px;
+    }
+}
+
+.lazy {
+    display: none;
+}
+
+@include media-breakpoint-up(sm) {
+    .product-list {
+        li {
+            display: flex;
+        }
+    }
+
+    .product-list.grid {
+
+        li {
+            display: flex;
+            box-shadow: none;
+        }
+
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .product-list.grid {
+
+        li {
+            display: flex;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .product-list.grid {
+
+        li {
+            display: flex;
+        }
+    }
+
+}
+
+.item-list-frame.loading:not(.blur-effect) > ul {
+    display: none;
+}
+
+.parallax-img-container {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    .parallax-text-container {
+        position: inherit;
+
+        h1 {
+            margin-bottom: 0;
+            word-wrap: break-word;
+        }
+    }
+
+    .category-description {
+        word-wrap: break-word;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .parallax-img-container-inner[style^="background-image"] {
+        height: 300px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: top center;
+        background-size: cover;
+
+        @include media-breakpoint-up(sm) {
+            height: 350px;
+        }
+        @include media-breakpoint-up(md) {
+            height: 400px;
+        }
+
+        .parallax-text-container {
+            position: absolute;
+            bottom: 0;
+            max-width: 100%;
+            padding-right: 30px;
+
+            @include media-breakpoint-up(xl) {
+                max-width: 1200px;
+            }
+
+            h1 {
+                bottom: 0;
+                width: 100%;
+                margin-bottom: .5rem;
+                font-size: 300%;
+                color: $category-text-color;
+                text-shadow: 0 0 .1em rgba(0, 0, 0, .75);
+                letter-spacing: 1px;
+
+                @include media-breakpoint-up(sm) {
+                    margin: 0 0 1rem;
+                    font-size: 400%;
+                }
+                @include media-breakpoint-up(md) {
+                    font-size: 500%;
+                }
+            }
+
+            .category-description {
+                font-size: 1rem;
+                line-height: 1.25;
+                @include theme() { color: theme-get('white'); }
+                text-shadow: 0 0 .2em rgba(0, 0, 0, .75);
+                letter-spacing: 1px;
+
+                @include media-breakpoint-up(sm) {
+                    font-size: 1.25rem;
+                }
+                @include media-breakpoint-up(md) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+/* IOS compatibility, missing background-attachment:fixed support */
+// stylelint-disable selector-no-qualifying-type
+html.ios,
+html.crios {
+    .parallax-img-container .parallax-img-container-inner[style^="background-image"] {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+}
+// stylelint-enable selector-no-qualifying-type

@@ -1,0 +1,107 @@
+.cmp-method-list {
+    .method-list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .method-list-item {
+        display: inline-block;
+        width: 100%;
+        margin-top: -1px;
+        margin-left: -1px;
+        vertical-align: top;
+
+        & > input:disabled ~ label,
+        & > input:disabled ~ .label {
+            cursor: not-allowed;
+            opacity: .5;
+        }
+
+        input {
+            display: none;
+            @include transition(box-shadow 2s);
+        }
+
+        label,
+        .label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-height: 5rem;
+            padding: .5em;
+            margin-bottom: 0;
+            overflow: hidden;
+            cursor: pointer;
+            @include theme() { background-color: theme-get('white'); }
+            @include border-radius($border-radius);
+            border: 2px solid transparent;
+        }
+
+        input:checked + label,
+        input:checked + .label {
+            border: 2px solid;
+            @include theme() { border-color: theme-get('gray-300'); }
+        }
+
+        &.has-error label,
+        &.has-error .label,
+        &.has-error input:checked + label,
+        &.has-error input:checked + .label{
+            color: $danger;
+            border-color: $danger;
+        }
+
+        .content,
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+
+            // fix image proportions for safari of the payment/shipping icons
+            > img {
+                object-fit: contain;
+                font-family: 'object-fit: contain;'; // IE polyfill
+            }
+        }
+
+        .content {
+            width: calc(100% - 3.5rem); // stylelint-disable-line function-blacklist
+            padding-left: .5rem;
+        }
+    }
+    &.list {
+        .method-list-item:not(:last-child) {
+            margin-bottom: 1em;
+        }
+        .content {
+            position: relative;
+            width: calc(100% - 4rem); // stylelint-disable-line function-blacklist
+            padding-left: .5rem;
+        }
+        .icon {
+            display: flex;
+            width: 4rem;
+            max-height: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .method-list {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .method-list-item {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 50%;
+        }
+        &.list {
+            .method-list-item {
+                width: 100%;
+            }
+        }
+    }
+}

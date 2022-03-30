@@ -1,0 +1,46 @@
+$radio-top: 5px;
+$radio-checked-color: $primary;
+$radio-unchecked-color: $font-color-secondary;
+
+@mixin radio-structure($color) {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: $radio-top;
+  border-radius: 50%;
+  border: 2px solid $color;
+}
+
+.form-check {
+  input[type=radio] {
+    display: none;
+
+    &:not(:checked) + label::before {
+      @include radio-structure($radio-unchecked-color);
+    }
+
+    &:checked + label {
+      &::before {
+        @include radio-structure($radio-checked-color);
+      }
+
+      &::after {
+        @include radio-structure($radio-checked-color);
+
+        background-color: $radio-checked-color;
+        -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+        transform: scale(0.4);
+        animation: fade-in .5s;
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 24px;
+  }
+}

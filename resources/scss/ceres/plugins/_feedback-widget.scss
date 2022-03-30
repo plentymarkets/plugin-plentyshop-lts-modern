@@ -1,0 +1,134 @@
+$feedback-star-active-color: $yellow;
+
+@mixin feedback-stars-average {
+    .feedback-stars-average {
+        .feedback-star {
+            color: $feedback-star-active-color;
+        }
+        .feedback-stars-background {
+            .feedback-star {
+                @include theme() { color: theme-get('gray-100'); }
+            }
+        }
+    }
+}
+.widget-feedback-average {
+    @include feedback-stars-average;
+}
+.widget-feedback {
+    .feedback-container {
+        hr,
+        .feedback-list .feedback{
+            margin-top: map-get($spacers, 3);
+            margin-bottom: map-get($spacers, 3);
+        }
+        .feedback-list .feedback {
+            padding-bottom: map-get($spacers, 3);
+        }
+        .title {
+            @include font-h2;
+            margin: 0;
+            vertical-align: middle;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .feedback-average-count {
+                margin-left: map-get($spacers, 2);
+                letter-spacing: map-get($spacers, 1);
+            }
+        }
+        @include feedback-stars-average;
+        .feedback-bars {
+            .feedback-bar-wrap {
+                font-variant-numeric: tabular-nums;
+                .feedback-bar-text-before {
+                    min-width: map-get($spacers, 2) * 3;
+                    display: inline-flex;
+                    justify-content: space-between;
+                    margin-right: map-get($spacers, 2);
+                    .fa-star {
+                        color: $feedback-star-active-color;
+                    }
+                }
+                .feedback-bar {
+                    @include theme() { background-color: theme-get('gray-100'); }
+                }
+                .feedback-bar-text-after {
+                    margin-left: map-get($spacers, 2);
+                    &:before {
+                        content: '(';
+                    }
+                    &:after {
+                        content: ')';
+                    }
+                }
+            }
+        }
+        .createFeedback {
+            .stars {
+                label,
+                &:hover label.star:before {
+                    &.star {
+                        @include theme() { color: theme-get('gray-100'); }
+                    }
+                }
+                input.star:checked ~ label.star:before,
+                input.star-rated:checked ~ label.star-rated:before,
+                label.star:hover ~ label.star:before,
+                label.star:hover:before {
+                    color: $feedback-star-active-color !important; // stylelint-disable-line declaration-no-important
+                }
+            }
+            .feedback-tooltip-wrapper {
+                display: flex;
+                justify-content: right;
+            }
+        }
+        .feedback-list {
+            .feedback {
+                .feedback-options {
+                    .btn {
+                        .fa {
+                            margin: 0;
+                        }
+                    }
+                    .btn-danger {
+                        @include btn-appearance($color: $transparent, $outline: false);
+                    }
+                }
+                .feedback-edit-cancel {
+                    @include btn-appearance($color: $transparent, $outline: false);
+                }
+                .feedback-comment {
+                    .feedback-comment-title {
+                        @include font-paragraph;
+                        font-weight: $font-weight-bolder;
+                    }
+                    .feedback-rating {
+                        @include theme() { color: theme-get('gray-100-important'); }
+                        .full {
+                            color: $feedback-star-active-color !important; // stylelint-disable-line declaration-no-important
+                        }
+                    }
+                    .feedback-attributes-list {
+                        p span.feedback-verified-tag {
+                            color: $green;
+                            @include font-interactive-element;
+                        }
+                    }
+                    .feedback-comment-text {
+                        margin-bottom: map-get($spacers, 3);
+                    }
+                    .feedback-info {
+                        .feedback-info-segment {
+                            &.btn.btn-default {
+                                @include btn-appearance($color: $transparent, $outline: false);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

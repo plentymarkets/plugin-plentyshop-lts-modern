@@ -1,0 +1,11 @@
+.widget-newsletter {
+    > .widget-inner {
+        .input-group-btn {
+            text-align: center;
+
+            .btn {
+                width: initial;
+            }
+        }
+    }
+}

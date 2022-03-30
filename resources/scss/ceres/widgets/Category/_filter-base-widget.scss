@@ -1,0 +1,38 @@
+.widget-filter-base {
+    .form-check-label {
+        cursor: pointer;
+
+        &.bg-appearance {
+            @include theme() { background-color: theme-get('white-important'); }
+            @include theme() { color: theme-get('font-color-primary-important'); }
+
+            &:hover, &:focus {
+                @include theme() { background-color: theme-get('gray-100-important'); }
+            }
+        }
+
+        .flex-grow-1 {
+            padding: 0 calc(#{$spacer} * 1.5);
+
+            &::before {
+                content: '' !important;
+            }
+        }
+    }
+
+    .form-check {
+        input[type="checkbox"]:not(:checked)+label::before,
+        input[type="checkbox"]:not(:checked)+label::after,
+        input[type="checkbox"]:checked+label::before,
+        input[type="checkbox"]:checked+label::after {
+            left: calc(#{$spacer} * 1.5);
+            top: calc(50% - (#{$checkbox-height} / 2));
+        }
+    }
+
+    .title,
+    .card .form-check-label,
+    .item-filter-price {
+        padding: .75rem 1.75rem;
+    }
+}

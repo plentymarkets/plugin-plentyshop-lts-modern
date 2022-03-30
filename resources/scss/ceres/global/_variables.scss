@@ -1,0 +1,310 @@
+$white: #ffffff !default;
+$gray-100: #f4f4f6 !default; // adjusted value (Background)
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #c9cdd0 !default; // adjusted value (Divider)
+$gray-500: #878c90 !default; // adjusted value (Placeholder)
+$gray-600: #61696a !default; // adjusted value (Secondary Text)
+$gray-700: #495057 !default;
+$gray-800: #3e4346 !default; // adjusted value (Primary Text)
+$gray-900: #212529 !default;
+$black: #000000 !default;
+$blue: #008ebd !default; // adjusted value (plenty CI)
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #d51317 !default; // adjusted value (plenty CI)
+$orange: #fb6e50 !default; // adjusted value
+$yellow: #efae56 !default; // adjusted value
+$green: #a8d080 !default; // adjusted value
+$teal: #20c997 !default;
+$cyan: #4da2d0 !default; // adjusted value
+$transparent: transparent !default; // new value // Typography
+
+// Legacy: Do not remove! These variables are filled with the values from the plugin config
+$brand-primary: $red !default;
+$brand-secondary: $blue !default;
+$brand-success: $green !default;
+$brand-info: $cyan !default;
+$brand-warning: $yellow !default;
+$brand-danger: $orange !default;
+$brand-dark: $gray-800 !default;
+$brand-light: $white !default;
+$brand-transparent: $transparent !default;
+
+@function check-color($color, $fallback) {
+  @if type-of($color) != color {
+    @return $fallback;
+  }
+  @return $color;
+}
+
+@function color-contrast($color) {
+  @if ($color == $transparent) {
+    $color: $white;
+  }
+  @return color-yiq($color);
+}
+
+$primary:                   check-color($brand-primary, $red) !default;
+$secondary:                 check-color($brand-secondary, $blue) !default;
+$success:                   check-color($brand-success, $green) !default;
+$info:                      check-color($brand-info, $cyan) !default;
+$warning:                   check-color($brand-warning, $yellow) !default;
+$danger:                    check-color($brand-danger, $orange) !default;
+$dark:                      check-color($brand-dark, $gray-800) !default;
+$light:                     check-color($brand-light, $white) !default;
+$transparent:               check-color($brand-transparent, $transparent) !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+        (
+            "primary": $primary,
+            "secondary": $secondary,
+            "success": $success,
+            "info": $info,
+            "warning": $warning,
+            "danger": $danger,
+            "light": $light,
+            "dark": $dark,
+            "transparent": $transparent,
+        ),
+        $theme-colors
+);
+
+$font-color-primary: $gray-800 !default; // Custom variable
+$font-color-secondary: $gray-600 !default; // Custom variable
+$font-color-light: $white !default; // Custom variable
+$link-primary: $font-color-primary !default; // Custom variable
+$link-primary-hover: $brand-primary !default; // Custom variable
+$yiq-text-dark: $gray-800 !default;
+$yiq-text-light: $white !default;
+$yiq-contrasted-threshold: 200 !default;
+$body-bg: $white !default;
+$body-color: $gray-800 !default;
+
+// Spacing
+$spacer: 12px !default;
+$spacers: () !default;
+$spacers: map-merge(
+        (
+            0: 0,
+            1: ($spacer * .5),
+            2: ($spacer),
+            3: ($spacer * 2),
+            4: ($spacer * 4),
+            5: ($spacer * 8)
+        ),
+        $spacers
+);
+
+// Footer
+$footer-bg: $gray-100 !default;
+$footer-color: $gray-800 !default;
+$footer-features-bg: $gray-100 !default;
+$footer-features-color: $gray-800 !default;
+
+// Top Bar
+$top-bar-bg-color: $white !default;
+$top-bar-color: $gray-800 !default;
+$top-bar-transparent-color: $gray-800 !default;
+
+// Navbar
+$navbar-bg-color: $white !default;
+$navbar-dark-color: $gray-600 !default;
+$navbar-dark-disabled-color: $gray-500 !default;
+
+// Nav
+$nav-link-padding-y: 1.3rem !default;
+$nav-link-hover-bg: $primary !default;
+
+// Pagination
+$pagination-color: color-contrast($transparent) !default;
+$pagination-bg: $transparent !default;
+$pagination-border-width: 0 !default;
+$pagination-focus-box-shadow: none !default;
+$pagination-hover-color: color-contrast($transparent) !default;
+$pagination-hover-bg: $transparent !default;
+$pagination-active-color: color-contrast($transparent) !default;
+$pagination-active-bg: $transparent !default;
+$pagination-disabled-color: $gray-500 !default;
+
+// Tabs
+$nav-tabs-border-color: $white !default;
+$nav-tabs-border-width: 0 !default;
+
+// Breadcrumbs
+$breadcrumb-padding-y: map-get($spacers, 3) !default;
+$breadcrumb-bg: $white !default;
+
+// Category
+$category-text-color: $white !default;
+$component-active-bg: $primary !default;
+$component-active-color: color-contrast($component-active-bg) !default;
+
+// Misc
+$hr-border-color: $gray-400 !default;
+
+// Sizes
+$heights: (
+  1: (
+    xs: 36px,
+    sm: 48px,
+    md: 64px,
+    lg: 72px,
+    xl: 80px
+  ),
+  2: (
+    xs: 72px,
+    sm: 90px,
+    md: 128px,
+    lg: 144px,
+    xl: 160px
+  ),
+  3: (
+    xs: 128px,
+    sm: 160px,
+    md: 192px,
+    lg: 224px,
+    xl: 256px
+  ),
+  4: (
+    xs: 200px,
+    sm: 244px,
+    md: 288px,
+    lg: 332px,
+    xl: 376px
+  ),
+  5: (
+    xs: 272px,
+    sm: 328px,
+    md: 384px,
+    lg: 440px,
+    xl: 496px
+  ),
+) !default;
+
+// Fonts
+$root-directory: ".." !default;
+
+$flag-icon-css-path: "#{$root-directory}/images/flags" !default;
+$flag-icon-rect-path: "/4x3" !default;
+$flag-icon-square-path: "/1x1" !default;
+
+$fa-font-path: "#{$root-directory}/documents/fonts" !default;
+
+// Grid
+$grid-gutter-width: map-get($spacers, 3) !default;
+$container-max-widths: ( // not actual .container-max ...
+    sm: 540px,
+    md: 720px,
+    lg: 900px
+) !default;
+
+// Typography
+$font-family-sans-serif: custom-font, montserrat, helvetica, arial, sans-serif !default;
+$font-family-serif: georgia, "Times New Roman", times, serif !default;
+$font-family-heading: $font-family-sans-serif !default;
+$font-size-base: 1rem !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.825 !default;
+$small-font-size: 75% !default;
+$h1-font-size: $font-size-base * 1.875 !default;
+$h2-font-size: $font-size-base * 1.3125 !default;
+$h3-font-size: $font-size-base * 1.167 !default;
+$h4-font-size: $font-size-base * 1.3125 !default;
+$h5-font-size: $font-size-base * 1.167 !default;
+$h6-font-size: $font-size-base * 1 !default;
+$font-weight-lighter: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+$font-weight-bolder: 600 !default;
+$line-height-base: 1.75 !default;
+$display1-size: 4rem !default;
+$display2-size: 3.5rem !default;
+$display3-size: 2.5rem !default;
+$display4-size: 1.5rem !default;
+$headings-margin-bottom: $spacer !default;
+$headings-line-height: 1.25 !default;
+$headings-font-weight: $font-weight-bolder !default;
+$headings-letter-spacing: 0.5px !default;
+
+// Components
+$line-height-lg: (4 / 3) !default;
+$border-radius: 0 !default;
+$border-radius-sm: 0 !default;
+$border-radius-lg: 0 !default;
+$box-shadow-bottom: 0 0.7rem 0.7rem rgba(0, 0, 0, 0.1) !default; // custom variable
+$box-shadow-active: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.15), 0 4px 0 $dark !default; // custom variable
+$progress-border-radius: 0.25rem !default;
+
+// plentyShop LTS variables
+$aside-columns-width: 30rem !default;
+$autocomplete-max-items: 10 !default;
+
+// Table
+$table-cell-padding-sm: 0.6rem !default;
+$table-border-width: 0 !default;
+
+// Buttons
+$input-btn-height: $spacer * 4 !default; // custom variable
+$input-btn-height-sm: $spacer * 3 !default; // custom variable
+$input-btn-height-lg: $spacer * 5 !default; // custom variable
+
+// Popovers
+$popover-max-width: 376px !default;
+$popover-max-width-md: 514px !default;
+$popover-max-width-lg: 652px !default;
+$popover-inner-padding: 1px !default;
+$popover-arrow-color: $dark !default;
+$popover-arrow-outer-color: $white !default;
+
+// Badges
+$badge-font-size: $font-size-sm !default;
+$badge-font-weight: $font-weight-bolder !default;
+$badge-padding-y: $spacer / 2 !default;
+$badge-padding-x: $spacer * 1.25 !default;
+$badge-border-radius: $spacer * 2 !default;
+
+// Modal
+$modal-dialog-margin: 0 !default;
+$modal-content-border-width: 0 !default;
+$modal-lg: 900px !default;
+$modal-md: 600px !default;
+$modal-sm: 300px !default;
+
+// Z-index
+$zindex-0: 990 !default;
+$zindex-1: 1000 !default;
+$zindex-2: 1020 !default;
+$zindex-3: 1030 !default;
+$zindex-4: 1040 !default;
+$zindex-5: 1050 !default;
+$zindex-6: 1060 !default;
+$zindex-7: 1070 !default;
+$zindex-8: 1080 !default;
+$zindex-9: 1090 !default;
+$zindex-10: 10000 !default;
+$zindex-11: 10010 !default;
+$zindex-dropdown: $zindex-1 !default;
+$zindex-fixed: $zindex-3 !default;
+$zindex-modal-backdrop: $zindex-9 !default;
+$zindex-modal: $zindex-10 !default;
+$zindex-popover: $zindex-11 !default;
+$zindex-sticky: $zindex-2 !default;
+$zindex-tooltip: $zindex-7 !default;
+$zindex-wrapper: $zindex-10 !default;
+
+// Shop-Builder
+$shop-builder-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "dark": $dark,
+  "light": $light,
+  "transparent": $transparent,
+) !default;

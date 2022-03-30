@@ -1,0 +1,6 @@
+body {
+    @include theme-body() {
+        color: theme-get('body-color');
+        background-color: theme-get('body-bg');
+    }
+}

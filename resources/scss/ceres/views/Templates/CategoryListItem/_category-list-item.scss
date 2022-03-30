@@ -1,0 +1,219 @@
+.cmp-product-thumb {
+    display: flex;
+    width: 100%;
+    margin-bottom: $grid-gutter-width / 2;
+    overflow: hidden;
+    @include theme() { background-color: theme-get('white'); }
+
+    > div {
+        display: flex;
+        flex-grow: 1;
+
+        @include media-breakpoint-up(sm) {
+            flex-direction: column;
+        }
+    }
+
+    .add-to-basket-lg-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 90;
+        height: $input-btn-height;
+        width: $input-btn-height;
+        border-radius: $input-btn-height;
+        margin: map-get($spacers, 2);
+        padding: map-get($spacers, 2);
+        cursor: pointer;
+        @include theme() { background-color: theme-get('gray-200'); }
+        transform: translateX(80px);
+        -webkit-transition: 0.3s ease-out;
+        transition: 0.3s ease-out;
+        @include transition(.3s ease-out);
+        justify-content: center;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {
+            display: flex !important; // override utility-class
+        }
+
+        &:hover {
+            background-color: $primary;
+            color: color-contrast($primary);
+        }
+    }
+
+    &:hover {
+        .add-to-basket-lg-container {
+            transform: translateX(0px);
+        }
+    }
+
+    .thumb-image {
+        @include img-contain();
+    }
+
+    //TODO create separate mixin
+    .special-tags {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        .badge {
+            &.badge-new {
+                background: $success;
+            }
+
+            &.badge-top {
+                background-color: $primary;
+            }
+        }
+    }
+
+    .thumb-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: calc(100% - 120px); // stylelint-disable-line function-blacklist
+        vertical-align: top;
+        padding: 0 map-get($spacers, 3);
+        @include theme() { background-color: theme-get('white'); }
+
+        .thumb-title {
+            @include font-paragraph;
+            font-weight: $font-weight-bolder;
+        }
+    
+        .thumb-meta {
+            &.mt-2 {
+                margin-top: map-get($spacers, 1) !important; // override utility-class/markups
+            }
+
+            .prices {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                flex-wrap: wrap-reverse;
+                @include font-paragraph;
+                @include theme() { color: theme-get('font-color-secondary'); }
+
+                .price-view-port {
+                    text-align: right;
+
+                    .crossprice {
+                        opacity: 0.7;
+                    }
+                }
+
+                .price {
+                    margin-right: auto;
+                    @include font-paragraph;
+                    @include theme() { color: theme-get('font-color-secondary'); }
+                }
+            }
+
+            + div {
+                margin-top: auto;
+            }
+        }
+
+        // addToBasket on mobile
+        .btn {
+            z-index: 1;
+
+            // Hide button text on mobile
+            @include media-breakpoint-down(lg) {
+                font-size: 0;
+                letter-spacing: -1px;
+
+                i {
+                    font-size: initial;
+                    margin: 0;
+                    letter-spacing: 0;
+
+                    &.fa-arrow-right {
+                        display: initial !important;
+                    }
+                }
+            }
+        }
+
+        .vat {
+            margin-top: map-get($spacers, 1);
+
+            a {
+                z-index: 1;
+            }
+        }
+    }
+
+    .category-unit-price {
+        @include theme() { color: theme-get('font-color-secondary'); }
+    }
+
+    .btn-group {
+        margin-top: map-get($spacers, 1);
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 0;
+        margin-bottom: $grid-gutter-width;
+
+        .thumb-content {
+            width: 100%;
+            padding: map-get($spacers, 3) 0;
+        }
+        
+        .thumb-image {
+            width: 100%;
+        }
+
+        .img-fluid {
+            @include transition(.4s cubic-bezier(0, 0, .26, 1));
+        }
+
+        &:hover {
+            .img-fluid {
+                transform: scale(1.05);
+            }
+
+            .owl-nav [class*="owl-"] {
+                opacity: 1;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .btn-group {
+            width: 100%;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        .thumb-image {
+            float: left;
+            width: 120px;
+        }
+    }
+}
+
+.no-pointer-events {
+    pointer-events: none;
+}
+
+@mixin visible-add-to-basket {
+    .cmp-product-thumb {
+        .add-to-basket-lg-container {
+            transform: translateX(0px);
+        }
+    }
+}
+
+@media only screen and (min-device-width: 601px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+    @include visible-add-to-basket;
+}
+
+@media only screen and (min-device-width: 601px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+    @include visible-add-to-basket;
+}

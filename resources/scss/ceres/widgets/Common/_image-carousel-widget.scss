@@ -1,0 +1,315 @@
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: map-get($spacers, 5);
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+
+    &:hover, &:focus {
+        span {
+            color: $primary !important;
+        }
+    }
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+}
+
+
+.widget-image-carousel {
+
+    // TODO: @Tim Müller-Späth, @vwiebe
+    // Remove (Temporary solution for first startpage slider image)
+    @include media-breakpoint-down(md) {
+        &.img-1-offset-md-20-flip-horizontal {
+            .carousel-item:nth-child(1) {
+                .img-cover {
+                    -o-object-position: 20% center;
+                    object-position: 20% center;
+                    -webkit-transform: translate(-50%, -50%) scaleX(-1);
+                    transform: translate(-50%, -50%) scaleX(-1);
+                }
+            }
+        }
+    }
+
+    // TODO: @Tim Müller-Späth, @vwiebe
+    // Use function to generate dynamic set of utility classes:
+
+    //$img-offset-indexes: '1', '2', '3';
+    //$img-offset-breakpoints: 'sm', 'md', 'lg';
+    //$img-offset-sizes: '20', '30', '40', '50', '60', '70', '80';
+    //$img-offset-transforms: '', '-flip-horizontal';
+    //@mixin img-offset($img-index, $breakpoint, $offset-size, $img-transforms) {
+    //    @include media-breakpoint-down($breakpoint) {
+    //        &.img-#{$img-index}-offset-#{$breakpoint}-#{$offset-size}#{$img-transforms} {
+    //            .carousel-item {
+    //                &:nth-child(#{$img-index}) {
+    //                    .img-cover {
+    //                        object-position: #{$offset-size}% center;
+    //                        @if ($img-transforms == '-flip-horizontal') {
+    //                            transform: translate(-50%, -50%) scaleX(-1);
+    //                        }
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+    //
+    //@each $index in $img-offset-indexes {
+    //    @each $breakpoint in $img-offset-breakpoints {
+    //        @each $size in $img-offset-sizes {
+    //            @each $transform in $img-offset-transforms {
+    //                @include img-offset($index, $breakpoint, $size, $transform)
+    //            }
+    //        }
+    //    }
+    //}
+
+    .widget-inner {
+        padding-right: 0 !important; // stylelint-disable-line declaration-no-important
+        padding-left: 0 !important; // stylelint-disable-line declaration-no-important
+
+        .widget-caption {
+            position: absolute;
+            bottom: map-get($spacers, 5);
+            left: 50%;
+            width: 100%;
+            text-align: center;
+            transform: translateX(-50%);
+
+            .btn {
+                margin-bottom: map-get($spacers, 2);
+            }
+
+            h2,
+            .h2 {
+                display: inline-block;
+                padding: map-get($spacers, 1) map-get($spacers, 2);
+                margin: 0;
+                @include transition(.3s all ease);
+                @include font-h1();
+
+                i.fa-angle-double-right {
+                    display: none;
+                }
+            }
+        }
+
+        .carousel-inner {
+            display: flex;
+            height: 100%;
+        }
+
+        .carousel-item {
+            width: 100%;
+            height: 100%;
+
+            // stylelint-disable selector-no-qualifying-type
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                max-width: 100%;
+                max-height: 100%;
+                transform: translate(-50%, -50%);
+
+                &.img-cover {
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                    font-family: 'object-fit: cover;';
+                }
+            }
+            // stylelint-enable selector-no-qualifying-type
+        }
+
+        .carousel-indicators {
+            bottom: 0;
+            padding: 1rem 1rem;
+
+            li {
+                position: relative;
+                box-sizing: border-box;
+                width: 10px;
+                height: 10px;
+                margin: 4px 14px;
+                opacity: initial;
+                background-color: transparent;
+                border: 2.5px solid #fff;
+                border-radius: 12px;
+
+                &:hover, &:focus {
+                    border-color: $primary;
+
+                    &.active {
+                        background-color: $primary;
+                    }
+                }
+
+                // increases the clickarea
+                &::before {
+                    content: '';
+                    position: absolute;
+                    margin: auto;
+                    width: $input-btn-height-sm;
+                    height: $input-btn-height-sm;
+                    left: -15px;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+
+        .carousel-control {
+            background-image: none;
+            @include transition(.3s all ease);
+
+            .fa {
+                position: absolute;
+                top: 50%;
+                font-size: 2rem;
+                transform: translateY(-50%);
+
+                &.fa-chevron-right {
+                    right: $grid-gutter-width;
+                }
+
+                &.fa-chevron-left {
+                    left: $grid-gutter-width;
+                }
+            }
+        }
+    }
+
+    &.text-right {
+        .widget-caption {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 0 map-get($spacers, 3);
+            left: initial;
+            transform: initial;
+
+            @include media-breakpoint-up(sm) {
+                padding: 0 map-get($spacers, 4);
+            }
+
+            @include media-breakpoint-up(md) {
+                padding: 0 map-get($spacers, 5);
+            }
+        }
+    }
+
+    &.text-left {
+        .widget-caption {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 map-get($spacers, 3);
+            left: initial;
+            transform: initial;
+
+            @include media-breakpoint-up(sm) {
+                padding: 0 map-get($spacers, 4);
+            }
+
+            @include media-breakpoint-up(md) {
+                padding: 0 map-get($spacers, 5);
+            }
+        }
+    }
+
+    @each $color, $value in $shop-builder-colors {
+        &.widget-#{$color} {
+            @if ($value == $transparent) {
+                $value: color-contrast($value);
+                .widget-caption {
+                    .btn {
+                        @include btn-appearance($dark, $outline: false);
+                    }
+                    h2,
+                    .h2 {
+                        background: #ffffff60;
+                        color: $dark;
+                        backdrop-filter: blur(8px);
+                    }
+                }
+                .carousel-indicators li {
+                    border-color: $value;
+
+                    &.active {
+                        background-color: $value;
+                    }
+                }
+
+                .carousel-control .fa {
+                    color: $value;
+                }
+            }
+            @else {
+                .widget-caption h2,
+                .widget-caption .h2 {
+                    @include widget-color-variant($value);
+                }
+
+                .carousel-indicators li {
+                    border-color: $value;
+
+                    &.active {
+                        background-color: $value;
+                    }
+                }
+
+                .carousel-control .fa {
+                    color: $value;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .widget-inner-stacked .widget-image-carousel {
+        .widget-caption {
+            h2,
+            .h2 {
+                padding: .5rem 1rem;
+                margin: 0;
+                font-size: 1.75rem;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .carousel-control {
+            .fa {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

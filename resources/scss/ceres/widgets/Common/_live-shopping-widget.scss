@@ -1,0 +1,116 @@
+.widget-live-shopping {
+    &.item-bg-gray {
+        .cmp-product-thumb {
+            .thumb-image {
+                @include theme() { background-color: theme-get('gray-100'); }
+            }
+        }
+    }
+    &.item-border {
+        .cmp-product-thumb {
+            .thumb-image {
+                border: 2px solid $gray-100;
+                @include theme() { bordeer-color: theme-get('gray-100'); }
+            }
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        .thumb-image {
+            float: none;
+            width: 100%;
+            .prop-1-1 {
+                padding-bottom: 50%;
+            }
+        }
+    }
+    .live-shopping-details {
+        padding: map-get($spacers, 3) 0;
+        .live-shopping-item-name,
+        .live-shopping-item-name a {
+            margin: 0 0 map-get($spacers, 2) 0;
+            @include font-paragraph;
+            font-weight: $font-weight-bolder;
+        }
+        .live-shopping-add-to-basket {
+            .btn {
+                margin-bottom: map-get($spacers, 2);
+                // Hide button text on mobile
+                @include media-breakpoint-down(lg) {
+                    font-size: 0;
+                    letter-spacing: -1px;
+                    i {
+                        font-size: initial;
+                        margin: 0;
+                        letter-spacing: 0;
+                        &.fa-arrow-right {
+                            display: initial !important;
+                        }
+                    }
+                }
+            }
+        }
+        .live-shopping-countdown {
+            .live-shopping-countdown-heading {
+                margin-bottom: map-get($spacers, 1);
+                text-align: center;
+            }
+            .live-shopping-countdown-thread-container {
+                display: flex;
+                margin-bottom: map-get($spacers, 2);
+                .live-shopping-countdown-thread {
+                    margin-right: auto;
+                    margin-left: auto;
+                    text-align: center;
+                    .live-shopping-countdown-thread-number {
+                        font-size: 2rem;
+                        font-weight: $font-weight-bold;
+                        line-height: 1.1;
+                    }
+                }
+            }
+            .live-shopping-progress {
+                margin-bottom: map-get($spacers, 2);
+                .live-shopping-progress-heading {
+                    text-align: center;
+                    margin-bottom: map-get($spacers, 2);
+                }
+                .progress {
+                    border-radius: 0;
+                    @for $i from 10 to -1 {
+                        .progress-#{$i * 10} {
+                            background-color: mix($success, $danger, $i * 10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .live-shopping-prices {
+        padding: map-get($spacers, 2);
+        .live-shopping-prices-inner {
+            display: grid;
+            grid-template-areas: "top" "bottom";
+            .live-shopping-prices-rebate {
+                grid-area: bottom;
+            }
+            .live-shopping-prices-container {
+                grid-area: top;
+                margin-left: 0;
+            }
+            .live-shopping-price {
+                font-size: 2rem;
+                line-height: 1.1;
+            }
+        }
+        .live-shopping-prices-additional-info {
+            margin-top: map-get($spacers, 1);
+            font-size: $small-font-size;
+            font-weight: $font-weight-normal;
+            text-align: left;
+            a {
+                font-weight: $font-weight-bold;
+                color: inherit;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.cookie-bar {
+    &.out {
+        left: map-get($spacers, 3);
+
+        &.fixed-bottom {
+            right: initial; // otherwise the privacy button will block the whole bottom click area
+        }
+    }
+
+    &.border-top { // overwrite utility class in template
+        border: none !important; // stylelint-disable-line declaration-no-important
+    }
+
+    > .container-max {
+        > .row {
+            padding: map-get($spacers, 2);
+        }
+    }
+    
+    .privacy-settings {
+        max-height: 50vh;
+        
+        .privacy-settings-body {
+            .card {
+                @extend .card;
+                @include theme() { background-color: theme-get('gray-100'); }
+                border: none;
+                margin-bottom: map_get($spacers, 3);
+            }
+        }
+    }
+    
+    i.fa-shield {
+        margin-right: 0;
+    }
+    
+    @include media-breakpoint-up(sm) {
+        i.fa-shield {
+            margin-right: map_get($spacers, 2);
+        }
+    }
+}

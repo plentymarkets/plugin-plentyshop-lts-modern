@@ -1,0 +1,88 @@
+{
+  "formatVersion": 1,
+  "menu": {
+    "Config.DesignTab": {
+      "label": "Config.designTab",
+      "formFields": {
+        "theme": {
+          "type": "selectBox",
+          "required": true,
+          "label": "Config.themeSelectionLabel",
+          "options": {
+            "defaultValue": "light-theme",
+            "selectBoxValues": [
+              {
+                "value": "light-theme",
+                "caption": "Config.themeSelectionLight"
+              },
+              {
+                "value": "dark-theme",
+                "caption": "Config.themeSelectionDark"
+              }
+            ]
+          }
+        },
+        "brand-primary": {
+          "deprecated": true,
+          "type": "colorPicker",
+          "required": false,
+          "scss": true,
+          "label": "Config.brandPrimaryLabel",
+          "options": {
+            "defaultValue": "#d51317"
+          }
+        },
+        "brand-secondary": {
+          "deprecated": true,
+          "type": "colorPicker",
+          "required": false,
+          "scss": true,
+          "label": "Config.brandSecondaryLabel",
+          "options": {
+            "defaultValue": "#008ebd"
+          }
+        },
+        "brand-success": {
+          "deprecated": true,
+          "type": "colorPicker",
+          "required": false,
+          "scss": true,
+          "label": "Config.brandSuccessLabel",
+          "options": {
+            "defaultValue": "#a8d080"
+          }
+        },
+        "brand-info": {
+          "deprecated": true,
+          "type": "colorPicker",
+          "required": false,
+          "scss": true,
+          "label": "Config.brandInfoLabel",
+          "options": {
+            "defaultValue": "#4da2d0"
+          }
+        },
+        "brand-warning": {
+          "deprecated": true,
+          "type": "colorPicker",
+          "required": false,
+          "scss": true,
+          "label": "Config.brandWarningLabel",
+          "options": {
+            "defaultValue": "#efae56"
+          }
+        },
+        "brand-danger": {
+          "deprecated": true,
+          "type": "colorPicker",
+          "required": false,
+          "scss": true,
+          "label": "Config.brandDangerLabel",
+          "options": {
+            "defaultValue": "#fb6e50"
+          }
+        }
+      }
+    }
+  }
+}

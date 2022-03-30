@@ -1,0 +1,122 @@
+{
+    "presets": {
+        "header": [
+            {
+                "label": "Widget.presetHeaderDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultHeaderPreset"
+            }
+        ],
+        "footer": [
+            {
+                "label": "Widget.presetFooterDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultFooterPreset"
+            }
+        ],
+        "content": [
+            {
+                "label": "Widget.presetHomepageDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultHomepagePreset"
+            },
+            {
+                "label": "Widget.presetBasketDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultBasketPreset"
+            },
+            {
+                "label": "Widget.presetOrderConfirmationDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultOrderConfirmationPreset"
+            },
+            {
+                "label": "Widget.presetWishList",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\WishListPreset"
+            },
+            {
+                "label": "Widget.presetContactDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultContactPreset"
+            },
+            {
+                "label": "Widget.presetRegistration",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\RegistrationPreset"
+            },
+            {
+                "label": "Widget.presetLoginDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultLoginPreset"
+            },
+            {
+                "label": "Widget.presetOrderReturn",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\OrderReturnPreset"
+            },
+            {
+                "label": "Widget.presetChangePassword",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\ChangePasswordPreset"
+            },
+            {
+                "label": "Widget.presetChangeMailDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultChangeMailPreset"
+            },
+            {
+                "label": "Widget.presetNewsletterUnsubscribe",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultNewsletterUnsubscribePreset"
+            },
+            {
+                "label": "Widget.presetPageNotFound",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultPageNotFoundPreset"
+            },
+            {
+                "label": "Widget.presetCancellationRightsDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\Legal\\DefaultCancellationRightsPreset"
+            },
+            {
+                "label": "Widget.presetCancellationFormDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\Legal\\DefaultCancellationFormPreset"
+            },
+            {
+                "label": "Widget.presetLegalDisclosureDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\Legal\\DefaultLegalDisclosurePreset"
+            },
+            {
+                "label": "Widget.presetPrivacyPolicyDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\Legal\\DefaultPrivacyPolicyPreset"
+            },
+            {
+                "label": "Widget.presetGTCDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\Legal\\DefaultGTCPreset"
+            }
+        ],
+        "checkout": [
+            {
+                "label": "Widget.presetCheckoutDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultCheckoutPreset"
+            }
+        ],
+        "myaccount": [
+            {
+                "label": "Widget.presetMyAccountDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultMyAccountPreset"
+            }
+        ],
+        "categoryitem": [
+            {
+                "label": "Widget.presetItemCategoryDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\ItemCategoryPreset"
+            }
+        ],
+        "itemsearch": [
+            {
+                "label": "Widget.presetItemSearchDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\ItemSearchPreset"
+            }
+        ],
+        "singleitem": [
+            {
+                "label":"Widget.presetSingleItemDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\DefaultSingleItemPreset"
+            }
+        ],
+        "itemset": [
+            {
+                "label":"Widget.presetItemSetDefault",
+                "presetClass": "plentyShopLight\\Widgets\\Presets\\ItemSetPreset"
+            }
+        ]
+    }
+}

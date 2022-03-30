@@ -1,0 +1,92 @@
+.cmp-address-list {
+    p {
+        // overwrite utility class in template
+        &.small {
+            font-size: $font-size-base;
+        }
+        // overwrite utility class in template
+        &.font-italic {
+            font-style: normal !important; // stylelint-disable-line declaration-no-important
+        }
+    }
+}
+
+.button-spacer {
+    margin-top: .5rem;
+}
+
+.modal-address {
+    display: grid;
+}
+
+.cannot-change-payment {
+    padding: 5px;
+    font-size: 1rem;
+    cursor: default;
+
+    .info-badge {
+        margin-left: .2rem;
+    }
+}
+
+.gradient-hr {
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #dcdbd7, rgba(0, 0, 0, 0));
+    border: 0;
+}
+
+.show-more-returns {
+    position: absolute;
+    bottom: 22px;
+    left: 40%;
+    width: 96px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.order-return-history-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    @include img-contain();
+}
+
+.order-return-history-count {
+    margin-top: 15px;
+    color: $gray-600;
+}
+
+.switchable-warning {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.warning-triangle {
+    margin: auto;
+    font-size: large;
+}
+
+.warning-text {
+    width: 85%;
+    margin: auto;
+    text-align: justify;
+}
+
+.current-payment-text {
+    border: 1px solid $gray-300;
+    @include border-radius($border-radius);
+}
+
+.card-body {
+    padding: map-get($spacers, 2);
+}
+
+.page-item {
+    &:not(.disabled):not(.active) {
+        cursor: pointer;
+    }
+}

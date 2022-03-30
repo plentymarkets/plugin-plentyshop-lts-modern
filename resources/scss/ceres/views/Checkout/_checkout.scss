@@ -1,0 +1,66 @@
+.checkout {
+    .basket-items-list .item {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .login-register-title {
+        font-size: 1em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .cmp-address-list {
+        @include transition(all .3s ease);
+    }
+    
+    .basket-list-item {
+        .image-container {
+            @include media-breakpoint-up(sm) {
+                padding-top: 100px;
+                width: 100px;
+            }
+            @include media-breakpoint-up(md) {
+                padding-top: 100px;
+                width: 100px;
+            }
+        }
+    }
+}
+
+.my-account-no-line {
+    padding-bottom: 15px;
+}
+
+.payment-change-text {
+    padding-top: 15px;
+    color: $gray-500;
+}
+
+.payment-align-center {
+    text-align: center;
+}
+
+.payment-change-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 15px;
+    }
+
+    .payment-change-box-item:nth-child(2) {
+        order: 1;
+    }
+
+    .cannot-change-payment {
+        width: 100%;
+        padding: 5px;
+        font-size: 1rem;
+
+        .info-badge {
+            margin-left: .2rem;
+        }
+    }
+}

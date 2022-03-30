@@ -1,0 +1,223 @@
+// transitions for item lists
+.list-transition-enter-active,
+.list-transition-leave-active {
+    animation-name: item-leaving;
+    animation-duration: .175s;
+    animation-fill-mode: forwards;
+}
+
+.list-transition-enter-active {
+    animation-direction: reverse;
+}
+
+@keyframes item-leaving {
+    from { max-height: 1000px; }
+    to { max-height: 0; }
+}
+
+.item-bg-gray {
+    .basket-list-item {
+        .image-container {
+            @include theme() { background-color: theme-get('gray-100'); }
+        }
+    }
+}
+
+.item-border {
+    .basket-list-item {
+        .image-container {
+            border: 2px solid $gray-100;
+            @include theme() { border-color: theme-get('gray-100'); }
+        }
+    }
+}
+
+.basket-list-item {
+    position: relative;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid;
+        @include theme() { border-color: theme-get('gray-400'); }
+    }
+
+    .image-container {
+        position: relative;
+        margin-right: map-get($spacers, 2);
+        flex-shrink: 0;
+        height: 0;
+        padding-top: 100px;
+        width: 100px;
+        
+        > a {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            > picture {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        // for returns view
+        > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        @include media-breakpoint-up(sm) {
+            padding-top: 150px;
+            width: 150px;
+        }
+    
+        @include media-breakpoint-up(md) {
+            padding-top: 200px;
+            width: 200px;
+        }
+    }
+
+    .meta-container-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0; // prevents overflowing
+
+        .small {
+            font-size: 100%; // Overwrite utility class in template
+            color: $gray-600;
+        }
+    
+        .meta-container-wrapper-inner {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+    
+            @include media-breakpoint-up(lg) {
+                flex-direction: row;
+            }
+    
+            .meta-container {
+                overflow-x: hidden;
+                min-width: 0;
+                margin-bottom: map-get($spacers, 2);
+                margin-right: map-get($spacers, 2);
+        
+                .item-name {
+                    font-weight: $headings-font-weight !important;
+                    @include link-primary;
+                    @include font-h6;
+                    box-shadow: none;
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+                
+                .item-base-price {
+                    margin-bottom: map_get($spacers, 3);
+                }
+
+                table {
+                    border-color: $gray-200;
+                }
+            }
+            
+            .basket-item-container-right {
+                margin-left: auto;
+                display: flex;
+                align-items: flex-start;
+
+                .qty-box-container {
+                    margin-right: calc(#{map-get($spacers, 1)} * (-1));
+                }
+                .price-box {
+                    display: flex;
+                    padding-top: $input-btn-height;
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+
+                    // Overwrite utility classes in template
+                    &.ml-2 { margin-left: 0 !important; } // stylelint-disable declaration-no-important
+                    &.mt-1 { margin-top: 0 !important; } // stylelint-disable declaration-no-important
+
+                    .btn {
+                        margin-top: calc(#{$input-btn-height} * (-1));
+                        margin-left: map-get($spacers, 1);
+                        font-size: 0;
+                        letter-spacing: -1px;
+                        height: $input-btn-height;
+                        width: $input-btn-height;
+                        color: $dark !important;
+
+                        &:hover {
+                            background: $danger;
+                            color: color-contrast($danger) !important;
+                        }
+
+                        i {
+                            font-size: initial;
+                            margin: 0;
+                            letter-spacing: 0;
+                            &.fa-arrow-right {
+                                display: initial !important;
+                            }
+                        }
+                    }
+
+                    .item-total-price {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 0;
+                        padding: map-get($spacers, 2) map-get($spacers, 2) map-get($spacers, 2) 0;
+                    }
+                }
+            }
+        }
+
+        .btn-collapse {
+            @include font-interactive-element();
+            display: inline-flex;
+            align-items: center;
+            min-height: $input-btn-height-sm;
+            width: initial;
+            margin-bottom: 0;
+            align-self: center;
+            margin-left: -20vw;
+
+            @include media-breakpoint-up(md) {
+                margin-left: 0;
+            }
+            
+            &:before {
+                display: inline-block;
+                @include plentyshop-icon('\e907');
+                height: auto;
+                border: 0;
+                margin-right: map-get($spacers, 2);
+            }
+    
+            &::after {
+                top: initial;
+                padding: initial;
+                color: inherit;
+            }
+            
+            &:not(.collapsed) {
+                &:before {
+                    transform: scaleY(-100%);
+                }
+            }
+        }
+    }
+    
+    .colon::after {
+        content: ":";
+    }
+}

@@ -1,0 +1,42 @@
+.popover {
+    border: none;
+    box-shadow: $box-shadow;
+
+    .popover-header {
+        padding: map-get($spacers, 3);
+        @include theme() { background-color: theme-get('white'); }
+        border: none;
+        @include font-h3();
+    }
+
+    .popover-body {
+        padding: map-get($spacers, 3);
+        @include font-paragraph();
+
+        > [data-builder-child-container] {
+            min-width: 190px;
+        }
+    }
+
+    &.hidden {
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    &.popover-md {
+        width: $popover-max-width-md;
+        max-width: $popover-max-width-md;
+    }
+
+    &.popover-lg {
+        width: $popover-max-width-lg;
+        max-width: $popover-max-width-lg;
+    }
+}
+
+// information button
+.popper-handle {
+    .btn.btn-icon.btn-secondary.btn-sm {
+        @include btn-appearance($color: $transparent, $outline: false); // override utility class/markup
+    }
+}

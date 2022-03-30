@@ -1,0 +1,9 @@
+.widget-registration {
+    hr {
+        display: none; // hide element in template
+    }
+    .border-top {
+        // overwrite utility class in template
+        border-top: none !important; // stylelint-disable-line declaration-no-important
+    }
+}

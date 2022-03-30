@@ -1,0 +1,104 @@
+@use "sass:selector";
+
+// stylelint-disable declaration-no-important
+@each $color, $value in $shop-builder-colors {
+    .widget-#{$color} {
+        @include text-emphasis-variant(".text-appearance", $value);
+        
+        a,
+        a span {
+            &.text-appearance {
+                &:not(.btn) {
+                    @include link-primary;
+    
+                    &.d-block,
+                    &.d-inline-block {
+                        display: inline !important; // stylelint-disable-line declaration-no-important
+                    }
+                }
+            }
+        }
+
+        .bg-appearance {
+            color: color-contrast($value) !important;
+            background-color: $value !important;
+        }
+        
+        button.bg-appearance:hover {
+            color: color-contrast(darken($value, 10%)) !important;
+            background-color: darken($value, 10%) !important;
+        }
+
+        .btn-appearance {
+            // if transparent is passed to button-appearance, color-yiq will create an error on old sass compiler
+            @include btn-appearance($color: $value, $outline: false);
+        }
+
+        // @at-root is for buttons with a markup missing .widget-#{$color} as a parent
+        @at-root {
+            // if transparent is passed to button-appearance, color-yiq will create an error on old sass compiler
+            .btn-#{$color} {
+                @include btn-appearance($color: $value, $outline: false);
+            }
+        }
+
+        &.btn-outline {
+            .btn {
+                @include btn-appearance($color: $value, $outline: true);
+                &.text-appearance:hover,
+                &.text-appearance:focus {
+                    color: color-contrast($primary) !important; // special case for filter button
+                }
+            }
+        }
+
+        @at-root {
+            .btn-outline {
+                .btn-#{$color} {
+                    @include btn-appearance($color: $value, $outline: true);
+                }
+            }
+        }
+
+        // Legacy?
+        .btn-outline-appearance {
+            @include btn-appearance($color: $value, $outline: true);
+        }
+        
+        .btn-appearance {
+            text-decoration-color: $value;
+
+            @include hover-focus () {
+                text-decoration-color: darken($value, 7.5);
+            }
+        }
+
+        .border-appearance.active,
+        .border-appearance:hover {
+            border-color: $value;
+        }
+
+        .pagination {
+            .page-item {
+                &.active {
+                    .page-link {
+                        &::before {
+                            background-color: $value;
+                        }
+                    }
+                }
+            }
+        }
+
+        .custom-control-appearance {
+            .custom-control-input:checked ~ .custom-control-label::before {
+                background-color: $value;
+                color: color-contrast($value);
+                border-color: $value;
+            }
+            .custom-control-input:not(:checked) ~ .custom-control-label::before {
+                border-color: $gray-500;
+            }
+        }
+    }
+}

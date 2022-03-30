@@ -1,0 +1,50 @@
+.pagination {
+  font-weight: $font-weight-bolder;
+
+  .page-item {
+    margin: 0 3px;
+    
+    &.disabled {
+      .page-link {
+        @include theme() { background-color: theme-get('white'); }
+      }
+    }
+
+    &.active {
+      .page-link {
+        color: color-contrast($dark);
+        cursor: default;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          background-color: $dark;
+          z-index: -1;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+          border-radius: 24px;
+        }
+      }
+    }
+    &:not(.active) {
+      &:hover:not(.disabled) {
+        .page-link {
+          color: $primary;
+        }
+      }
+
+      .page-link {
+        i.fa-angle-right {
+          margin-left: map-get($spacers, 4);
+        }
+
+        i.fa-angle-left {
+          margin-right: map-get($spacers, 4);
+        }
+      }
+    }
+  }
+}

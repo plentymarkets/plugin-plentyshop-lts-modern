@@ -1,0 +1,177 @@
+$themes: (
+    
+    light-theme: (
+        
+        // Colors
+        "white": $white,
+        "white-important": $white !important,
+        "white-static-important": $white !important,
+        "gray-100": $gray-100,
+        "gray-100-important": $gray-100 !important,
+        "gray-200": $gray-200,
+        "gray-300": $gray-300,
+        "gray-400": $gray-400,
+        "gray-500": $gray-500,
+        "gray-600": $gray-600,
+        "gray-700": $gray-700,
+        "gray-800": $gray-800,
+        "gray-900": $gray-900,
+        "transparent": $transparent,
+        "font-color-primary": $font-color-primary,
+        "font-color-primary-important": $font-color-primary !important,
+        "font-color-secondary": $font-color-secondary,
+        "font-color-light": $font-color-light,
+        "link-primary": $link-primary,
+        "link-primary-important": $link-primary !important,
+        "link-primary-hover": $link-primary-hover,
+        "link-primary-hover-important": $link-primary-hover !important,
+        "yiq-text-dark": $yiq-text-dark,
+        "yiq-text-light": $yiq-text-light,
+        "body-bg": $body-bg,
+        "body-color": $body-color,
+        
+        // Footer
+        "footer-bg": $footer-bg,
+        "footer-color": $footer-color,
+        "footer-features-bg": $footer-features-bg,
+        "footer-features-color": $footer-features-color,
+        
+        // Top Bar
+        "top-bar-bg-color": $top-bar-bg-color,
+        "top-bar-color": $top-bar-color,
+        "top-bar-transparent-color": $top-bar-transparent-color,
+        
+        // Navbar
+        "navbar-bg-color": $navbar-bg-color,
+        
+        // Pagination
+        "pagination-color": $pagination-color,
+        "pagination-bg": $pagination-bg,
+        "pagination-hover-color": $pagination-hover-color,
+        "pagination-hover-bg": $pagination-hover-bg,
+        "pagination-active-color": $pagination-active-color,
+        "pagination-active-bg": $pagination-active-bg,
+        "pagination-disabled-color": $pagination-disabled-color,
+        
+        // Tabs
+        "nav-tabs-border-color": $nav-tabs-border-color,
+        
+        // Breadcrumbs
+        "breadcrumb-bg": $breadcrumb-bg,
+        
+        // Category
+        "category-text-color": $category-text-color,
+        "component-active-bg": $component-active-bg,
+        "component-active-color": $component-active-color,
+        
+        // Misc
+        "hr-border-color": $hr-border-color,
+
+        // Button
+        "button-bg-color": #3e4346,
+        "button-bg-color-important": #3e4346 !important
+    ),
+    
+    dark-theme: (
+        
+        // Colors
+        "white": #111313,
+        "white-important": #111313 !important,
+        "white-static-important": #ffffff !important,
+        "gray-100": #1b1d1e,
+        "gray-100-important": #1b1d1e !important,
+        "gray-200": #2b2e2f,
+        "gray-300": #181a1a,
+        "gray-400": #7c8085,
+        "gray-500": #878c90,
+        "gray-600": #7c8085,
+        "gray-700": #495057,
+        "gray-800": #9d9da0,
+        "gray-900": #212529,
+        "transparent": transparent,
+        "font-color-primary": #949494,
+        "font-color-primary-important": #9d9da0 !important,
+        "font-color-secondary": #7c8085,
+        "font-color-light": $white,
+        "link-primary": #9d9da0,
+        "link-primary-important": #9d9da0 !important,
+        "link-primary-hover": #d51317,
+        "link-primary-hover-important": #d51317 !important,
+        "yiq-text-dark": #9d9da0,
+        "yiq-text-light": #111313,
+        "body-bg": #111313,
+        "body-color": #9d9da0,
+        
+        // Footer
+        "footer-bg": #1b1d1e,
+        "footer-color": #9d9da0,
+        "footer-features-bg": #1b1d1e,
+        "footer-features-color": #9d9da0,
+        
+        // Top Bar
+        "top-bar-bg-color": #111313,
+        "top-bar-color": #9d9da0,
+        "top-bar-transparent-color": $top-bar-transparent-color,
+        
+        // Navbar
+        "navbar-bg-color": #111313,
+        
+        // Pagination
+        "pagination-color": color-contrast($transparent),
+        "pagination-bg": $transparent,
+        "pagination-hover-color": color-contrast($transparent),
+        "pagination-hover-bg": $transparent,
+        "pagination-active-color": color-contrast($transparent),
+        "pagination-active-bg": $transparent,
+        "pagination-disabled-color": $gray-500,
+        
+        // Tabs
+        "nav-tabs-border-color": #111313,
+        
+        // Breadcrumbs
+        "breadcrumb-bg": #111313,
+        
+        // Category
+        "category-text-color": #111313,
+        "component-active-bg": $primary,
+        "component-active-color": color-contrast($component-active-bg),
+        
+        // Misc
+        "hr-border-color": $gray-400,
+        
+        // Button
+        "button-bg-color": #575d60,
+        "button-bg-color-important": #575d60 !important
+    )
+);
+
+@mixin theme() {
+    @each $theme, $map in $themes {
+        $theme-map: $map !global;
+        @if ($theme == 'light-theme')
+        {
+            & {
+                @content;
+            }
+        } @else {
+            .#{$theme} & {
+                @content;
+            }
+        }
+    }
+    $theme-map: null !global;
+}
+
+@mixin theme-body() {
+    @each $theme, $map in $themes {
+        $theme-map: $map !global;
+        &.#{$theme} {
+            @content;
+        }
+    }
+    $theme-map: null !global;
+}
+
+@function theme-get($key) {
+    @return map-get($theme-map, $key);
+}

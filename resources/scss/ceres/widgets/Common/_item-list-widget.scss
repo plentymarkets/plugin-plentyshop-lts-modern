@@ -1,0 +1,71 @@
+.widget-item-list {
+    &.item-bg-gray {
+        .cmp-product-thumb {
+            .thumb-image {
+                @include theme() { background-color: theme-get('gray-100'); }
+            }
+        }
+    }
+    
+    &.item-border {
+        .cmp-product-thumb {
+            .thumb-image {
+                border: 2px solid $gray-100;
+                @include theme() { border-color: theme-get('gray-100'); }
+            }
+        }
+    }
+    
+    &.item-vat-hidden {
+        .vat {
+            display: none;
+        }
+    }
+
+    &.item-dots-hidden {
+        .owl-dots {
+            display: none;
+        }
+    }
+    
+    .widget-inner {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .widget-caption {
+        display: flex;
+        align-items: center;
+
+        > div {
+            flex: 1;
+        }
+    }
+    
+    // In case the background is transparent, the caption doesn't need any padding
+    @each $color, $value in $shop-builder-colors {
+        &.widget-#{$color} {
+            @if ($value == $transparent) {
+                .widget-item-list-caption {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.widget-item-list-caption {
+    word-wrap: break-word;
+    padding: calc(#{$grid-gutter-width} / 2) $grid-gutter-width;
+
+    h1, h2, h3, p {
+        margin: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        align-items: inherit !important; // stylelint-disable-line declaration-no-important
+    }
+}
+
+

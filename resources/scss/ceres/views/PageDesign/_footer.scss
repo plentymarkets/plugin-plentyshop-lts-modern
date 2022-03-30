@@ -1,0 +1,106 @@
+.back-to-top-center {
+    position: fixed;
+    right: 0;
+    bottom: -17px;
+    left: 0;
+    z-index: $zindex-5;
+    display: none;
+    width: 94px;
+    height: 50px;
+    @include theme() { background-color: theme-get('white'); }
+    opacity: .5;
+    @include transition(opacity .3s);
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: none !important; // stylelint-disable-line declaration-no-important
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 99;
+    width: $input-btn-height;
+    height: $input-btn-height;
+    opacity: .5;
+    margin: 0 !important; // stylelint-disable-line declaration-no-important
+    padding: 0 !important; // stylelint-disable-line declaration-no-important
+    border: none !important; // stylelint-disable-line declaration-no-important
+    @include transition(opacity .3s);
+
+    &:hover {
+        opacity: 1;
+    }
+    
+    &.btn {
+        @include theme() { background-color: theme-get('gray-100'); }
+        @include theme() { color: theme-get('link-primary'); }
+
+        display: none;
+        background-color: $gray-100;
+        color: $link-primary;
+
+        &:hover,
+        &:active
+        {
+            @include theme() { color: theme-get('link-primary-hover'); }
+            @include theme() { background-color: theme-get('gray-100'); }
+        }
+    }
+    
+    i {
+        &.fa {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin-right: 0;
+            font-size: $font-size-lg;
+        }
+    }
+}
+
+.back-to-top + .btn-secondary {
+    display: none !important;
+}
+
+.footer {
+    
+    @include theme() { background-color: theme-get('footer-bg'); }
+
+    a {
+        @include theme() { color: theme-get('footer-color'); }
+        &:hover {
+            @include theme() { color: theme-get('link-primary-hover'); }
+        }
+    }
+
+    .plenty-brand {
+        height: 30px;
+    }
+
+    .footer-features {
+        @include theme() { background-color: theme-get('footer-features-bg'); }
+    }
+
+    .footer-services {
+        flex-flow: column nowrap;
+
+        div {
+            display: inline-flex;
+            flex-flow: row wrap;
+        }
+        img {
+            max-height: 4rem;
+        }
+
+        @include media-breakpoint-up(sm) {
+            flex-flow: row nowrap;
+        }
+    }
+}

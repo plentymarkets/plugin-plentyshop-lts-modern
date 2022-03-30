@@ -1,0 +1,42 @@
+.widget-list,
+.widget-link-list {
+    .widget-inner {
+        .list-container,
+        .list-centered {
+            width: fit-content;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+        p.h4 {
+            @include font-navigation();
+            margin-bottom: map-get($spacers, 3);
+            cursor: default;
+            
+            &:hover {
+                @include theme() { color: theme-get('font-color-primary'); }
+            }
+        }
+
+        ul {
+            margin-bottom: 0;
+
+            li {
+                margin-bottom: map-get($spacers, 3);
+
+                a {
+                    @include font-subnavigation();
+                    @include theme() { color: theme-get('body-color'); }
+    
+                    &:hover {
+                        @include theme() { color: theme-get('link-primary-hover'); }
+                    }
+                    
+                    &:not([href]) {
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+}

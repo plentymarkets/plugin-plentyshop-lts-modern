@@ -1,0 +1,23 @@
+.widget-selected-filter {
+    .selected-filters {
+        .selected-filter {
+            @extend .badge;
+            background: $gray-200;
+            @include theme() { color: theme-get('font-color-primary-important'); }
+            cursor: pointer;
+            margin-bottom: map-get($spacers, 1);
+
+            &.reset-all {
+                background: $danger !important;
+                @include theme() { color: theme-get('white-important'); }
+            }
+        }
+    }
+
+    &.widget-alignment-left {
+        .selected-filter {
+            margin-right: map-get($spacers, 1);
+            margin-left: 0;
+        }
+    }
+}

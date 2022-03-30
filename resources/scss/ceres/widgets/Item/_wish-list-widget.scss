@@ -1,0 +1,20 @@
+.widget-wish-list {
+    .basket-list-item {
+        .meta-container-wrapper {
+            .d-inline {
+                .btn {
+                    margin-bottom: map-get($spacers, 3);
+                }
+            }
+        }
+    }
+    p {
+        &.h4 {
+            &.my-5 {
+                // overwrite utility class in template
+                margin-top: 0 !important; // stylelint-disable-line declaration-no-important
+                margin-bottom: 0 !important; // stylelint-disable-line declaration-no-important
+            }
+        }
+    }
+}

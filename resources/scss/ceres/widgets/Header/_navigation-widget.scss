@@ -1,0 +1,471 @@
+.navbar {
+    right: 0; // ToDo: Consider removing this class in markup
+    left: 0;  // ToDo: left:0 and right:0 initially come from .header-fw which is now not in use anymore
+    @include theme() { background-color: theme-get('navbar-bg-color'); }
+    @include fade-transition(background-color);
+    
+    &.bg-transparent {
+        &:not(.default-font-color) {
+            &.normalmenu a,
+            &.megamenu a {
+                @include theme() {
+                    color: theme-get('top-bar-transparent-color');
+                }
+    
+                &:hover {
+                    @include theme() {
+                        color: theme-get('link-primary-hover');
+                    }
+                }
+            }
+            &.normalmenu .collapse a,
+            &.megamenu .collapse a {
+                @include theme() {
+                    color: theme-get('top-bar-color');
+                }
+        
+                &:hover {
+                    @include theme() {
+                        color: theme-get('link-primary-hover');
+                    }
+                }
+            }
+        }
+    }
+    
+    &.normalmenu a,
+    &.megamenu a {
+        @include theme() { color: theme-get('top-bar-color'); }
+        &:hover {
+            @include theme() { color: theme-get('link-primary-hover'); }
+        }
+    }
+
+    &.border-bottom {
+        border-bottom: none !important; // ToDo: remove utility class from template?
+    }
+
+    > .container-max {
+        padding: 0;
+        > .row {
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+    }
+
+    ul {
+        list-style: none;
+    }
+}
+
+.main-navbar-collapsable
+{
+    padding: 0 map-get($spacers, 3);
+}
+
+.brand-wrapper {
+    flex-shrink: 0 !important; // override utility-class/markup
+
+    &.px-lg-3 // override utility-class/markup
+    {
+        padding-left: map_get($spacers, 3) !important;
+        padding-right: map_get($spacers, 3) !important;
+    }
+    
+    .navbar-brand {
+        img {
+            max-height: 50px;
+        }
+    }
+}
+
+.navbar-toggler {
+    margin-left: auto;
+    border: none;
+    padding: map-get($spacers, 3) !important;
+    @include theme() { color: theme-get('font-color-primary'); }
+}
+
+// When mobile navigation is open
+body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
+    position: fixed;
+    overflow-y: hidden;
+}
+
+.normalmenu {
+    
+    a {
+        @include font-navigation();
+        padding: map-get($spacers, 2);
+    }
+    
+    .mainmenu {
+        > li {
+            position: relative;
+        }
+    }
+
+    .collapse {
+        position: absolute;
+        display: block;
+        min-width: 100%;
+        max-height: 80vh;
+        overflow: hidden;
+        word-wrap: break-word;
+        visibility: hidden;
+        @include theme() { background-color: theme-get('white'); }
+        opacity: 0;
+        box-shadow: $box-shadow;
+
+        > li {
+            min-width: 150px;
+        }
+    }
+
+    .bt-more {
+        text-transform: lowercase;
+    }
+}
+
+.megamenu {
+    .mainmenu {
+        > li {
+            &:hover,
+            &.hover {
+                > ul {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .collapse {
+        position: absolute;
+        left: 0;
+        display: none;
+        min-width: 100%;
+        min-height: 7em;
+        max-height: 86vh;
+        padding: map_get($spacers, 3) 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        column-count: 5;
+        column-fill: balance;
+        column-gap: .5em;
+        word-wrap: break-word;
+        @include theme() { background-color: theme-get('navbar-bg-color'); }
+        box-shadow: $box-shadow;
+
+        li {
+            margin: 0 map_get($spacers, 3) map_get($spacers, 3) map_get($spacers, 3);
+            font-size: 0; // fixes weird alignment
+            line-height: 170%;
+            text-align: left;
+        }
+    }
+
+    .collapse-inner {
+        padding-bottom: 1em;
+    }
+
+    a {
+        @include font-navigation();
+        @include theme() { color: theme-get('top-bar-color'); }
+    }
+    
+    .level1 {
+    
+    }
+    .level2 {
+        a {
+            font-weight: $font-weight-normal;
+        }
+    }
+    .level3 {
+        padding-left: 2.5em !important; // stylelint-disable-line declaration-no-important
+    }
+
+    .bt-more {
+        a {
+            text-transform: lowercase;
+        }
+    }
+}
+
+// normalmenu & megamenu
+.main-navbar-collapsable {
+    flex: 1 1 auto;
+    align-self: stretch;
+    font-size: 1rem;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        display: block;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .mainmenu {
+        flex-flow: wrap;
+        justify-content: flex-end;
+        height: 100%;
+
+        > li {
+            > a {
+                padding: map-get($spacers, 3);
+            }
+
+            &:hover,
+            &.hover {
+                > ul {
+                    overflow-y: auto; // show the overflow-y only when the menu is visible / required for safari (desktop)
+                    visibility: visible;
+                    opacity: 1;
+                    z-index: $zindex-9;
+                }
+            }
+        }
+    }
+
+    .ddown {
+        > a {
+            &::after {
+                padding-left: .5em;
+                @include plentyshop-icon('\e907'); // stylelint-disable-line font-family-no-missing-generic-family-keyword
+                font-size: $small-font-size;
+            }
+        }
+    }
+
+    .collapse-inner {
+        > li {
+            cursor: pointer;
+        }
+    }
+}
+
+.mobile-navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    overflow-y: auto;
+    font-size: 1.2em;
+    @include theme() { color: theme-get('top-bar-color'); }
+    @include theme() { background-color: theme-get('navbar-bg-color'); }
+    opacity: .6;
+    @include transition(all .3s ease);
+    transform: translateX(100%);
+    -webkit-overflow-scrolling: touch;
+    padding: 0 map-get($spacers, 2);
+
+    &.open {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .sk-fading-circle .sk-circle::before,
+    .loading-animation > div {
+        // ToDo: @vwiebe fix color-contrast
+        @include theme() { background-color: theme-get('top-bar-color'); }
+    }
+
+    .breadcrumb {
+        display: flex !important; // override utility-class
+        justify-content: space-between;
+        align-items: center;
+        padding: map-get($spacers, 2) !important; // override utility-class
+        @include theme() { background-color: theme-get('navbar-bg-color'); }
+
+        .breadcrumb-item {
+            padding-right: calc(#{$spacer} * 1.5);
+            @include font-navigation();
+            text-transform: capitalize;
+
+            &:hover {
+                color: $primary;
+            }
+
+            + .breadcrumb-item::before {
+                display: inline-block;
+                padding-right: calc(#{$spacer} * 0.8);
+                content: "–";
+                transform: scaleX(1.5);
+                font-weight: 800;
+            }
+
+            i {
+                font-size: $font-size-lg;
+                line-height: 1.5;
+            }
+        }
+
+        li {
+            display: inline-block;
+            padding: .8rem 0;
+            cursor: pointer;
+
+            &:last-child {
+                pointer-events: none;
+            }
+
+            &.btn-close { // stylelint-disable-line selector-no-qualifying-type
+                order: 1000;
+                margin-left: auto;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+            &:not(:first-of-type) a::before {
+                padding: 0 .3rem;
+                font-family: FontAwesome; // stylelint-disable-line font-family-no-missing-generic-family-keyword
+                font-size: 1rem;
+                content: "\f0da";
+            }
+            &:first-of-type a::before {
+                display: none !important; // stylelint-disable-line declaration-no-important
+            }
+        }
+    }
+
+    .mainmenu {
+        display: none;
+
+        &.menu-active {
+            display: block !important; // stylelint-disable-line declaration-no-important
+        }
+
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            float: left;
+            width: 100%;
+            cursor: pointer;
+
+            a {
+                display: inline-block;
+                flex: 1 0 80%;
+                padding: map-get($spacers, 2);
+                @include font-navigation();
+                @include theme() { color: theme-get('top-bar-color'); }
+    
+                &:hover {
+                    @include theme() { color: theme-get('link-primary-hover'); }
+                }
+            }
+
+            .nav-direction {
+                color: inherit;
+                font-size: $font-size-base;
+
+                &:hover {
+                    color: $primary;
+                }
+
+                &:not(.btn-up) {
+                    flex: 1 0 20%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 0 1rem;
+                }
+
+                &.btn-up {
+                    padding: map-get($spacers, 2);
+                }
+            }
+        }
+    }
+
+    .nav-placeholder {
+        height: 25px;
+        @include theme() { background-color: theme-get('black'); }
+        border-radius: 3px; // stylelint-disable-line property-blacklist
+        animation: mobile-nav-placeholder .8s infinite ease-in-out;
+    }
+}
+
+@keyframes mobile-nav-placeholder {
+    0% { opacity: .1; }
+    50% { opacity: .15; }
+    100% { opacity: .1; }
+}
+
+.mainmenu[class*=" animate-"] {
+    display: block !important; // stylelint-disable-line declaration-no-important
+}
+
+.animate-out-to-right .ddown {
+    animation: out-to-right .2s both cubic-bezier(.7, 0, .3, 1);
+}
+
+@keyframes out-to-right {
+    to {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+}
+.animate-out-to-left .ddown {
+    animation: out-to-left .2s both cubic-bezier(.7, 0, .3, 1);
+}
+
+@keyframes out-to-left {
+    to {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+.animate-in-from-left .ddown {
+    animation: in-from-left .2s both cubic-bezier(.7, 0, .3, 1);
+}
+
+@keyframes in-from-left {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.animate-in-from-right .ddown {
+    animation: in-from-right .2s both cubic-bezier(.7, 0, .3, 1);
+}
+
+@keyframes in-from-right {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+// IE compatibility
+html.ie { // stylelint-disable-line selector-no-qualifying-type
+    .main-navbar-collapsable { // stylelint-disable-line selector-no-qualifying-type
+        width: 100%;
+    }
+    .mobile-navigation { // stylelint-disable-line selector-no-qualifying-type
+        .mainmenu { // stylelint-disable-line selector-no-qualifying-type
+            a {
+                flex: 1 0 75%;
+            }
+            .nav-direction { // stylelint-disable-line selector-no-qualifying-type
+                flex: 1 0 10%;
+            }
+        }
+    }
+}
