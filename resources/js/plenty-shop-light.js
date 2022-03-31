@@ -54,5 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // add scroll listener for dynamic menu state
     document.addEventListener("scroll", () => {
         updateHeaderBackgrounds();
-    }, { passive: true });
+    });
 });
