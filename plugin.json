@@ -23,7 +23,8 @@
         {
             "key"           :"plentyShopLight\\Containers\\plentyShopLightStylesContainer",
             "name"          :"plentyShopLight Styles",
-            "description"   :"Replaces plentyShop LTS styles with styles from the plentyShopLight theme"
+            "description"   :"Replaces plentyShop LTS styles with styles from the plentyShopLight theme",
+            "defaultLayoutContainer": "Ceres::Template.StyleOverwrite"
         }
     ]
 }
