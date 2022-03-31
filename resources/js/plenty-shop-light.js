@@ -1,56 +1,58 @@
-document.addEventListener("DOMContentLoaded", function() {
-
-    // ToDO: Delete & integrate into ceres
+document.addEventListener("DOMContentLoaded", () => {
+    // TODO: check if  really required
     objectFitImages(); // Polyfill object-fit and object-position on images on IE9, IE10, IE11, Edge, Safari, ...
 
-    // ToDO: Delete & integrate button into widget-image-carousel
-    let widgetImageCarouselElements = document.querySelectorAll('.widget-image-carousel.action-button');
-    for (let i = 0; i < widgetImageCarouselElements.length; i++) {
-        let carouselItemElements = widgetImageCarouselElements[i].querySelectorAll('.carousel-item a');
-        for (let j = 0; j < carouselItemElements.length; j++) {
-            let itemLinkElementHref = carouselItemElements[j].getAttribute('href');
-            let widgetCaptionElement = carouselItemElements[j].getElementsByClassName('widget-caption')[0];
-            let widgetCaptionLabelElement = widgetCaptionElement.getElementsByTagName('h2')[0];
-            let buttonElement = '<a href="' + itemLinkElementHref + '" class="btn btn-appearance">Shop now</a>';
-            widgetCaptionLabelElement.insertAdjacentHTML('beforebegin', buttonElement);
-        }
-    }
+    document.querySelectorAll(".widget-image-carousel.action-button .carousel-item a").forEach((carouselItemElement) => {
+        const itemLinkElementHref = carouselItemElement.getAttribute("href");
+        const widgetCaptionLabelElement = carouselItemElement.querySelector(".widget-caption h2");
+        const buttonElement = `<a href="${itemLinkElementHref}" class="btn btn-appearance">Shop now</a>`;
 
-    // ToDO: Delete & integrate into ceres
-    let topBarElement = document.getElementsByClassName('top-bar');
-    let navbarElement = document.getElementsByClassName('navbar');
-    let breadcrumbElement = document.getElementsByClassName('breadcrumbs');
-    let negativeMarginElements = document.getElementsByClassName('negative-margin-top');
+        widgetCaptionLabelElement
+
+        widgetCaptionLabelElement.insertAdjacentHTML("beforebegin", buttonElement);
+    });
+
+    const topBarElements = document.querySelectorAll(".top-bar");
+    const navbarElements = document.querySelectorAll(".navbar");
+    const breadcrumbElements = document.querySelectorAll(".breadcrumbs");
+    const negativeMarginElements = document.querySelectorAll(".negative-margin-top");
+    const BG_TRANSPARENT_CLASS = "bg-transparent";
     let topBarElementOffsetHeight = 0;
     let navbarElementOffsetHeight = 0;
     let breadcrumbElementOffsetHeight = 0;
-    const bgTransparentClass = "bg-transparent";
 
     // set offset based on active header elements
-    if (topBarElement.length) topBarElementOffsetHeight = topBarElement[0].offsetHeight;
-    if (navbarElement.length)  navbarElementOffsetHeight = navbarElement[0].offsetHeight;
-    if (breadcrumbElement.length)  breadcrumbElementOffsetHeight = breadcrumbElement[0].offsetHeight;
+    topBarElements.forEach(element => topBarElementOffsetHeight += element.offsetHeight);
+    navbarElements.forEach(element => navbarElementOffsetHeight += element.offsetHeight);
+    breadcrumbElements.forEach(element => breadcrumbElementOffsetHeight += element.offsetHeight);
 
     // add negative margin to specified element
     if (negativeMarginElements.length) {
         let totalMarginTop = Math.ceil(topBarElementOffsetHeight + navbarElementOffsetHeight + breadcrumbElementOffsetHeight);
-        negativeMarginElements[0].style.setProperty('margin-top', (totalMarginTop * -1) + 'px', 'important');
+        // TODO: alle 0 Zugriffe loopen
+        negativeMarginElements.forEach(element =>
+            element.style.setProperty("margin-top", -totalMarginTop + "px", "important")
+        );
     }
     function updateHeaderBackgrounds() {
+        // TODO: alle 0 Zugriffe loopen
         if (window.pageYOffset > topBarElementOffsetHeight) {
-            if (topBarElement.length) topBarElement[0].classList.remove(bgTransparentClass);
-            if (navbarElement.length) navbarElement[0].classList.remove(bgTransparentClass);
-            if (breadcrumbElement.length) breadcrumbElement[0].classList.remove(bgTransparentClass);
+            topBarElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
+            navbarElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
+            breadcrumbElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
         }
         else {
-            if (topBarElement.length) topBarElement[0].classList.add(bgTransparentClass);
-            if (navbarElement.length) navbarElement[0].classList.add(bgTransparentClass);
-            if (breadcrumbElement.length) breadcrumbElement[0].classList.add(bgTransparentClass);
+            topBarElements.forEach(element => element.classList.add(BG_TRANSPARENT_CLASS));
+            navbarElements.forEach(element => element.classList.add(BG_TRANSPARENT_CLASS));
+            breadcrumbElements.forEach(element => element.classList.add(BG_TRANSPARENT_CLASS));
         }
     }
-    updateHeaderBackgrounds(); // init
+
+    // initial call
+    updateHeaderBackgrounds();
+
     // add scroll listener for dynamic menu state
-    document.addEventListener('scroll', function(e) {
+    document.addEventListener("scroll", () => {
         updateHeaderBackgrounds();
-    });
+    }, { passive: true });
 });
