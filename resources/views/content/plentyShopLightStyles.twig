@@ -1,3 +1,44 @@
 {% set defaultCSS = plugin_path("plentyShopLight") ~ "/css/" ~ assetName ~ ".css?v=" ~ buildHash %}
 {% set defaultSCSS = plugin_path("plentyShopLight") ~ "/css/" ~ assetName ~ ".scss?v=" ~ buildHash %}
 <link rel="stylesheet" href="{{ defaultCSS }}"{% if isShopBuilder %} data-sass-root="{{ plugin_path('plentyShopLight') }}" data-sass-original="{{ defaultSCSS }}"{% endif %}>
+
+{# font source can be found here: https://fonts.googleapis.com/css?family=Montserrat:regular,bold,italic,bolditalic #}
+{% set baseFontPath = plugin_path("plentyShopLight") ~ "/documents/fonts/montserrat/Montserrat-" %}
+{% set regular = baseFontPath ~ "Regular.woff2" %}
+{% set italic = baseFontPath ~ "Italic.woff2" %}
+
+<style data-font="Montserrat">
+    /* regular */
+    {{ add_asset(regular, "font", "preload", {"crossorigin": true}) }}
+    @font-face {
+        font-family: "Montserrat";
+        src: url("{{ regular }}") format('woff2');
+        font-display: optional;
+    }
+
+    /* bold */
+    @font-face {
+        font-family: "Montserrat";
+        src: url("{{ regular }}") format('woff2');
+        font-display: optional;
+        font-weight: bold;
+    }
+
+    /* italic */
+    {{ add_asset(italic, "font", "preload", {"crossorigin": true}) }}
+    @font-face {
+        font-family: "Montserrat";
+        src: url("{{ italic }}") format('woff2');
+        font-display: optional;
+        font-style: italic;
+    }
+
+    /* bold italic */
+    @font-face {
+        font-family: "Montserrat";
+        src: url("{{ italic }}") format('woff2');
+        font-display: optional;
+        font-weight: bold;
+        font-style: italic;
+    }
+</style>
