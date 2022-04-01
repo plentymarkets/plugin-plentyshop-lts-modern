@@ -1,12 +1,12 @@
 ![plentymarkets Logo](http://www.plentymarkets.eu/layout/pm/images/logo/plentymarkets-logo.jpg)
 
-# plentyShopLight theme plugin
+# plentyShop LTS Modern theme plugin
 
-This is the official **plentyShopLight** theme plugin developed by plentymarkets. **plentyShopLight** is the default theme plugin for [plentymarkets](https://www.plentymarkets.eu/tour/) online stores.
+This is the official **plentyShop LTS Modern** theme plugin developed by plentymarkets. **plentyShop LTS Modern** is the default theme plugin for [plentymarkets](https://www.plentymarkets.eu/tour/) online stores.
 
 ## Requirements
 
-This is a theme plugin for [plentyShop LTS](https://github.com/plentymarkets/plugin-ceres). The [IO](https://github.com/plentymarkets/plugin-io) plugin is required to run the **plentyShopLight** plugin.
+This is a theme plugin for [plentyShop LTS](https://github.com/plentymarkets/plugin-ceres). The [IO](https://github.com/plentymarkets/plugin-io) plugin is required to run the **plentyShop LTS Modern** plugin. The **plentyShop LTS Modern** plugin is intended to work with plentyShop LTS versions 5.0.48 and higher.
 
 ## Installing
 
@@ -14,10 +14,10 @@ For detailed information about plugin provisioning refer to [plentymarkets devel
 
 ## Quick start
 
-If you want make your own individual changes to the **plentyShopLight** plugin, you need to follow the following steps.
+If you want make your own individual changes to the **plentyShop LTS Modern** plugin, you need to follow the following steps.
 
 1. Install node.js in the LTS version from [nodejs.org](https://nodejs.org/en/).
-2. Open your console and navigate to the **plentyShopLight** directory.
+2. Open your console and navigate to the **plentyShop LTS Modern** directory.
 3. Run the command **npm install**.
 4. After you have integrated your changes, run the command **npm run build**.
 

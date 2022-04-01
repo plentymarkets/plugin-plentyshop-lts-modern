@@ -1,7 +1,7 @@
 {
-    "name"              :   "plentyShopLight",
+    "name"              :   "plentyShop LTS Modern",
     "namespace"         :   "plentyShopLight",
-    "marketplaceName"   :   {"de": "plentyShopLight","en": "plentyShopLight"},
+    "marketplaceName"   :   {"de": "plentyShop LTS Modern","en": "plentyShop LTS Modern"},
     "type"              :   "theme",
     "version"           :   "1.0.0",
     "pluginIcon"        :   "icon_plugin_xs.png",
@@ -16,7 +16,7 @@
         "IO": "~5.0.48",
         "Ceres": "~5.0.48"
     },
-    "keywords"          :   ["plentymarkets", "plentyShopLight", "theme", "plentyShop LTS", "template", "light", "design"],
+    "keywords"          :   ["plentymarkets", "plentyShop LTS Modern", "theme", "plentyShop LTS", "template", "modern", "design"],
     "serviceProvider"   :   "plentyShopLight\\Providers\\plentyShopLightServiceProvider",
     "dataProviders"         :
     [
