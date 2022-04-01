@@ -54,7 +54,7 @@ class PlentyShopLTSModern {
         headerElementOffsetHeight = Math.ceil(headerElementOffsetHeight);
 
         topBarElements.forEach(element => this.topBarElementsOffsetHeight += element.offsetHeight);
-        this.topBarElementsOffsetHeight = Math.ceil(topBarElementsOffsetHeight);
+        this.topBarElementsOffsetHeight = Math.ceil(this.topBarElementsOffsetHeight);
 
         // add negative margin to specified element
         this.negativeMarginElements.forEach(element =>
