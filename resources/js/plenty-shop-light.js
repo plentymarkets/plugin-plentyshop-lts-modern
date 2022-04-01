@@ -4,7 +4,7 @@ class PlentyShopLTSModern {
     headerElementOffsetHeight = 0;
 
     constructor() {
-        document.addEventListener("DOMContentLoaded", this.init);
+        document.addEventListener("DOMContentLoaded", this.init());
     }
 
     init() {
@@ -21,7 +21,7 @@ class PlentyShopLTSModern {
         this.updateHeaderBackgrounds();
 
         // add scroll listener for dynamic menu state
-        this.addEventListener("scroll", this.updateHeaderBackgrounds);
+        this.addEventListener("scroll", this.updateHeaderBackgrounds());
     }
 
     /**
