@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const widgetCaptionLabelElement = carouselItemElement.querySelector(".widget-caption h2");
         const buttonElement = `<a href="${itemLinkElementHref}" class="btn btn-appearance">Shop now</a>`;
 
-        widgetCaptionLabelElement
-
         widgetCaptionLabelElement.insertAdjacentHTML("beforebegin", buttonElement);
     });
 
@@ -29,13 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // add negative margin to specified element
     if (negativeMarginElements.length) {
         let totalMarginTop = Math.ceil(topBarElementOffsetHeight + navbarElementOffsetHeight + breadcrumbElementOffsetHeight);
-        // TODO: alle 0 Zugriffe loopen
         negativeMarginElements.forEach(element =>
             element.style.setProperty("margin-top", -totalMarginTop + "px", "important")
         );
     }
     function updateHeaderBackgrounds() {
-        // TODO: alle 0 Zugriffe loopen
         if (window.pageYOffset > topBarElementOffsetHeight) {
             topBarElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
             navbarElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
