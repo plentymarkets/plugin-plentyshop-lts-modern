@@ -49,7 +49,7 @@ class PlentyShopLTSModern {
 
         // set offset based on active header elements
         this.headerElements.forEach(element => this.headerElementOffsetHeight += element.offsetHeight);
-        this.headerElementOffsetHeight = Math.ceil(this.headerElements);
+        this.headerElementOffsetHeight = Math.ceil(this.headerElementOffsetHeight);
 
         // add negative margin to specified element
         this.negativeMarginElements.forEach(element =>
