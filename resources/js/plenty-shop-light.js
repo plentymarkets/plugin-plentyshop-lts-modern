@@ -1,3 +1,5 @@
+const BG_TRANSPARENT_CLASS = "bg-transparent";
+
 class PlentyShopLTSModern {
     headerElements = [];
     negativeMarginElements = [];
