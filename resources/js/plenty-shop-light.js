@@ -58,7 +58,7 @@ class PlentyShopLTSModern {
 
         // add negative margin to specified element
         this.negativeMarginElements.forEach(element =>
-            element.style.setProperty("margin-top", -this.headerElementOffsetHeight + "px", "important")
+            element.style.setProperty("margin-top", -headerElementOffsetHeight + "px", "important")
         );
     }
 
