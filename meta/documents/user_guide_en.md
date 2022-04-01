@@ -15,6 +15,20 @@ The plugin is installed and will be available in your plugin set after publishin
 
 **Important:** You need to assign a priority to the **plentyShop LTS Modern** plugin that is *higher* than the priority of **plentyShop LTS** and lower than the priority of the plugin **IO**. You can set priorities by opening the plugin set and clicking on the tab **Set priorities**. 
 
+### Container links
+
+plentyShop LTS Modern uses CSS which replaces the usual CSS of plentyShops. For this, the theme uses a container link. The corresponding container **Ceres::Template.StyleOverwrite** is already linked with the theme after you've installed it.
+
+In case no container is linked, take the following steps to link the plentyShop LTS Modern styles:
+
+1. Open the **Plugins » Plugin set overview** menu in your plentymarkets backend.
+2. Open the plugin set in which you use the theme.
+3. Open the plugin **plentyShop LTS Modern** by clicking on it.
+4. Open the tab **Container links**.
+5. In the section **Container links**, select the option **plentyShop LTS Modern Styles** for the setting **Data provider**.
+6. Select the option **Ceres** for the setting **Plugin name**.
+7. Search the entry **Template.StyleOverwrite** from the list of containers and click the checkbox.
+8. **Save** your changes.
 
 ## Setting up plentyShop LTS Modern
 
