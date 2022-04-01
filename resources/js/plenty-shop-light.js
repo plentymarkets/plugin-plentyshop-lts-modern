@@ -1,54 +1,71 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // TODO: check if  really required
-    objectFitImages(); // Polyfill object-fit and object-position on images on IE9, IE10, IE11, Edge, Safari, ...
+class PlentyShopLTSModern {
+    headerElements = [];
+    negativeMarginElements = [];
+    headerElementOffsetHeight = 0;
 
-    document.querySelectorAll(".widget-image-carousel.action-button .carousel-item a").forEach((carouselItemElement) => {
-        const itemLinkElementHref = carouselItemElement.getAttribute("href");
-        const widgetCaptionLabelElement = carouselItemElement.querySelector(".widget-caption h2");
-        const buttonElement = `<a href="${itemLinkElementHref}" class="btn btn-appearance">Shop now</a>`;
+    constructor() {
+        document.addEventListener("DOMContentLoaded", this.init);
+    }
 
-        widgetCaptionLabelElement.insertAdjacentHTML("beforebegin", buttonElement);
-    });
+    init() {
+        // TODO: check if  really required
+        // Polyfill object-fit and object-position on images on IE9, IE10, IE11, Edge, Safari, ...
+        objectFitImages();
 
-    const topBarElements = document.querySelectorAll(".top-bar");
-    const navbarElements = document.querySelectorAll(".navbar");
-    const breadcrumbElements = document.querySelectorAll(".breadcrumbs");
-    const negativeMarginElements = document.querySelectorAll(".negative-margin-top");
-    const BG_TRANSPARENT_CLASS = "bg-transparent";
-    let topBarElementOffsetHeight = 0;
-    let navbarElementOffsetHeight = 0;
-    let breadcrumbElementOffsetHeight = 0;
+        // TODO: do we keep this?
+        this.createImageCarouselButton();
 
-    // set offset based on active header elements
-    topBarElements.forEach(element => topBarElementOffsetHeight += element.offsetHeight);
-    navbarElements.forEach(element => navbarElementOffsetHeight += element.offsetHeight);
-    breadcrumbElements.forEach(element => breadcrumbElementOffsetHeight += element.offsetHeight);
+        this.getHeaderElementsAndHeights();
 
-    // add negative margin to specified element
-    if (negativeMarginElements.length) {
-        let totalMarginTop = Math.ceil(topBarElementOffsetHeight + navbarElementOffsetHeight + breadcrumbElementOffsetHeight);
-        negativeMarginElements.forEach(element =>
-            element.style.setProperty("margin-top", -totalMarginTop + "px", "important")
+        // initial call
+        this.updateHeaderBackgrounds();
+
+        // add scroll listener for dynamic menu state
+        this.addEventListener("scroll", this.updateHeaderBackgrounds);
+    }
+
+    /**
+     * create a 'shop now' button for each image carousel widget
+     */
+    createImageCarouselButton() {
+        document.querySelectorAll(".widget-image-carousel.action-button .carousel-item a").forEach((carouselItemElement) => {
+            const itemLinkElementHref = carouselItemElement.getAttribute("href");
+            const widgetCaptionLabelElement = carouselItemElement.querySelector(".widget-caption h2");
+            const buttonElement = `<a href="${itemLinkElementHref}" class="btn btn-appearance">Shop now</a>`;
+    
+            widgetCaptionLabelElement.insertAdjacentHTML("beforebegin", buttonElement);
+        });
+    }
+
+    /**
+     * collect all top-bars, navbars and breadcrumbs, calculate their height and handle negative margin elements
+     */
+    getHeaderElementsAndHeights() {
+        this.headerElements = document.querySelectorAll(".top-bar, .navbar, .breadcrumbs");
+        this.negativeMarginElements = document.querySelectorAll(".negative-margin-top");
+        this.headerElementOffsetHeight = 0;
+
+        // set offset based on active header elements
+        this.headerElements.forEach(element => this.headerElementOffsetHeight += element.offsetHeight);
+        this.headerElementOffsetHeight = Math.ceil(headerElements);
+
+        // add negative margin to specified element
+        this.negativeMarginElements.forEach(element =>
+            element.style.setProperty("margin-top", -this.headerElementOffsetHeight + "px", "important")
         );
     }
-    function updateHeaderBackgrounds() {
-        if (window.pageYOffset > topBarElementOffsetHeight) {
-            topBarElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
-            navbarElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
-            breadcrumbElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
+
+    /**
+     * toggle the transparent class on the header elements
+     */
+    updateHeaderBackgrounds() {
+        if (window.pageYOffset > this.headerElementOffsetHeight) {
+            this.headerElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
         }
         else {
-            topBarElements.forEach(element => element.classList.add(BG_TRANSPARENT_CLASS));
-            navbarElements.forEach(element => element.classList.add(BG_TRANSPARENT_CLASS));
-            breadcrumbElements.forEach(element => element.classList.add(BG_TRANSPARENT_CLASS));
+            this.headerElements.forEach(element => element.classList.add(BG_TRANSPARENT_CLASS));
         }
     }
+}
 
-    // initial call
-    updateHeaderBackgrounds();
-
-    // add scroll listener for dynamic menu state
-    document.addEventListener("scroll", () => {
-        updateHeaderBackgrounds();
-    });
-});
+new PlentyShopLTSModern();
