@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Config\CeresConfig;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
@@ -28,7 +28,7 @@ use Plenty\Plugin\Translation\Translator;
  * - CodeWidget
  * - CookieBarWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class DefaultFooterPreset implements ContentPreset
 {
@@ -121,15 +121,15 @@ class DefaultFooterPreset implements ContentPreset
 
         $footerLinkColumns = [
             "first" => [
-                "title" => $this->translator->trans("plentyShopLight::Widget.presetFooterLegal"),
+                "title" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterLegal"),
                 "entries" => $this->getLegalLinkEntries()
             ],
             "second" => [
-                "title" => $this->translator->trans("plentyShopLight::Widget.presetFooterService"),
+                "title" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterService"),
                 "entries" => $this->getServiceLinkEntries()
             ],
             "third" => [
-                "title" => $this->translator->trans("plentyShopLight::Widget.presetFooterEnterprise"),
+                "title" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterEnterprise"),
                 "entries" => $this->getEnterpriseLinkEntries()
             ]
         ];
@@ -226,22 +226,22 @@ class DefaultFooterPreset implements ContentPreset
     private function getEnterpriseLinkEntries() {
         $enterprise = [
             [
-                "text" => $this->translator->trans("plentyShopLight::Widget.presetFooterAboutUs"),
+                "text" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterAboutUs"),
                 "urlDE" => "https://www.plentymarkets.com/de/unternehmen/",
                 "urlEN" => "https://www.plentymarkets.com/company/"
             ],
             [
-                "text" => $this->translator->trans("plentyShopLight::Widget.presetFooterCareer"),
+                "text" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterCareer"),
                 "urlDE" => "https://www.plentymarkets.com/de/karriere/",
                 "urlEN" => "https://www.plentymarkets.com/careers/"
             ],
             [
-                "text" => $this->translator->trans("plentyShopLight::Widget.presetFooterPress"),
+                "text" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterPress"),
                 "urlDE" => "https://www.plentymarkets.com/de/presse/",
                 "urlEN" => "https://www.plentymarkets.com/press/"
             ],
             [
-                "text" => $this->translator->trans("plentyShopLight::Widget.presetFooterBlog"),
+                "text" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterBlog"),
                 "urlDE" => "https://www.plentymarkets.eu/blog/",
                 "urlEN" => "https://www.plentymarkets.co.uk/blog/"
             ]

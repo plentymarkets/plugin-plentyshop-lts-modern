@@ -1,9 +1,9 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Widgets\Helper\PresetHelper;
-use plentyShopLight\Widgets\Presets\Helper\HasWhiteBackground;
+use plentyShopLTSModern\Widgets\Presets\Helper\HasWhiteBackground;
 use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
 
 /**
@@ -14,7 +14,7 @@ use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
  * - InlineTextWidget
  * - OrderReturnWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class OrderReturnPreset implements ContentPreset
 {

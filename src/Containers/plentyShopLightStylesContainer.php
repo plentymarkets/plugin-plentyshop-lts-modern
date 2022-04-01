@@ -1,13 +1,13 @@
 <?php
 
-namespace plentyShopLight\Containers;
+namespace plentyShopLTSModern\Containers;
 
 use Plenty\Plugin\Templates\Twig;
 
-class plentyShopLightStylesContainer
+class plentyShopLTSModernStylesContainer
 {
     public function call(Twig $twig):string
     {
-        return $twig->render('plentyShopLight::content.plentyShopLightStyles');
+        return $twig->render('plentyShopLTSModern::content.plentyShopLTSModernStyles');
     }
 }

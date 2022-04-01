@@ -1,4 +1,4 @@
-plentymarkets plentyShopLight
+plentymarkets plentyShopLTSModern
 
 Copyright © 2022 plentysystems AG
 

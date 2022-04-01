@@ -1,4 +1,4 @@
-# Release Notes for plentyShopLight
+# Release Notes for plentyShopLTSModern
 
 ## v1.0.0
 

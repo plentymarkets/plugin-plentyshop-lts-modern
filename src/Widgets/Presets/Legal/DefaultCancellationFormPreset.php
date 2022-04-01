@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets\Legal;
+namespace plentyShopLTSModern\Widgets\Presets\Legal;
 
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
 use Ceres\Widgets\Helper\PresetHelper;
@@ -16,7 +16,7 @@ use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
  * - LegalTextsWidget
  * - PrintButtonWidget
  *
- * @package plentyShopLight\Widgets\Presets\Legal
+ * @package plentyShopLTSModern\Widgets\Presets\Legal
  */
 class DefaultCancellationFormPreset implements ContentPreset
 {

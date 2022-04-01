@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModerndern\Widgets\Presets;
 
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
 use Ceres\Widgets\Helper\PresetHelper;
@@ -24,7 +24,7 @@ use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
  * - PaginationWidget
  * - ItemGridWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModerndern\Widgets\Presets
  */
 class ItemSearchPreset implements ContentPreset
 {

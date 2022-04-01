@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets\Helper;
+namespace plentyShopLTSModern\Widgets\Presets\Helper;
 
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
 use Ceres\Widgets\Helper\PresetHelper;
@@ -11,7 +11,7 @@ use Ceres\Widgets\Helper\PresetHelper;
  * This is a helper trait for presets for ShopBuilder contents. Presets can be applied during content creation to generate a default content with predefined and configured widgets.
  * This particular helper provides a preconfigured white background widget.
  *
- * @package plentyShopLight\Widgets\Presets\Helper
+ * @package plentyShopLTSModern\Widgets\Presets\Helper
  */
 trait HasWhiteBackground
 {

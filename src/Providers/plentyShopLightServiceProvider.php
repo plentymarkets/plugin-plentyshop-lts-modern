@@ -1,20 +1,20 @@
 <?php
 
-namespace plentyShopLight\Providers;
+namespace plentyShopLTSModern\Providers;
 
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 use Plenty\Console\Commands\GenerateShopBuilderPresetsEvent;
-use plentyShopLight\Hooks\GenerateShopBuilderPresets;
+use plentyShopLTSModern\Hooks\GenerateShopBuilderPresets;
 use IO\Extensions\Functions\Partial;
 use IO\Helper\ResourceContainer;
 
 /**
- * Class plentyShopLightServiceProvider
- * @package plentyShopLight\Providers
+ * Class plentyShopLTSModernServiceProvider
+ * @package plentyShopLTSModern\Providers
  */
-class plentyShopLightServiceProvider extends ServiceProvider
+class plentyShopLTSModernServiceProvider extends ServiceProvider
 {
     /**
      * Register the service provider.
@@ -33,7 +33,7 @@ class plentyShopLightServiceProvider extends ServiceProvider
         // import additional scripts
         $eventDispatcher->listen("IO.Resources.Import", function (ResourceContainer $container)
         {
-            $container->addScriptTemplate("plentyShopLight::content.plentyShopLightScripts");
+            $container->addScriptTemplate("plentyShopLTSModern::content.plentyShopLTSModernScripts");
         }, 0);
 
         // generate shopbuilder presets

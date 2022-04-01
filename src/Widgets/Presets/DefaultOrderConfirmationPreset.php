@@ -1,11 +1,11 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Config\CeresConfig;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
 use Ceres\Widgets\Helper\PresetHelper;
-use plentyShopLight\Widgets\Presets\Helper\HasWhiteBackground;
+use plentyShopLTSModern\Widgets\Presets\Helper\HasWhiteBackground;
 use IO\Extensions\Constants\ShopUrls;
 use IO\Helper\RouteConfig;
 use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
@@ -26,7 +26,7 @@ use Plenty\Plugin\Translation\Translator;
  * - ThreeColumnWidget
  * - TwoColumnWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class DefaultOrderConfirmationPreset implements ContentPreset
 {
