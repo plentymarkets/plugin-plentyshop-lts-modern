@@ -1,4 +1,4 @@
-# Release Notes für plentyShopLTSModern
+# Release Notes für plentyShop LTS Modern
 
 ## v1.0.0
 

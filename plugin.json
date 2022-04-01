@@ -1,5 +1,5 @@
 {
-    "name"              :   "plentyShopLTSModern",
+    "name"              :   "plentyShop LTS Modern",
     "namespace"         :   "plentyShopLTSModern",
     "marketplaceName"   :   {"de": "plentyShop LTS Modern","en": "plentyShop LTS Modern"},
     "type"              :   "theme",
@@ -12,13 +12,13 @@
     "authorIcon"        :   "icon_author_xs.png",
     "email"             :   "sales@plentymarkets.com",
     "phone"             :   "+49 561 98 681 100",
-    "keywords"          :   ["plentymarkets", "plentyShopLTSModern", "theme", "plentyShop LTS", "template", "light", "dark", "design"],
+    "keywords"          :   ["plentymarkets", "plentyShop LTS Modern", "theme", "plentyShop LTS", "template", "modern", "design"],
     "serviceProvider"   :   "plentyShopLTSModern\\Providers\\plentyShopLTSModernServiceProvider",
-    "dataProviders"         :
+    "dataProviders"     :
     [
         {
             "key"           :"plentyShopLTSModern\\Containers\\plentyShopLTSModernStylesContainer",
-            "name"          :"plentyShopLTSModern Styles",
+            "name"          :"plentyShop LTS Modern Styles",
             "description"   :"Replaces plentyShop LTS styles with styles from the plentyShopLTSModern theme",
             "defaultLayoutContainer": "Ceres::Template.StyleOverwrite"
         }
