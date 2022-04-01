@@ -23,7 +23,7 @@ class PlentyShopLTSModern {
         this.updateHeaderBackgrounds();
 
         // add scroll listener for dynamic menu state
-        this.addEventListener("scroll", this.updateHeaderBackgrounds());
+        document.addEventListener("scroll", this.updateHeaderBackgrounds());
     }
 
     /**
