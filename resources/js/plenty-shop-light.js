@@ -3,7 +3,7 @@ const BG_TRANSPARENT_CLASS = "bg-transparent";
 class PlentyShopLTSModern {
     headerElements = [];
     negativeMarginElements = [];
-    headerElementOffsetHeight = 0;
+    topBarElementsOffsetHeight = 0;
 
     constructor() {
         document.addEventListener("DOMContentLoaded", () => this.init());
@@ -45,11 +45,16 @@ class PlentyShopLTSModern {
     getHeaderElementsAndHeights() {
         this.headerElements = document.querySelectorAll(".top-bar, .navbar, .breadcrumbs");
         this.negativeMarginElements = document.querySelectorAll(".negative-margin-top");
-        this.headerElementOffsetHeight = 0;
+        this.topBarElementsOffsetHeight = 0;
+        const topBarElements = document.querySelectorAll(".top-bar");
+        let headerElementOffsetHeight = 0;
 
         // set offset based on active header elements
-        this.headerElements.forEach(element => this.headerElementOffsetHeight += element.offsetHeight);
-        this.headerElementOffsetHeight = Math.ceil(this.headerElementOffsetHeight);
+        this.headerElements.forEach(element => headerElementOffsetHeight += element.offsetHeight);
+        headerElementOffsetHeight = Math.ceil(headerElementOffsetHeight);
+
+        topBarElements.forEach(element => this.topBarElementsOffsetHeight += element.offsetHeight);
+        this.topBarElementsOffsetHeight = Math.ceil(topBarElementsOffsetHeight);
 
         // add negative margin to specified element
         this.negativeMarginElements.forEach(element =>
@@ -61,7 +66,7 @@ class PlentyShopLTSModern {
      * toggle the transparent class on the header elements
      */
     updateHeaderBackgrounds() {
-        if (window.pageYOffset > this.headerElementOffsetHeight) {
+        if (window.pageYOffset > this.topBarElementsOffsetHeight) {
             this.headerElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
         }
         else {
