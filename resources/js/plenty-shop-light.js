@@ -46,7 +46,7 @@ class PlentyShopLTSModern {
         this.headerElements = document.querySelectorAll(".top-bar, .navbar, .breadcrumbs");
         this.negativeMarginElements = document.querySelectorAll(".negative-margin-top");
         this.topBarOffsetHeight = 0;
-        const topBarElement = document.querySelector(".top-bar");
+        const topBarElement = document.querySelector(".top-bar.unfixed");
         let headerElementOffsetHeight = 0;
 
         // set offset based on active header elements
