@@ -1,4 +1,4 @@
-plentymarkets plentyShopLTSModern
+plentymarkets plentyShop LTS Modern
 
 Copyright © 2022 plentysystems AG
 
