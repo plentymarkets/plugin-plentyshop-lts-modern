@@ -1,12 +1,5 @@
-import objectFitImages from "object-fit-images";
 class PlentyShopLTSModern {
-    unfixedElementsHeight = 0;
-    bgTransparentElements = [];
-
     constructor() {
-        // Polyfill object-fit and object-position on images on IE9, IE10, IE11, Edge, Safari, ...
-        objectFitImages();
-
         this.getHeaderElementsAndHeights();
 
         // add scroll listener for dynamic menu state
@@ -55,5 +48,4 @@ class PlentyShopLTSModern {
     }
 }
 
-
-document.addEventListener("DOMContentLoaded", () => { new PlentyShopLTSModern() });
+export default { PlentyShopLTSModern }
