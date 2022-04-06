@@ -49,6 +49,7 @@
     "flag-icon-css": "^2.9.0",
     "font-awesome": "^4.6.3",
     "jquery": "^3.5.1",
+    "object-fit-images": "^3.2.4",
     "vue": "^2.6.12",
     "vue-lazy-hydration": "^2.0.0-beta.4",
     "vue-template-compiler": "^2.6.12",
