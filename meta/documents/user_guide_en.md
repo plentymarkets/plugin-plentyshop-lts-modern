@@ -61,6 +61,16 @@ Take the following steps to change the colours of your plentyShop:
 
 The colours are now used by the ShopBuilder widgets of your shop.
 
+### Transparency of the preset header
+
+If you use plentyShop LTS Modern, new **presets** are available in the ShopBuilder.
+In the header preset, the header widgets **Top Bar** and **Category navigation** have been equipped with the custom CSS class **bg-transparent**. 
+
+This means that these widgets are initially transparent, so that the background image underneath is visible.
+Only when the bottom-most widget, for which the setting **Fix when scrolling the page** is active, is reached during scrolling, the header is coloured white.
+
+If you want the header to always be white (or black in the **Dark** theme), you can remove the custom CSS class **bg-transparent** from the widget settings of the header widgets and save your changes.
+
 ## You want to contribute to the **plentyShop LTS Modern** project?
 
 If you want to help develop the **plentyShop LTS Modern** theme plugin, either by contributing bugfixes or features, our [Contribution Guide](https://github.com/plentymarkets/plugin-ceres/blob/stable/contributionGuide.md) provides ways of contacting our team as well as a number of guidelines you should kep in mind while developing for **plentyShop LTS Modern**. We're looking forward to your contribution.

@@ -61,6 +61,16 @@ Gehe wie folgt vor, um Farbeinstellungen vorzunehmen:
 
 Die Farben werden nun von den ShopBuilder-Widgets deines Shops verwendet.
 
+### Transparenz des Vorlagen-Headers
+
+Wenn du plentyShop LTS Modern verwendest, stehen dir im ShopBuilder neue **Vorlagen** zur Verfügung.
+In der Vorlage des Headers wurden die Header-Widgets Top Bar und Kategorienavigation mit der Custom CSS-Klasse **bg-transparent** ausgestattet. 
+
+Dadurch sind diese Widgets zunächst transparent, sodass das darunterliegende Hintergrundbild sichtbar ist.
+Erst wenn das unterste Widget, für das die Einstellung **Beim Scrollen der Seite fixieren** aktiv ist, beim Scrollen erreicht wird, wird der Header weiß gefärbt.
+
+Wenn du willst, dass der Header immer weiß (bzw. schwarz im **Dark**-Theme) angezeigt wird, kannst du die Custom CSS-Klasse **bg-transparent** aus den Widget-Einstellungen der Header-Widgets entfernen und deine Änderungen speichern.
+
 ## Du willst dich an der Entwicklung von **plentyShop LTS Modern** beteiligen?
 
 Wenn du das Open-Source-Projekt **plentyShop LTS Modern** unterstützen willst, indem du Bugfixes oder Features beisteuerst, findest du in unserem [Contribution Guide](https://github.com/plentymarkets/plugin-ceres/blob/stable/contributionGuide.md) Wege, dich mit uns in Verbindung zu setzen und eine Reihe von Richtlinien, auf die du bei der Entwicklung berücksichtigen solltest. Wir freuen uns auf deinen Beitrag!
