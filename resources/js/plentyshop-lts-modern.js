@@ -31,8 +31,8 @@ class PlentyShopLTSModern {
         this.bgTransparentElements = document.querySelectorAll("#page-header-parent > .bg-transparent:not(.unfixed)");
 
         const allheaderElements = document.querySelectorAll("#page-header-parent > *");
-        const fixedElements = allheaderElements.querySelectorAll(":not(.unfixed)");
-        const unfixedElements = allheaderElements.querySelectorAll(".unfixed");
+        // const fixedElements = allheaderElements.querySelectorAll(":not(.unfixed)");
+        // const unfixedElements = allheaderElements.querySelectorAll(".unfixed");
         
         const negativeMarginElements = document.querySelectorAll(".negative-margin-top");
         const topBarElement = document.querySelector(".top-bar.unfixed");
