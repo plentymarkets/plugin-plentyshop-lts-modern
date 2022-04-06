@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Config\CeresConfig;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
@@ -26,7 +26,7 @@ use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
  * - PlaceOrderWidget
  * - CancelPaymentWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class DefaultCheckoutPreset implements ContentPreset
 {

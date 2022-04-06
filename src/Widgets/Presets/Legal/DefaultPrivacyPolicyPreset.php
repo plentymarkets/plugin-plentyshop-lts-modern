@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets\Legal;
+namespace plentyShopLTSModern\Widgets\Presets\Legal;
 
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
 use Ceres\Widgets\Helper\PresetHelper;
@@ -15,7 +15,7 @@ use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
  * - SeparatorWidget
  * - LegalTextsWidget
  *
- * @package plentyShopLight\Widgets\Presets\Legal
+ * @package plentyShopLTSModern\Widgets\Presets\Legal
  */
 class DefaultPrivacyPolicyPreset implements ContentPreset
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Config\CeresConfig;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
@@ -24,7 +24,7 @@ use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
  * - OrderReturnHistoryWidget
  * - InlineTextWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class DefaultMyAccountPreset implements ContentPreset
 {

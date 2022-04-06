@@ -1,10 +1,10 @@
 {
-  "name": "plentyShopLight",
+  "name": "plentyshop-lts-modern",
   "license": "AGPL-3.0",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/plentymarkets/plugin-plentyShopLight.git"
+    "url": "https://github.com/plentymarkets/plugin-plentyshop-lts-modern.git"
   },
   "scripts": {
     "start": "webpack --watch --progress",

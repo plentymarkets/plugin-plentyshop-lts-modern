@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Config\CeresConfig;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
@@ -24,7 +24,7 @@ use Plenty\Plugin\Translation\Translator;
  * - TextAreaWidget
  * - AcceptPrivacyPolicyWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class DefaultContactPreset implements ContentPreset
 {

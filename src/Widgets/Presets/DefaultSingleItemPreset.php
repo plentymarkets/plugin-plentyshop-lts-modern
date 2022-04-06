@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Config\CeresConfig;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
@@ -30,7 +30,7 @@ use IO\Extensions\Functions\UniqueId;
  * - AttributeWidget
  * - TagsWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class DefaultSingleItemPreset implements ContentPreset
 {

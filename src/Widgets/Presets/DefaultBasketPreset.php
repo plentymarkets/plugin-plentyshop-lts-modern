@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
 use Ceres\Widgets\Helper\PresetHelper;
@@ -26,7 +26,7 @@ use Plenty\Plugin\Translation\Translator;
  * - CouponWidget
  * - LinkWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class DefaultBasketPreset implements ContentPreset
 {
