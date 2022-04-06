@@ -17,7 +17,7 @@ jobs:
       - name: "Checkout code"
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.PUBLIC_PAT_CICD4_PUBLIC }}
+          token: ${{ secrets.PUBLIC_PAT_CICD4 }}
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v2
