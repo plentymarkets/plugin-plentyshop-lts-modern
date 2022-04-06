@@ -9,6 +9,7 @@ module.exports = env =>
         output: {
             filename: "plentyshop-lts-modern.js",
             path: path.resolve(__dirname, "..", "..", "resources/js/dist/")
-        }
+        },
+        devtool: "source-map"
     };
 };
