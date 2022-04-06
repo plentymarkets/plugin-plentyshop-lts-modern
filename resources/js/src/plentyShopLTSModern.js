@@ -1,49 +1,51 @@
 export default class PlentyShopLTSModern {
     constructor() {
-        this.getHeaderElementsAndHeights();
+        this.headerHeight = 0;
+        this.unfixedElementsHeight = 0;
+        this.headerElements = [];
+        this.unfixedHeaderElements = [];
+        this.negativeMarginElements = [];
 
-        // add scroll listener for dynamic menu state
-        document.addEventListener("scroll", () => this.updateHeaderBackgrounds());
-    }
+        objectFitImages();
 
-    /**
-     * collect all top-bars, navbars and breadcrumbs, calculate their height and handle negative margin elements
-     */
-    getHeaderElementsAndHeights() {
-        // TODO: document .negative-margin-top .bg-transparent
-        this.bgTransparentElements = document.querySelectorAll("#page-header-parent > .bg-transparent:not(.unfixed)");
+        this.getElements();
 
-        const allheaderElements = document.querySelectorAll("#page-header-parent > *");
-        const negativeMarginElements = document.querySelectorAll(".negative-margin-top");
-        let allHeaderElementsHeight = 0;
+        this.calculateHeight();
 
-        // set offset based on active header elements
-        allheaderElements.forEach(element => allHeaderElementsHeight += element.offsetHeight);
+        this.setNegativeMargin();
 
-        // add negative margin to specified element
-        negativeMarginElements.forEach(element =>
-            element.style.setProperty("margin-top", -Math.ceil(allHeaderElementsHeight) + "px", "important")
-        );
-
-        // collect element heights until a fixed element is found
-        for (const element of allheaderElements) {
-            if (!element.classList.contains("unfixed")) {
-                // stop when the element is fixed
-                break;
-            }
-
-            this.unfixedElementsHeight += element.offsetHeight;
-        }
-
-        // initial call
         this.updateHeaderBackgrounds();
+
+        document.addEventListener("scroll", this.updateHeaderBackgrounds.bind(this));
     }
 
-    /**
-     * toggle the transparent class on the header elements
-     */
+    getElements() {
+        this.headerElements = [...document.querySelectorAll("#page-header-parent > *")];
+        this.unfixedHeaderElements = [...document.querySelectorAll("#page-header-parent > .bg-transparent:not(.unfixed)")];
+        this.negativeMarginElements = [...document.querySelectorAll(".negative-margin-top")];
+    }
+
+    calculateHeight() {
+        this.headerElements.forEach(element => {
+            this.headerHeight += element.offsetHeight;
+
+            if (element.classList.contains("unfixed")) {
+                this.unfixedElementsHeight += element.offsetHeight;
+            }
+        })
+    }
+
+    setNegativeMargin() {
+        this.negativeMarginElements.forEach((element) =>
+            element.style.setProperty("margin-top", `${-this.headerHeight}px`, "important")
+        );
+    }
+
     updateHeaderBackgrounds() {
         const hasUnfixedElementsPassed = window.pageYOffset > this.unfixedElementsHeight;
-        this.bgTransparentElements.forEach(element => element.classList.toggle("bg-transparent", !hasUnfixedElementsPassed));
+
+        this.unfixedHeaderElements.forEach((element) =>
+            element.classList.toggle("bg-transparent", !hasUnfixedElementsPassed)
+        );
     }
 }
