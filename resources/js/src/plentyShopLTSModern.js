@@ -6,8 +6,6 @@ export default class PlentyShopLTSModern {
         this.unfixedHeaderElements = [];
         this.negativeMarginElements = [];
 
-        objectFitImages();
-
         this.getElements();
 
         this.calculateHeight();
