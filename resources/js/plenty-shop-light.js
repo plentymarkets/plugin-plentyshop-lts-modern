@@ -10,12 +10,8 @@ class PlentyShopLTSModern {
     }
 
     init() {
-        // TODO: check if  really required
         // Polyfill object-fit and object-position on images on IE9, IE10, IE11, Edge, Safari, ...
         objectFitImages();
-
-        // TODO: do we keep this?
-        this.createImageCarouselButton();
 
         this.getHeaderElementsAndHeights();
 
@@ -27,22 +23,12 @@ class PlentyShopLTSModern {
     }
 
     /**
-     * create a 'shop now' button for each image carousel widget
-     */
-    createImageCarouselButton() {
-        document.querySelectorAll(".widget-image-carousel.action-button .carousel-item a").forEach((carouselItemElement) => {
-            const itemLinkElementHref = carouselItemElement.getAttribute("href");
-            const widgetCaptionLabelElement = carouselItemElement.querySelector(".widget-caption h2");
-            const buttonElement = `<a href="${itemLinkElementHref}" class="btn btn-appearance">Shop now</a>`;
-    
-            widgetCaptionLabelElement.insertAdjacentHTML("beforebegin", buttonElement);
-        });
-    }
-
-    /**
      * collect all top-bars, navbars and breadcrumbs, calculate their height and handle negative margin elements
      */
     getHeaderElementsAndHeights() {
+        // TODO: document .negative-margin-top .bg-transparent
+        // TODO: alle Widgets berücksichtigen
+        // TODO: this.headerElements = document.querySelectorAll("#page-header-parent > .bg-transparent");
         this.headerElements = document.querySelectorAll(".top-bar, .navbar, .breadcrumbs");
         this.negativeMarginElements = document.querySelectorAll(".negative-margin-top");
         this.topBarOffsetHeight = 0;
@@ -67,6 +53,8 @@ class PlentyShopLTSModern {
      * toggle the transparent class on the header elements
      */
     updateHeaderBackgrounds() {
+        // TODO: statt topBarOffsetHeight die höhe der Elemente, die wegscrollen
+        // TODO: nur auf Elementen ausführen, die schon die Klasse haben
         if (window.pageYOffset > this.topBarOffsetHeight) {
             this.headerElements.forEach(element => element.classList.remove(BG_TRANSPARENT_CLASS));
         }
