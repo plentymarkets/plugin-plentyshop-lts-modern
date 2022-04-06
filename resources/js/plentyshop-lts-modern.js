@@ -42,7 +42,7 @@ class PlentyShopLTSModern {
         );
 
         allheaderElements.forEach((element) => {
-            if (element.classList.contains(".unfixed")) {
+            if (element.classList.contains("unfixed")) {
                 this.topBarOffsetHeight += element.offsetHeight;
             }
             else {
