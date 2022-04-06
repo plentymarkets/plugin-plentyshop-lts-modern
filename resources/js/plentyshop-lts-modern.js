@@ -58,7 +58,7 @@ class PlentyShopLTSModern {
         // TODO: statt topBaxrOffsetHeight die höhe der Elemente, die wegscrollen
         // TODO: wert renamen
         const wert = window.pageYOffset > this.topBarOffsetHeight;
-        this.bgTransparentElements.forEach(element => element.classList.toggle(BG_TRANSPARENT_CLASS, wert));
+        this.bgTransparentElements.forEach(element => element.classList.toggle(BG_TRANSPARENT_CLASS, !wert));
     }
 }
 
