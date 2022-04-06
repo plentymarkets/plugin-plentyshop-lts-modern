@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Widgets\Helper\PresetHelper;
 use IO\Extensions\Constants\ShopUrls;
@@ -19,7 +19,7 @@ use Plenty\Plugin\Translation\Translator;
  * - GuestLoginWidget
  * - LinkWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class DefaultLoginPreset implements ContentPreset
 {

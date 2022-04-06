@@ -1,9 +1,9 @@
-{% set defaultCSS = plugin_path("plentyShopLight") ~ "/css/" ~ assetName ~ ".css?v=" ~ buildHash %}
-{% set defaultSCSS = plugin_path("plentyShopLight") ~ "/css/" ~ assetName ~ ".scss?v=" ~ buildHash %}
-<link rel="stylesheet" href="{{ defaultCSS }}"{% if isShopBuilder %} data-sass-root="{{ plugin_path('plentyShopLight') }}" data-sass-original="{{ defaultSCSS }}"{% endif %}>
+{% set defaultCSS = plugin_path("plentyShopLTSModern") ~ "/css/" ~ assetName ~ ".css?v=" ~ buildHash %}
+{% set defaultSCSS = plugin_path("plentyShopLTSModern") ~ "/css/" ~ assetName ~ ".scss?v=" ~ buildHash %}
+<link rel="stylesheet" href="{{ defaultCSS }}"{% if isShopBuilder %} data-sass-root="{{ plugin_path('plentyShopLTSModern') }}" data-sass-original="{{ defaultSCSS }}"{% endif %}>
 
 {# font source can be found here: https://fonts.googleapis.com/css?family=Montserrat:regular,bold,italic,bolditalic #}
-{% set baseFontPath = plugin_path("plentyShopLight") ~ "/documents/fonts/montserrat/Montserrat-" %}
+{% set baseFontPath = plugin_path("plentyShopLTSModern") ~ "/documents/fonts/montserrat/Montserrat-" %}
 {% set regular = baseFontPath ~ "Regular.woff2" %}
 {% set italic = baseFontPath ~ "Italic.woff2" %}
 

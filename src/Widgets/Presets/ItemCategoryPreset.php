@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Config\CeresConfig;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
@@ -29,7 +29,7 @@ use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
  * - NavigationTreeWidget
  * - ItemGridWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class ItemCategoryPreset implements ContentPreset
 {

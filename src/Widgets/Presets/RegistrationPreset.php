@@ -1,6 +1,6 @@
 <?php
 
-namespace plentyShopLight\Widgets\Presets;
+namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
 use Ceres\Widgets\Helper\PresetHelper;
@@ -15,7 +15,7 @@ use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
  * - CodeWidget
  * - RegistrationWidget
  *
- * @package plentyShopLight\Widgets\Presets
+ * @package plentyShopLTSModern\Widgets\Presets
  */
 class RegistrationPreset implements ContentPreset
 {
