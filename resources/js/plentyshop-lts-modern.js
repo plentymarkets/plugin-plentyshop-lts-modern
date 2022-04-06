@@ -26,14 +26,9 @@ class PlentyShopLTSModern {
      */
     getHeaderElementsAndHeights() {
         // TODO: document .negative-margin-top .bg-transparent
-        // TODO: alle Widgets berücksichtigen
-
         this.bgTransparentElements = document.querySelectorAll("#page-header-parent > .bg-transparent:not(.unfixed)");
 
         const allheaderElements = document.querySelectorAll("#page-header-parent > *");
-        // const fixedElements = allheaderElements.querySelectorAll(":not(.unfixed)");
-        // const unfixedElements = allheaderElements.querySelectorAll(".unfixed");
-        
         const negativeMarginElements = document.querySelectorAll(".negative-margin-top");
         const topBarElement = document.querySelector(".top-bar.unfixed");
         let allHeaderElementsHeight = 0;
@@ -46,16 +41,20 @@ class PlentyShopLTSModern {
             element.style.setProperty("margin-top", -Math.ceil(allHeaderElementsHeight) + "px", "important")
         );
 
-        if (topBarElement) {
-            this.topBarOffsetHeight = topBarElement.offsetHeight;
-        }
+        allheaderElements.forEach((element) => {
+            if (element.classList.contains(".unfixed")) {
+                this.topBarOffsetHeight += element.offsetHeight;
+            }
+            else {
+                return;
+            }
+        })
     }
 
     /**
      * toggle the transparent class on the header elements
      */
     updateHeaderBackgrounds() {
-        // TODO: statt topBaxrOffsetHeight die höhe der Elemente, die wegscrollen
         // TODO: wert renamen
         const wert = window.pageYOffset > this.topBarOffsetHeight;
         this.bgTransparentElements.forEach(element => element.classList.toggle(BG_TRANSPARENT_CLASS, !wert));
