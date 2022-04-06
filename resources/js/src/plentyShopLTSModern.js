@@ -1,4 +1,4 @@
-class PlentyShopLTSModern {
+export default class PlentyShopLTSModern {
     constructor() {
         this.getHeaderElementsAndHeights();
 
@@ -47,5 +47,3 @@ class PlentyShopLTSModern {
         this.bgTransparentElements.forEach(element => element.classList.toggle("bg-transparent", !hasUnfixedElementsPassed));
     }
 }
-
-export default { PlentyShopLTSModern }
