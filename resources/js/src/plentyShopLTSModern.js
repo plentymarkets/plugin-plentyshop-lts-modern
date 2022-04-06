@@ -24,10 +24,15 @@ export default class PlentyShopLTSModern {
     }
 
     calculateHeight() {
+        let firstUnfixed = false;
         this.headerElements.forEach(element => {
             this.headerHeight += element.offsetHeight;
 
-            if (element.classList.contains("unfixed")) {
+            if(element.classList.contains("unfixed")){
+                firstUnfixed = true
+            }
+
+            if(!firstUnfixed){
                 this.unfixedElementsHeight += element.offsetHeight;
             }
         })
