@@ -1,14 +1,8 @@
-const BG_TRANSPARENT_CLASS = "bg-transparent";
-
 class PlentyShopLTSModern {
     unfixedElementsHeight = 0;
     bgTransparentElements = [];
 
     constructor() {
-        document.addEventListener("DOMContentLoaded", () => this.init());
-    }
-
-    init() {
         // Polyfill object-fit and object-position on images on IE9, IE10, IE11, Edge, Safari, ...
         objectFitImages();
 
@@ -56,8 +50,9 @@ class PlentyShopLTSModern {
      */
     updateHeaderBackgrounds() {
         const hasUnfixedElementsPassed = window.pageYOffset > this.unfixedElementsHeight;
-        this.bgTransparentElements.forEach(element => element.classList.toggle(BG_TRANSPARENT_CLASS, !hasUnfixedElementsPassed));
+        this.bgTransparentElements.forEach(element => element.classList.toggle("bg-transparent", !hasUnfixedElementsPassed));
     }
 }
 
-new PlentyShopLTSModern();
+
+document.addEventListener("DOMContentLoaded", () => { new PlentyShopLTSModern() });
