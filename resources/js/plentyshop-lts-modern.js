@@ -41,6 +41,7 @@ class PlentyShopLTSModern {
             element.style.setProperty("margin-top", -Math.ceil(allHeaderElementsHeight) + "px", "important")
         );
 
+        // collect element heights until a fixed element is found
         allheaderElements.forEach((element) => {
             if (element.classList.contains("unfixed")) {
                 this.topBarOffsetHeight += element.offsetHeight;
