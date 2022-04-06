@@ -1,7 +1,7 @@
 const BG_TRANSPARENT_CLASS = "bg-transparent";
 
 class PlentyShopLTSModern {
-    topBarOffsetHeight = 0;
+    unfixedElementsHeight = 0;
     bgTransparentElements = [];
 
     constructor() {
@@ -13,9 +13,6 @@ class PlentyShopLTSModern {
         objectFitImages();
 
         this.getHeaderElementsAndHeights();
-
-        // initial call
-        this.updateHeaderBackgrounds();
 
         // add scroll listener for dynamic menu state
         document.addEventListener("scroll", () => this.updateHeaderBackgrounds());
@@ -30,7 +27,6 @@ class PlentyShopLTSModern {
 
         const allheaderElements = document.querySelectorAll("#page-header-parent > *");
         const negativeMarginElements = document.querySelectorAll(".negative-margin-top");
-        const topBarElement = document.querySelector(".top-bar.unfixed");
         let allHeaderElementsHeight = 0;
 
         // set offset based on active header elements
@@ -42,23 +38,25 @@ class PlentyShopLTSModern {
         );
 
         // collect element heights until a fixed element is found
-        allheaderElements.forEach((element) => {
-            if (element.classList.contains("unfixed")) {
-                this.topBarOffsetHeight += element.offsetHeight;
+        for (const element of allheaderElements) {
+            if (!element.classList.contains("unfixed")) {
+                // stop when the element is fixed
+                break;
             }
-            else {
-                return;
-            }
-        })
+
+            this.unfixedElementsHeight += element.offsetHeight;
+        }
+
+        // initial call
+        this.updateHeaderBackgrounds();
     }
 
     /**
      * toggle the transparent class on the header elements
      */
     updateHeaderBackgrounds() {
-        // TODO: wert renamen
-        const wert = window.pageYOffset > this.topBarOffsetHeight;
-        this.bgTransparentElements.forEach(element => element.classList.toggle(BG_TRANSPARENT_CLASS, !wert));
+        const hasUnfixedElementsPassed = window.pageYOffset > this.unfixedElementsHeight;
+        this.bgTransparentElements.forEach(element => element.classList.toggle(BG_TRANSPARENT_CLASS, !hasUnfixedElementsPassed));
     }
 }
 
