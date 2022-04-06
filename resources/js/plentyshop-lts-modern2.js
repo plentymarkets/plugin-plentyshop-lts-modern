@@ -1,11 +1,11 @@
 class PlentyShopLTSModern {
-  headerHeight = 0;
-  unfixedElementsHeight = 0;
-  headerElements = [];
-  unfixedHeaderElements = [];
-  negativeMarginElements = [];
-
   constructor() {
+    this.headerHeight = 0;
+    this.unfixedElementsHeight = 0;
+    this.headerElements = [];
+    this.unfixedHeaderElements = [];
+    this.negativeMarginElements = [];
+
     objectFitImages();
 
     this.getElements();
