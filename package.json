@@ -20,10 +20,13 @@
     "prebuild": "npm run build:sass-vendor"
   },
   "browserslist": [
-    "> .25%"
+    "> .25%",
+    "ie >= 11"
   ],
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^8.6.5",
+    "babel-loader": "^8.2.4",
     "css-loader": "^3.5.3",
     "del": "^2.2.0",
     "eslint": "^6.8.0",

@@ -10,6 +10,15 @@ module.exports = env =>
             filename: "plentyshop-lts-modern.js",
             path: path.resolve(__dirname, "..", "..", "resources/js/dist/")
         },
-        devtool: "source-map"
+        devtool: "source-map",
+        module: {
+            rules: [
+                {
+                    test: /\.js$/, 
+                    exclude: /node_modules/, 
+                    loader: 'babel-loader' 
+                }
+            ]
+          },
     };
 };
