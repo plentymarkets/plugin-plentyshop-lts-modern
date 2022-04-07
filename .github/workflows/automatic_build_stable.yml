@@ -35,7 +35,5 @@ jobs:
         run: |
           git config user.name "plenty-cicd-4"
           git config user.email "98583752+plenty-cicd-4@users.noreply.github.com"
-          git add --force resources/js/dist/plentyshop-lts-modern.js
-          git add --force resources/js/dist/plentyshop-lts-modern.js.map
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic build" && git push origin HEAD:stable
