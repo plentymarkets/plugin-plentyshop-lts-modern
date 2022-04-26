@@ -1,5 +1,9 @@
 # Release Notes for plentyShop LTS Modern
 
+## v1.0.2
+
+- Adjusting the preview image
+
 ## v1.0.1
 
 - Adaptation of the user guide

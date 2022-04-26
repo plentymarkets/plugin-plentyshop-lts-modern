@@ -3,7 +3,7 @@
     "namespace"         :   "plentyShopLTSModern",
     "marketplaceName"   :   {"de": "plentyShop LTS Modern","en": "plentyShop LTS Modern"},
     "type"              :   "theme",
-    "version"           :   "1.0.1",
+    "version"           :   "1.0.2",
     "pluginIcon"        :   "icon_plugin_xs.png",
     "price"             :   0.00,
     "shortDescription"  :   {"de": "Dies ist das offizielle plentyShop LTS Modern Theme Plugin entwickelt von plentymarkets.","en": "This is the official plentyShop LTS Modern theme plugin developed by plentymarkets."},
