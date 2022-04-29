@@ -487,7 +487,7 @@ class ItemSetPreset implements ContentPreset
 
     private function createAddToBasketWidget()
     {
-        $this->preset->createChild('second', 'Ceres::AddToBasketWidget')
+        $this->preset->createWidget('Ceres::AddToBasketWidget')
             ->withSetting('customClass', 'widget-dark')
             ->withSetting('spacing.customMargin', true)
             ->withSetting("spacing.margin.top.value", 3)
