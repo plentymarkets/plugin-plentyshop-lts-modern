@@ -97,9 +97,10 @@ class ItemSetPreset implements ContentPreset
 
         $this->createSetComponentQuantity();
         $this->createSetComponentWishList();
-        
+
         $this->createSecondSetPriceWidget();
         $this->createLegalInformation();
+        $this->createAddToBasketWidget();
 
         return $this->preset->toArray();
     }
@@ -160,7 +161,10 @@ class ItemSetPreset implements ContentPreset
             default;
                 $itemName = "name1";
         }
-        $dataProvider = $this->getShopBuilderDataFieldProvider("TextsDataFieldProvider::$itemName", array("texts.$itemName"));
+        $dataProvider = $this->getShopBuilderDataFieldProvider(
+            "TextsDataFieldProvider::$itemName",
+            array("texts.$itemName")
+        );
         $this->setItemBackgroundWidget->createChild("background", "Ceres::InlineTextWidget")
             ->withSetting("customClass", "title-outer")
             ->withSetting("spacing.customPadding", true)
@@ -179,7 +183,10 @@ class ItemSetPreset implements ContentPreset
 
     private function createManufacturer()
     {
-        $dataProvider = $this->getShopBuilderDataFieldProvider("ManufacturerDataFieldProvider::externalName", array("item.manufacturer.externalName"));
+        $dataProvider = $this->getShopBuilderDataFieldProvider(
+            "ManufacturerDataFieldProvider::externalName",
+            array("item.manufacturer.externalName")
+        );
 
         $this->setItemBackgroundWidget->createChild("background", "Ceres::InlineTextWidget")
             ->withSetting("appearance", "none")
@@ -218,7 +225,13 @@ class ItemSetPreset implements ContentPreset
             ->withSetting("spacing.padding.top.unit", null)
             ->withSetting("spacing.padding.bottom.value", 0)
             ->withSetting("spacing.padding.bottom.unit", null)
-            ->withSetting("text", $this->getShopBuilderDataFieldProvider("TextsDataFieldProvider::description", array("texts.description", null, null)));
+            ->withSetting(
+                "text",
+                $this->getShopBuilderDataFieldProvider(
+                    "TextsDataFieldProvider::description",
+                    array("texts.description", null, null)
+                )
+            );
     }
 
     private function createSetPriceWidget()
@@ -272,7 +285,10 @@ class ItemSetPreset implements ContentPreset
 
     private function createSetComponentBackgroundWidget()
     {
-        $this->setComponentBackgroundWidget = $this->setComponentWidget->createChild("itemSet", "Ceres::BackgroundWidget")
+        $this->setComponentBackgroundWidget = $this->setComponentWidget->createChild(
+            "itemSet",
+            "Ceres::BackgroundWidget"
+        )
             ->withSetting("opacity", 100)
             ->withSetting("fullWidth", false)
             ->withSetting("backgroundFixed", true)
@@ -296,7 +312,10 @@ class ItemSetPreset implements ContentPreset
 
     private function createSetComponentThreeColumnWidget()
     {
-        $this->setComponentThreeColumnWidget = $this->setComponentBackgroundWidget->createChild("background", "Ceres::ThreeColumnWidget")
+        $this->setComponentThreeColumnWidget = $this->setComponentBackgroundWidget->createChild(
+            "background",
+            "Ceres::ThreeColumnWidget"
+        )
             ->withSetting("layout", "oneToOneToOne")
             ->withSetting("customClass", "mb-0");
     }
@@ -317,7 +336,10 @@ class ItemSetPreset implements ContentPreset
                 $itemName = "name1";
         }
 
-        $dataProvider = $this->getShopBuilderDataFieldProvider("TextsDataFieldProvider::$itemName", array("texts.$itemName"));
+        $dataProvider = $this->getShopBuilderDataFieldProvider(
+            "TextsDataFieldProvider::$itemName",
+            array("texts.$itemName")
+        );
         $this->setComponentThreeColumnWidget->createChild("second", "Ceres::InlineTextWidget")
             ->withSetting("customClass", "title-outer")
             ->withSetting("spacing.customPadding", true)
@@ -373,7 +395,13 @@ class ItemSetPreset implements ContentPreset
             ->withSetting("spacing.padding.top.unit", null)
             ->withSetting("spacing.padding.bottom.value", 0)
             ->withSetting("spacing.padding.bottom.unit", null)
-            ->withSetting("text", $this->getShopBuilderDataFieldProvider("TextsDataFieldProvider::description", array("texts.description", null, null)));
+            ->withSetting(
+                "text",
+                $this->getShopBuilderDataFieldProvider(
+                    "TextsDataFieldProvider::description",
+                    array("texts.description", null, null)
+                )
+            );
     }
 
     private function createSetComponentImageWidget()
@@ -455,5 +483,16 @@ class ItemSetPreset implements ContentPreset
         $dataFields = implode(",", $itemDataFields);
         $query .= "{{ item_data_field($dataFields)}}";
         return $query;
+    }
+
+    private function createAddToBasketWidget()
+    {
+        $this->secondTwoColumnWidget->createChild('second', 'Ceres::AddToBasketWidget')
+            ->withSetting('customClass', 'widget-dark')
+            ->withSetting('spacing.customMargin', true)
+            ->withSetting("spacing.margin.top.value", 3)
+            ->withSetting("spacing.margin.top.unit", null)
+            ->withSetting('spacing.margin.bottom.value', 3)
+            ->withSetting('spacing.margin.bottom.unit', null);
     }
 }
