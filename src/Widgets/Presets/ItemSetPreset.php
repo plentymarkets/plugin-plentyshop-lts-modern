@@ -464,7 +464,10 @@ class ItemSetPreset implements ContentPreset
         $this->preset->createWidget("Ceres::ItemPriceWidget")
             ->withSetting("showCrossPrice", false)
             ->withSetting("customClass", "text-right w-100")
-            ->withSetting("appearance", "none");
+            ->withSetting("appearance", "none")
+            ->withSetting('spacing.customMargin', true)
+            ->withSetting('spacing.margin.bottom.value', 0)
+            ->withSetting('spacing.margin.bottom.unit', null);
     }
 
     private function createLegalInformation()
@@ -488,7 +491,7 @@ class ItemSetPreset implements ContentPreset
     private function createAddToBasketWidget()
     {
         $this->preset->createWidget('Ceres::AddToBasketWidget')
-            ->withSetting('customClass', 'widget-dark')
+            ->withSetting('customClass', 'widget-dark float-right')
             ->withSetting('spacing.customMargin', true)
             ->withSetting("spacing.margin.top.value", 3)
             ->withSetting("spacing.margin.top.unit", null)
