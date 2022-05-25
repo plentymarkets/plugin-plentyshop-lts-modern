@@ -148,6 +148,7 @@
         }
     }
 
+    .category-lowest-price,
     .category-unit-price {
         @include theme() { color: theme-get('font-color-secondary'); }
     }
