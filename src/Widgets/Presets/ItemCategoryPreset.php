@@ -42,9 +42,6 @@ class ItemCategoryPreset implements ContentPreset
     /** @var PresetHelper */
     private $preset;
 
-    /** @var threeColumnWidget */
-    private $threeColumnWidget;
-
     /** @var PresetWidgetFactory */
     private $toolbarWidget;
 
@@ -70,7 +67,6 @@ class ItemCategoryPreset implements ContentPreset
 
         $this->createItemSortingWidget();
         $this->createItemsPerPageWidget();
-        $this->createThreeColumnWidget();
 
         $this->createAttributesPropertiesCharacteristicsFilterWidget();
         $this->createManufacturerFilterWidget();
@@ -164,7 +160,7 @@ class ItemCategoryPreset implements ContentPreset
 
     private function createToolbarWidget()
     {
-        $innerFirstTwoColumnWidget = $this->firstTwoColumnWidget->createChild("second", "Ceres::ToolbarWidget")
+        $innerFirstTwoColumnWidget = $this->firstTwoColumnWidget->createChild("second", "Ceres::TwoColumnWidget")
             ->withSetting("layout", "oneToTwo")
             ->withSetting("layoutTablet", "oneToTwo")
             ->withSetting("layoutMobile", "stackedMobile");
@@ -180,31 +176,12 @@ class ItemCategoryPreset implements ContentPreset
     private function createItemSortingWidget()
     {
         $this->toolbarWidget->createChild("toolbar", "Ceres::ItemSortingWidget")
-            ->withSetting(
-                "itemSortOptions",
-                [
-                    "texts.name1_asc",
-                    "texts.name1_desc",
-                    "sorting.price.avg_asc",
-                    "sorting.price.avg_desc"
-                ]
-            );
+            ->withSetting('itemSortOptions', ["texts.name1_asc", "texts.name1_desc", "sorting.price.avg_asc", "sorting.price.avg_desc"]);
     }
 
     private function createItemsPerPageWidget()
     {
-        $this->toolbarWidget->createChild("toolbar", "Ceres::ItemsPerPageWidget")
-            ->withSetting("entries", [
-                ["text" => "20"],
-                ["text" => "40"],
-                ["text" => "100"]
-            ]);
-    }
-
-    private function createThreeColumnWidget()
-    {
-        $this->threeColumnWidget = $this->toolbarWidget->createChild("collapsable", "Ceres::ThreeColumnWidget")
-            ->withSetting("layout", "oneToOneToOne");
+        $this->toolbarWidget->createChild("toolbar", "Ceres::ItemsPerPageWidget");
     }
 
     private function createAttributesPropertiesCharacteristicsFilterWidget()
