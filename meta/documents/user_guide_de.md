@@ -17,7 +17,7 @@ Das Plugin wird installiert und ist nach dem nächsten **Bereitstellen** des Plu
 
 ### Container-Verknüpfung
 
-plentyShop LTS Modern verwendet CSS, das das normale CSS von plentyShops überschreibt. Dafür ist eien Container-Verknüpfung notwendig. Gehe wie folgt vor, um den richtigen Container zuzuweisen:
+plentyShop LTS Modern verwendet CSS, das das normale CSS von plentyShops überschreibt. Dafür ist eine Container-Verknüpfung notwendig. Gehe wie folgt vor, um den richtigen Container zuzuweisen:
 
 1. Öffne im plentyMarkets-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
 2. Öffne das Plugin-Set, in dem du das Theme verwendest.
