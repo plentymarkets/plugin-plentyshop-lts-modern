@@ -17,18 +17,14 @@ Das Plugin wird installiert und ist nach dem nächsten **Bereitstellen** des Plu
 
 ### Container-Verknüpfung
 
-plentyShop LTS Modern verwendet CSS, das das normale CSS von plentyShops überschreibt. Dafür ist eien Container-Verknüpfung notwendig. Standardmäßig ist nach der Installation von plentyShop LTS Modern der richtige Container **Ceres::Template.StyleOverwrite** bereits verknüpft. 
-
-Falls noch kein Container verknüpft ist, gehe wie folgt vor, um den richtigen Container zuzuweisen:
+plentyShop LTS Modern verwendet CSS, das das normale CSS von plentyShops überschreibt. Dafür ist eine Container-Verknüpfung notwendig. Gehe wie folgt vor, um den richtigen Container zuzuweisen:
 
 1. Öffne im plentyMarkets-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
 2. Öffne das Plugin-Set, in dem du das Theme verwendest.
 3. Öffne das Plugin **plentyShop LTS Mordern** indem du darauf klickst.
 4. Öffne das Tab **Container-Verknüpfungen**.
-5. Wähle im Abschnitt **Container-Verknüpfungen** für die Einstellung **Data-Provider** die Option **plentyShop LTS Modern Styles**.
-6. Wähle für die Einstellung **Plugin-Name** die Option **Ceres**.
-7. Suche den Eintrag **Template.StyleOverwrite** in der Liste der Container und aktiviere die Checkbox.
-8. **Speichere** deine Einstellungen.
+5. Wähle im Abschnitt **Standard-Container-Verknüpfungen** alle Verknüpfungen.
+6. **Speichere** deine Einstellungen.
 
 ## plentyShop LTS Modern einrichten
 
