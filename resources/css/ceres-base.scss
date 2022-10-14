@@ -15903,7 +15903,7 @@ html.ie { // stylelint-disable-line selector-no-qualifying-type
     &.fixed-top {
         position: fixed;
     }
-    
+
     &.bg-transparent {
         &:not(.default-font-color) {
             .controls-list {
@@ -15918,6 +15918,10 @@ html.ie { // stylelint-disable-line selector-no-qualifying-type
                 }
             }
         }
+    }
+
+    .top-bar-items {
+        max-width: 100%;
     }
     
     > .container-max {
