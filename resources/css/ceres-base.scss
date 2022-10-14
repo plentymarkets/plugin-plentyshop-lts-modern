@@ -10919,7 +10919,7 @@ $checkbox-border-color-unchecked:  $font-color-secondary;
 
   input[type="checkbox"] {
     cursor: pointer;
-    display: none;
+    visibility: hidden;
 
     &:not(:checked) + label::before {
       @include checkbox-structure($border-color: $checkbox-border-color-unchecked, $background-color: $checkbox-bg-color-unchecked, $checkbox-top: 5px, $checkbox-left: 0);
@@ -12479,6 +12479,7 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
         }
     }
 
+    .category-lowest-price,
     .category-unit-price {
         @include theme() { color: theme-get('font-color-secondary'); }
     }
