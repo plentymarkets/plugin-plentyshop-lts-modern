@@ -11157,9 +11157,11 @@ html.ios .basket-preview-content .totals {
       margin-top: 6px; }
       .cmp-product-thumb .thumb-content .vat a {
         z-index: 1; }
+  .cmp-product-thumb .category-lowest-price,
   .cmp-product-thumb .category-unit-price {
     color: #61696a; }
-  .dark-theme .cmp-product-thumb .category-unit-price {
+  .dark-theme .cmp-product-thumb .category-lowest-price, .dark-theme
+  .cmp-product-thumb .category-unit-price {
     color: #7c8085; }
   .cmp-product-thumb .btn-group {
     margin-top: 6px; }
@@ -13724,6 +13726,9 @@ html.safari .widget-grid .widget-inner-stacked .widget-inner {
 .language-detection {
   z-index: 200 !important;
   top: 0; }
+  @media (max-width: 575.98px) {
+    .language-detection .containder-max .d-flex {
+      flex-direction: column; } }
 
 .navbar {
   right: 0;
@@ -15107,7 +15112,6 @@ header .widget {
   justify-content: flex-end;
   flex-wrap: wrap; }
 
-@use "sass:selector";
 .widget-primary .text-appearance {
   color: #d51317 !important; }
 
