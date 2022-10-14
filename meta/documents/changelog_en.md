@@ -1,5 +1,11 @@
 # Release Notes for plentyShop LTS Modern
 
+## v.1.0.3
+
+### Fixed
+
+- It's no longer possible to submit a plentyShop contact form without accepting the privacy policy.
+
 ## v.1.0.2
 
 ### Fixed
