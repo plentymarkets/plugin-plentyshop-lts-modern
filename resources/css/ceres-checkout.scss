@@ -15161,7 +15161,7 @@ html.safari .widget-grid .widget-inner-stacked .widget-inner { // stylelint-disa
     top: 0;
 
     @include media-breakpoint-only(xs) {
-        .containder-max .d-flex {
+        .container-max .d-flex {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
                 -ms-flex-direction: column;
