@@ -1,5 +1,11 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.3
+
+### Behoben
+
+- Es ist nicht mehr möglich, ein Kontaktformular für plentyShop zu versenden, ohne die Datenschutzrichtlinien zu akzeptieren.
+
 ## v.1.0.2
 
 ### Behoben

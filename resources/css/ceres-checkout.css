@@ -9658,7 +9658,7 @@ button:focus {
       color: #fb6e50 !important; }
   .form-check input[type="checkbox"] {
     cursor: pointer;
-    display: none; }
+    visibility: hidden; }
     .form-check input[type="checkbox"]:not(:checked) + label::before {
       content: "";
       position: absolute;
