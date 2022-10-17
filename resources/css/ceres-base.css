@@ -10910,7 +10910,8 @@ body.dark-theme {
     flex-direction: row; }
     .basket-preview-content .item-list {
       flex-basis: 55%;
-      max-width: 55%; }
+      max-width: 55%;
+      max-height: 45vh; }
     .basket-preview-content .totals {
       flex-basis: 45%;
       max-width: 45%;
