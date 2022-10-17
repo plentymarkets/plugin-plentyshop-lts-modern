@@ -12117,6 +12117,12 @@ body {
         @include theme() { border-color: theme-get('gray-400'); }
     }
 
+    @include media-breakpoint-only(xs) {
+      .item-list {
+        min-height: 45vh;
+      }
+    }
+
     .basket-list-item {
         .image-container {
             width: 100px;
@@ -12159,7 +12165,6 @@ body {
             -ms-flex-preferred-size: 55%;
                 flex-basis: 55%;
             max-width: 55%;
-            max-height: 45vh;
         }
 
         .totals {
