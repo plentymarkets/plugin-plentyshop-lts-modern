@@ -7,7 +7,7 @@
 - Es ist nicht mehr möglich, ein Kontaktformular für plentyShop zu versenden, ohne die Datenschutzrichtlinien zu akzeptieren.
 - In der mobilen Ansicht ist die permanent eingeblendete Suche nicht mehr durch Darstellungsfehler beeinträchtigt.
 - In der mobilen Ansicht kann die Spracherkennung wieder geschlossen werden, die durch das Widget **Spracherkennung** eingebunden wird.
-- In der mobilen Ansicht werden die Bilder im **Artikelraster** Widget mit der Einstellung "Artikelanzahl pro Zeile (Mobil): 2"  wieder korrekt dargestellt.
+- In der mobilen Ansicht werden die Bilder im **Artikelraster** Widget mit der Einstellung **Artikelanzahl pro Zeile (Mobil): 2**  wieder korrekt dargestellt.
 - In der mobilen Ansicht ist nun sichergestellt, dass die Artikel im Warenkorb immer sichtbar sind.
 - Im Widget **Artikelliste** wird die Aktion zum Hinzufügen von Artikeln zum Warenkorb nicht mehr durch andere Elemente überlappt. Das bedeutet, dass jetzt wieder alle Artikel dem Warenkorb hinzugefügt werden können, egal an welcher Position sich der Artikel in der Liste befindet.
 
