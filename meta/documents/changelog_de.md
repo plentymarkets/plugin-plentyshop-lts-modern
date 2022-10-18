@@ -5,6 +5,9 @@
 ### Behoben
 
 - Es ist nicht mehr möglich, ein Kontaktformular für plentyShop zu versenden, ohne die Datenschutzrichtlinien zu akzeptieren.
+- Die permanent eingeblendete Suche war durch ein Darstellungsfehler in der Mobilansicht nicht nutzbar, dies wurde behoben.
+- Die Spracherkennung konnte in der Mobilansicht nicht geschlossen werden, dies wurde behoben.
+- Im Artikellisten Widget war es teilweise nicht möglich Artikel in den Warenkorb zu legen, dies wurde behoben.
 
 ## v.1.0.2
 
