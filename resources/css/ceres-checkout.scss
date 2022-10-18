@@ -10173,8 +10173,8 @@ Custom classes
 
 .owl-single-item-nav {
     position: absolute;
-    top: 0%;
-    bottom: 0%;
+    top: 35%;
+    bottom: 35%;
     width: map-get($spacers, 4);
     cursor: pointer;
     opacity: 0;
@@ -15165,6 +15165,15 @@ html.safari .widget-grid .widget-inner-stacked .widget-inner { // stylelint-disa
 .language-detection {
     z-index: 200 !important;
     top: 0;
+
+    @include media-breakpoint-only(xs) {
+        .container-max .d-flex {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+        }
+    }
 }
 
 .navbar {
@@ -15909,7 +15918,7 @@ html.ie { // stylelint-disable-line selector-no-qualifying-type
     &.fixed-top {
         position: fixed;
     }
-    
+
     &.bg-transparent {
         &:not(.default-font-color) {
             .controls-list {
@@ -15924,6 +15933,10 @@ html.ie { // stylelint-disable-line selector-no-qualifying-type
                 }
             }
         }
+    }
+
+    .top-bar-items {
+        max-width: 100%;
     }
     
     > .container-max {

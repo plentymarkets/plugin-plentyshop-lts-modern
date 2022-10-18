@@ -8840,8 +8840,8 @@ Custom classes
 **/
 .owl-single-item-nav {
   position: absolute;
-  top: 0%;
-  bottom: 0%;
+  top: 35%;
+  bottom: 35%;
   width: 48px;
   cursor: pointer;
   opacity: 0;
@@ -13729,6 +13729,9 @@ html.safari .widget-grid .widget-inner-stacked .widget-inner {
 .language-detection {
   z-index: 200 !important;
   top: 0; }
+  @media (max-width: 575.98px) {
+    .language-detection .container-max .d-flex {
+      flex-direction: column; } }
 
 .navbar {
   right: 0;
@@ -14335,6 +14338,8 @@ html.ie .mobile-navigation .mainmenu .nav-direction {
     color: #d51317; }
   .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link:hover, .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
     color: #d51317; }
+  .top-bar .top-bar-items {
+    max-width: 100%; }
   .top-bar > .container-max.pr-lg-3 {
     padding-right: 0 !important; }
   .top-bar .controls-list {
