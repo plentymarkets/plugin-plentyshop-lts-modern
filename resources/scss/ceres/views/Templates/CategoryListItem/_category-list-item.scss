@@ -9,7 +9,7 @@
         display: flex;
         flex-grow: 1;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(xs) {
             flex-direction: column;
         }
     }

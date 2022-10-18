@@ -11037,10 +11037,8 @@ html.ios .basket-preview-content .totals {
     background-color: #111313; }
   .cmp-product-thumb > div {
     display: flex;
-    flex-grow: 1; }
-    @media (min-width: 576px) {
-      .cmp-product-thumb > div {
-        flex-direction: column; } }
+    flex-grow: 1;
+    flex-direction: column; }
   .cmp-product-thumb .add-to-basket-lg-container {
     position: absolute;
     top: 0;
