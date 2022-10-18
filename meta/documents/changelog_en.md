@@ -5,9 +5,9 @@
 ### Fixed
 
 - It's no longer possible to submit a plentyShop contact form without accepting the privacy policy.
-- The permanently displayed search was not usable due to a display error in the mobile view, this has been fixed.
-- The auto language detection could not be closed on mobile devices, this has been fixed.
-- In the article list widget it was sometimes not possible to add articles to the shopping cart, this has been fixed.
+- On mobile, display errors no longer inhibit the usability of the permanently displayed search.
+- On mobile, you can now close the language detection from the **Language detection** widget again.
+- In the **Item list** widget, other elements no longer overlap the action of adding items to the basket. This means that you can now add items to the basket again, no matter the position of the item in the list.
 
 ## v.1.0.2
 
