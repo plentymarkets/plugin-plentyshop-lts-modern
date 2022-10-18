@@ -12314,7 +12314,7 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
             -ms-flex-positive: 1;
                 flex-grow: 1;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(xs) {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
                 -ms-flex-direction: column;
