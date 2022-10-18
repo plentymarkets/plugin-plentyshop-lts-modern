@@ -8,7 +8,7 @@
 - On mobile, display errors no longer inhibit the usability of the permanently displayed search.
 - On mobile, you can now close the language detection from the **Language detection** widget again.
 - On mobile, the images in the **Article grid** widget are displayed correctly again with the setting: **Number of articles per row (mobile): 2**.
-- On mobile, it is now ensured that the items in the shopping cart are always visible.
+- On mobile, items in the shopping cart are now always visible.
 - In the **Item list** widget, other elements no longer overlap the action of adding items to the basket. This means that you can now add items to the basket again, no matter the position of the item in the list.
 
 ## v.1.0.2
