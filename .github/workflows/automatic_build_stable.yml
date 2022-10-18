@@ -15,12 +15,12 @@ jobs:
 
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PUBLIC_PAT_CICD4 }}
+         token: ${{ secrets.ORGA_PAT_CICD2_FULL_REPO_AND_PACKAGES }}
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -33,7 +33,6 @@ jobs:
           npm run build
       - name: Commit and push
         run: |
-          git config user.name "plenty-cicd-4"
-          git config user.email "98583752+plenty-cicd-4@users.noreply.github.com"
+          git config --global user.name "PAT"
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic build" && git push origin HEAD:stable
