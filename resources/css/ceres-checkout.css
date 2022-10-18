@@ -14368,6 +14368,8 @@ html.ie .mobile-navigation .mainmenu .nav-direction {
     color: #d51317; }
   .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link:hover, .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
     color: #d51317; }
+  .top-bar .top-bar-items {
+    max-width: 100%; }
   .top-bar > .container-max.pr-lg-3 {
     padding-right: 0 !important; }
   .top-bar .controls-list {
