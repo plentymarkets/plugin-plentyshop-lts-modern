@@ -13726,6 +13726,9 @@ html.safari .widget-grid .widget-inner-stacked .widget-inner {
 .language-detection {
   z-index: 200 !important;
   top: 0; }
+  @media (max-width: 575.98px) {
+    .language-detection .container-max .d-flex {
+      flex-direction: column; } }
 
 .navbar {
   right: 0;

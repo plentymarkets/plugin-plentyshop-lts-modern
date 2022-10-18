@@ -1,4 +1,10 @@
 .language-detection {
     z-index: 200 !important;
     top: 0;
+
+    @include media-breakpoint-only(xs) {
+        .container-max .d-flex {
+            flex-direction: column;
+        }
+    }
 }
