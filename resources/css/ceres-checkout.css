@@ -10799,6 +10799,9 @@ body.dark-theme {
       border-color: #c9cdd0; }
     .dark-theme .basket-preview-content .totals {
       border-color: #7c8085; }
+  @media (max-width: 575.98px) {
+    .basket-preview-content .item-list {
+      min-height: 45vh; } }
   .basket-preview-content .basket-list-item .image-container {
     width: 100px;
     padding-top: 100px; }

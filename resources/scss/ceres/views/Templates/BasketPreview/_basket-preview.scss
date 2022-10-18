@@ -83,6 +83,12 @@
         @include theme() { border-color: theme-get('gray-400'); }
     }
 
+    @include media-breakpoint-only(xs) {
+      .item-list {
+        min-height: 45vh;
+      }
+    }
+
     .basket-list-item {
         .image-container {
             width: 100px;
