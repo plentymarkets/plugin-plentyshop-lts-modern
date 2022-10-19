@@ -8,19 +8,16 @@
             margin-bottom: 0;
         }
     }
+}
 
-    &.widget-fw {
-        position: relative;
-        right: unset !important; // stylelint-disable-line declaration-no-important
-        left: unset !important; // stylelint-disable-line declaration-no-important
-        width: auto !important; // stylelint-disable-line declaration-no-important
-        max-width: unset !important; // stylelint-disable-line declaration-no-important
-        margin: 0 calc(#{$grid-gutter-width} * (-1));
-
-        &.header-fw {
-            margin: 0;
-        }
-    }
+.widget-fw {
+    position: relative;
+    right: 0 !important;
+    left: calc(-1*(100vw - 100%)/2) !important;
+    width: 100vw !important;
+    max-width: none !important;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 @include media-breakpoint-down(sm) {

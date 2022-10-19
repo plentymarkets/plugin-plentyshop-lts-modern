@@ -14693,15 +14693,15 @@ html.safari .controls-list i {
     position: relative; }
     .widget .widget-inner .widget {
       margin-bottom: 0; }
-  .widget.widget-fw {
-    position: relative;
-    right: unset !important;
-    left: unset !important;
-    width: auto !important;
-    max-width: unset !important;
-    margin: 0 calc(24px * (-1)); }
-    .widget.widget-fw.header-fw {
-      margin: 0; }
+
+.widget-fw {
+  position: relative;
+  right: 0 !important;
+  left: calc(-1*(100vw - 100%)/2) !important;
+  width: 100vw !important;
+  max-width: none !important;
+  margin-right: 0;
+  margin-left: 0; }
 
 @media (max-width: 767.98px) {
   .widget {
