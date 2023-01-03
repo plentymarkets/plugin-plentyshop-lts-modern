@@ -26,6 +26,9 @@
     "Ceres": "~5.0.48",
     "IO": "~5.0.48"
   },
+  "platform": {
+    "php": ">=7.3 <8.1"
+  },
   "keywords": [
     "plentymarkets",
     "plentyShop LTS Modern",
