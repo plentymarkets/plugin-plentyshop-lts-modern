@@ -1,5 +1,11 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.4
+
+### Behoben
+
+- Die Option "Buttonreihenfolge" hat beim Cookiebar-Widget nicht korrekt funktioniert. Dies wurde behoben.
+
 ## v.1.0.3
 
 ### Behoben
