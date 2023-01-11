@@ -9620,12 +9620,54 @@ button:focus {
     .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .cmp-address-list .items > div:first-child, .cmp-address-list .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .items > div:first-child {
       background-color: #1b1d1e; }
 
+.cookie-bar .container-max {
+  max-height: 100vh;
+  overflow-y: auto; }
+
 .cookie-bar i.fa-shield {
   margin-right: 0; }
 
 @media (min-width: 576px) {
   .cookie-bar i.fa-shield {
     margin-right: 12px; } }
+
+.button-order {
+  display: grid;
+  height: -webkit-fit-content;
+  height: fit-content; }
+
+.button-order-1 {
+  grid-area: first; }
+
+.button-order-2 {
+  grid-area: second; }
+
+.button-order-3 {
+  grid-area: last; }
+
+.order-1-3 .button-order {
+  grid-template-areas: "first" "last"; }
+
+.order-3-1 .button-order {
+  grid-template-areas: "last" "first"; }
+
+.order-1-2-3 .button-order {
+  grid-template-areas: "first" "second" "last"; }
+
+.order-1-3-2 .button-order {
+  grid-template-areas: "first" "last" "second"; }
+
+.order-2-1-3 .button-order {
+  grid-template-areas: "second" "first" "last"; }
+
+.order-2-3-1 .button-order {
+  grid-template-areas: "second" "last" "first"; }
+
+.order-3-1-2 .button-order {
+  grid-template-areas: "last" "first" "second"; }
+
+.order-3-2-1 .button-order {
+  grid-template-areas: "last" "second" "first"; }
 
 .dropdown .dropdown-menu {
   background-color: #ffffff; }
