@@ -1,6 +1,5 @@
 # Release Notes for plentyShop LTS Modern
 
-
 ## v.1.0.4
 
 ### Fixed

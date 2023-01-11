@@ -6,7 +6,6 @@
 
 - Die Option "Buttonreihenfolge" hat beim Cookiebar-Widget nicht korrekt funktioniert. Dies wurde behoben.
 
-The "button order" option did not work correctly for the cookiebar widget. This has been fixed.
 ## v.1.0.3
 
 ### Behoben
