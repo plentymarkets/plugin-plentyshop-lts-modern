@@ -29,6 +29,11 @@
             }
         }
     }
+
+    .container-max {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
     
     i.fa-shield {
         margin-right: 0;
