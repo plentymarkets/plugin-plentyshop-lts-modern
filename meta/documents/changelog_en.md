@@ -1,5 +1,12 @@
 # Release Notes for plentyShop LTS Modern
 
+
+## v.1.0.4
+
+### Fixed
+
+- The "button order" option did not work correctly for the cookiebar widget. This has been fixed.
+
 ## v.1.0.3
 
 ### Fixed
