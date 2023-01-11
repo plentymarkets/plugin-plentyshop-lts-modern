@@ -1,12 +1,6 @@
 # Release Notes for plentyShop LTS Modern
 
 ## v.1.0.5
- 
-### Added
-
-- The preset for the type soft-login was added.
-
-## v.1.0.4
 
 ### Fixed
 

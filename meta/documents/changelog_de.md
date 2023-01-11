@@ -1,12 +1,6 @@
 # Release Notes für plentyShop LTS Modern
 
 ## v.1.0.5
- 
-### Hinzugefügt
-
-- Die Vorlage für den Softlogin wurde hinzugefügt.
-
-## v.1.0.4
 
 ### Behoben
 
