@@ -81,6 +81,12 @@ class GenerateShopBuilderPresets
             "name" => "Widget.presetLoginDefault"
         ],
         [
+            "configKey" => "IO.routing.category_login",
+            "presetClass" => "Ceres\\Widgets\\Presets\\DefaultSoftLoginPreset",
+            "type" => "content",
+            "name" => "Widget.presetSoftLoginDefault"
+        ],
+        [
             "configKey" => "IO.routing.category_register",
             "presetClass" => "plentyShopLTSModern\\Widgets\\Presets\\RegistrationPreset",
             "type" => "content",
