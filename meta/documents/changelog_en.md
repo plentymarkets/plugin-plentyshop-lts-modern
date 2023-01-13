@@ -1,5 +1,11 @@
 # Release Notes for plentyShop LTS Modern
 
+## v.1.0.6
+
+### Fixed
+
+- Under some conditions, the sticky container widget on the article view could wobble. This was fixed.
+
 ## v.1.0.5
 
 ### Fixed
