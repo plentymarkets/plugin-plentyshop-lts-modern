@@ -8349,7 +8349,7 @@ i.fa-lg {
     min-height: 496px !important; } }
 
 .sticky-element {
-  padding-bottom: .1px; }
+  display: inline-block; }
   .sticky-element p:empty {
     margin-bottom: 0; }
 
