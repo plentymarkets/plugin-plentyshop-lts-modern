@@ -12601,10 +12601,6 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
 .widget-toolbar .item-filter-price {
   padding: .75rem; }
 
-.widget-toolbar .form-check-input:checked + label,
-.widget-toolbar .form-check-input:hover + label {
-  padding-left: .75rem !important; }
-
 .widget-toolbar .widget {
   margin-bottom: 0; }
 
