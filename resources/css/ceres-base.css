@@ -12449,7 +12449,7 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
 
 .widget-filter-base .title,
 .widget-filter-base .item-filter-price {
-  padding: .75rem 1.75rem; }
+  padding: 0.5rem 1rem; }
 
 .widget-item-grid .product-list > .col-12 {
   padding-right: 12px !important;
