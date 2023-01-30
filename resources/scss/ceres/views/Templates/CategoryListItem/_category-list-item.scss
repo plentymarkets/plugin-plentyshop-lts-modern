@@ -75,9 +75,7 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        width: calc(100% - 120px); // stylelint-disable-line function-blacklist
         vertical-align: top;
-        padding: 0 map-get($spacers, 3);
         @include theme() { background-color: theme-get('white'); }
 
         .thumb-title {
@@ -194,7 +192,6 @@
     @include media-breakpoint-down(xs) {
         .thumb-image {
             float: left;
-            width: 120px;
         }
     }
 }
