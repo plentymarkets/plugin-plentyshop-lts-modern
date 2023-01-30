@@ -254,7 +254,7 @@ $sidebar-indent: $input-btn-height;
 
     .form-check-label {
         display: block;
-        padding: .5rem 0;
+        padding: 0.5rem 1.5rem;
         color: $gray-700;
         @include transition(all .1s ease);
 
