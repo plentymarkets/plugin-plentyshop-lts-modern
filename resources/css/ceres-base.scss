@@ -13676,15 +13676,14 @@ $sidebar-indent: $input-btn-height;
     .btn-block {
         width: auto; // overwrite utility class in template
         margin: 0;
+    }
 
-        @include media-breakpoint-down(md) {
-            font-size: 0;
-            width: $input-btn-height;
+    @include media-breakpoint-down(md) {
+        display: block;
 
-            i {
-                font-size: initial;
-                margin: 0;
-            }
+        .qty-box {
+            margin-left: unset;
+            margin-bottom: 12px;
         }
     }
 }

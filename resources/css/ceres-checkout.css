@@ -12347,13 +12347,12 @@ html.crios .parallax-img-container .parallax-img-container-inner[style^="backgro
   .add-to-basket-container .btn-block {
     width: auto;
     margin: 0; }
-    @media (max-width: 991.98px) {
-      .add-to-basket-container .btn-block {
-        font-size: 0;
-        width: 48px; }
-        .add-to-basket-container .btn-block i {
-          font-size: initial;
-          margin: 0; } }
+  @media (max-width: 991.98px) {
+    .add-to-basket-container {
+      display: block; }
+      .add-to-basket-container .qty-box {
+        margin-left: unset;
+        margin-bottom: 12px; } }
 
 .v-s-boxes {
   display: flex;
