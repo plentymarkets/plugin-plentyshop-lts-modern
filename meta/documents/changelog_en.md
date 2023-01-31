@@ -5,6 +5,7 @@
 ### Fixed
 
 - The first image of the image slider on the home page template was incorrectly mirrored. This now only happens with the demo image.
+- Improved the display of the category-view on small devices.
 
 ## v.1.0.6
 
