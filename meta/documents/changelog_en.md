@@ -1,5 +1,11 @@
 # Release Notes for plentyShop LTS Modern
 
+## v.1.0.7
+
+### Fixed
+
+- The first image of the image slider on the home page template was incorrectly mirrored. This now only happens with the demo image.
+
 ## v.1.0.6
 
 ### Fixed
