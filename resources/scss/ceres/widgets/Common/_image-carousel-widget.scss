@@ -37,7 +37,7 @@
 
 // Flip Demo Image for first startpage slider image
 @include media-breakpoint-down(md) {
-    img[src="https://cdn02.plentymarkets.com/veh0p4v6xhx3/plugin/2/ceres/images/homepage/slider-living-1920x.jpg"] {
+    img[src*="slider-living-1920x.jpg"] {
         -o-object-position: 20% center;
         object-position: 20% center;
         -webkit-transform: translate(-50%, -50%) scaleX(-1);
