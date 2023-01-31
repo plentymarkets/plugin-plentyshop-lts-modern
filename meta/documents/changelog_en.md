@@ -6,6 +6,10 @@
 
 - The first image of the image slider on the home page template was incorrectly mirrored. This now only happens with the demo image.
 
+### Changed
+
+- On mobile devices, the "Add to Cart" button has been made more prominent.
+
 ## v.1.0.6
 
 ### Fixed
