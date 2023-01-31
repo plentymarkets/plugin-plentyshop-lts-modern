@@ -1,5 +1,11 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.7
+
+### Behoben
+
+- Das erste Bild des Image-Slider auf der Startseiten-Vorlage wurde fälschlicherweise gespiegelt. Dies passiert jetzt nur noch beim Demo-Bild.
+
 ## v.1.0.6
 
 ### Behoben
