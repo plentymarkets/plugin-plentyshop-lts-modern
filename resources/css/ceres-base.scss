@@ -12488,9 +12488,7 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
         -webkit-box-flex: 1;
             -ms-flex-positive: 1;
                 flex-grow: 1;
-        width: calc(100% - 120px); // stylelint-disable-line function-blacklist
         vertical-align: top;
-        padding: 0 map-get($spacers, 3);
         @include theme() { background-color: theme-get('white'); }
 
         .thumb-title {
@@ -12616,7 +12614,6 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
     @include media-breakpoint-down(xs) {
         .thumb-image {
             float: left;
-            width: 120px;
         }
     }
 }

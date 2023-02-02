@@ -11125,9 +11125,7 @@ html.ios .basket-preview-content .totals {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: calc(100% - 120px);
-    vertical-align: top;
-    padding: 0 24px; }
+    vertical-align: top; }
     .cmp-product-thumb .thumb-content {
       background-color: #ffffff; }
     .dark-theme .cmp-product-thumb .thumb-content {
@@ -11233,8 +11231,7 @@ html.ios .basket-preview-content .totals {
       width: 100%; } }
   @media (max-width: 575.98px) {
     .cmp-product-thumb .thumb-image {
-      float: left;
-      width: 120px; } }
+      float: left; } }
 
 .no-pointer-events {
   pointer-events: none; }
