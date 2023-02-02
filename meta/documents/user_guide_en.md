@@ -55,7 +55,8 @@ Take the following steps to change the colours of your plentyShop:
 6. Repeat this process for the remaining colours.
 7. **Save** your changes.
 8. Go to the **Plugins » Plugin set overview** menu.
-9. **Deploy** the plugin set to effect the changes.
+9. Open the plugin set in which you've made the changes to the colours.
+10. Click **Deploy plugin set** to effect the changes.
 
 After **deploying** the plugin set, the colours are used by the ShopBuilder widgets of your shop.
 

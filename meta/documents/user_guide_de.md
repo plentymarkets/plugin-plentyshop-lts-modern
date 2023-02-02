@@ -55,7 +55,8 @@ Gehe wie folgt vor, um Farbeinstellungen vorzunehmen:
 6. Wiederhole diesen Vorgang für die verbleibenden Farben.
 7. Speichere deine Einstellungen.
 8. Öffne das Menü **Plugins » Plugin-Set-Übersicht**.
-9. Klicke auf **Plugin-Set bereitstellen**, damit die Änderungen wirksam werden. 
+9. Öffne das Plugin-Set, in dem du die Änderungen an den Farbeinstellungen vorgenommen hast.
+10. Klicke auf **Plugin-Set bereitstellen**, damit die Änderungen wirksam werden. 
 
 Nach dem **Bereitstellen** des Plugin-Sets sind
 die Farben für die ShopBuilder-Widgets deines Shops verfügbar.
