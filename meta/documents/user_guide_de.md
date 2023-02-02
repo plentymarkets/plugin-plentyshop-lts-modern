@@ -54,8 +54,10 @@ Gehe wie folgt vor, um Farbeinstellungen vorzunehmen:
 5. Gib für eine Farbe entweder einen HEX-Code ein oder klicke auf das farbige Kästchen, um die Farbauswahl zu öffnen.
 6. Wiederhole diesen Vorgang für die verbleibenden Farben.
 7. Speichere deine Einstellungen.
+8. Klicke auf **Plugin-Set bereitstellen**, damit die Änderungen wirksam werden. 
 
-Die Farben werden nun von den ShopBuilder-Widgets deines Shops verwendet.
+Nach dem **Bereitstellen** des Plugin-Sets sind
+die Farben für die ShopBuilder-Widgets deines Shops verfügbar.
 
 ### Transparenz des Vorlagen-Headers
 
