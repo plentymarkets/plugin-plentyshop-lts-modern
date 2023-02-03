@@ -14497,58 +14497,17 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
     background-size: 100% 100%;
 }
 
+// Flip Demo Image for first startpage slider image
+@include media-breakpoint-down(md) {
+    img[src*="slider-living-1920x.jpg"] {
+        -o-object-position: 20% center;
+        object-position: 20% center;
+        -webkit-transform: translate(-50%, -50%) scaleX(-1);
+        transform: translate(-50%, -50%) scaleX(-1);
+    }
+}
 
 .widget-image-carousel {
-
-    // TODO: @Tim Müller-Späth, @vwiebe
-    // Remove (Temporary solution for first startpage slider image)
-    @include media-breakpoint-down(md) {
-        &.img-1-offset-md-20-flip-horizontal {
-            .carousel-item:nth-child(1) {
-                .img-cover {
-                    -o-object-position: 20% center;
-                    object-position: 20% center;
-                    -webkit-transform: translate(-50%, -50%) scaleX(-1);
-                    transform: translate(-50%, -50%) scaleX(-1);
-                }
-            }
-        }
-    }
-
-    // TODO: @Tim Müller-Späth, @vwiebe
-    // Use function to generate dynamic set of utility classes:
-
-    //$img-offset-indexes: '1', '2', '3';
-    //$img-offset-breakpoints: 'sm', 'md', 'lg';
-    //$img-offset-sizes: '20', '30', '40', '50', '60', '70', '80';
-    //$img-offset-transforms: '', '-flip-horizontal';
-    //@mixin img-offset($img-index, $breakpoint, $offset-size, $img-transforms) {
-    //    @include media-breakpoint-down($breakpoint) {
-    //        &.img-#{$img-index}-offset-#{$breakpoint}-#{$offset-size}#{$img-transforms} {
-    //            .carousel-item {
-    //                &:nth-child(#{$img-index}) {
-    //                    .img-cover {
-    //                        object-position: #{$offset-size}% center;
-    //                        @if ($img-transforms == '-flip-horizontal') {
-    //                            transform: translate(-50%, -50%) scaleX(-1);
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
-    //
-    //@each $index in $img-offset-indexes {
-    //    @each $breakpoint in $img-offset-breakpoints {
-    //        @each $size in $img-offset-sizes {
-    //            @each $transform in $img-offset-transforms {
-    //                @include img-offset($index, $breakpoint, $size, $transform)
-    //            }
-    //        }
-    //    }
-    //}
-
     .widget-inner {
         padding-right: 0 !important; // stylelint-disable-line declaration-no-important
         padding-left: 0 !important; // stylelint-disable-line declaration-no-important

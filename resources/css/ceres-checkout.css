@@ -13072,7 +13072,7 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
   background-size: 100% 100%; }
 
 @media (max-width: 991.98px) {
-  .widget-image-carousel.img-1-offset-md-20-flip-horizontal .carousel-item:nth-child(1) .img-cover {
+  img[src*="slider-living-1920x.jpg"] {
     -o-object-position: 20% center;
     object-position: 20% center;
     -webkit-transform: translate(-50%, -50%) scaleX(-1);
