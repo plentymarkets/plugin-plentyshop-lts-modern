@@ -1,13 +1,7 @@
 .widget-toolbar {
     .title,
-    .card .form-check-label,
     .item-filter-price {
         padding: .75rem;
-    }
-
-    .form-check-input:checked + label,
-    .form-check-input:hover + label {
-        padding-left: .75rem !important; // stylelint-disable-line declaration-no-important
     }
 
     .widget {

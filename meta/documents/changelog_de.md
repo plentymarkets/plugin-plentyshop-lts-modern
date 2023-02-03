@@ -4,6 +4,7 @@
 
 ### Behoben
 
+- Die Abstände der Filterauswahl auf der Kategorie-Ansicht wurde vereinheitlicht.
 - Das erste Bild des Image-Slider auf der Startseiten-Vorlage wurde fälschlicherweise gespiegelt. Dies passiert jetzt nur noch beim Demo-Bild.
 - Die Anzeige der Kategorie-Ansicht auf kleinen Geräten wurde verbessert.
 

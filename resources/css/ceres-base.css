@@ -11716,7 +11716,7 @@ html.crios .parallax-img-container .parallax-img-container-inner[style^="backgro
 .filter-collapse .form-check-label,
 .widget-filter-base .form-check-label {
   display: block;
-  padding: .5rem 0;
+  padding: 0.5rem 1.5rem;
   color: #495057;
   transition: all 0.1s ease; }
   @media (prefers-reduced-motion: reduce) {
@@ -12445,11 +12445,8 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
   top: calc(50% - (16px / 2)); }
 
 .widget-filter-base .title,
-.widget-filter-base .card .form-check-label,
-.widget-filter-base .cookie-bar .privacy-settings .privacy-settings-body .card .form-check-label,
-.cookie-bar .privacy-settings .privacy-settings-body .widget-filter-base .card .form-check-label,
 .widget-filter-base .item-filter-price {
-  padding: .75rem 1.75rem; }
+  padding: 0.5rem 1rem; }
 
 .widget-item-grid .product-list > .col-12 {
   padding-right: 12px !important;
@@ -12598,15 +12595,8 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
     transition: 0.4s cubic-bezier(0, 0, 0.26, 1); }
 
 .widget-toolbar .title,
-.widget-toolbar .card .form-check-label,
-.widget-toolbar .cookie-bar .privacy-settings .privacy-settings-body .card .form-check-label,
-.cookie-bar .privacy-settings .privacy-settings-body .widget-toolbar .card .form-check-label,
 .widget-toolbar .item-filter-price {
   padding: .75rem; }
-
-.widget-toolbar .form-check-input:checked + label,
-.widget-toolbar .form-check-input:hover + label {
-  padding-left: .75rem !important; }
 
 .widget-toolbar .widget {
   margin-bottom: 0; }
