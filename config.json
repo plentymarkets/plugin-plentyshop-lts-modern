@@ -5,6 +5,7 @@
       "label": "Config.designTab",
       "formFields": {
         "theme": {
+          "deprecated": false,
           "type": "selectBox",
           "required": true,
           "label": "Config.themeSelectionLabel",
@@ -23,7 +24,7 @@
           }
         },
         "brand-primary": {
-          "deprecated": true,
+          "deprecated": false,
           "type": "colorPicker",
           "required": false,
           "scss": true,
@@ -33,7 +34,7 @@
           }
         },
         "brand-secondary": {
-          "deprecated": true,
+          "deprecated": false,
           "type": "colorPicker",
           "required": false,
           "scss": true,
@@ -43,7 +44,7 @@
           }
         },
         "brand-success": {
-          "deprecated": true,
+          "deprecated": false,
           "type": "colorPicker",
           "required": false,
           "scss": true,
@@ -53,7 +54,7 @@
           }
         },
         "brand-info": {
-          "deprecated": true,
+          "deprecated": false,
           "type": "colorPicker",
           "required": false,
           "scss": true,
@@ -63,7 +64,7 @@
           }
         },
         "brand-warning": {
-          "deprecated": true,
+          "deprecated": false,
           "type": "colorPicker",
           "required": false,
           "scss": true,
@@ -73,7 +74,7 @@
           }
         },
         "brand-danger": {
-          "deprecated": true,
+          "deprecated": false,
           "type": "colorPicker",
           "required": false,
           "scss": true,
