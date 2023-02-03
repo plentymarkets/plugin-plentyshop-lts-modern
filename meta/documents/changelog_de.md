@@ -8,6 +8,10 @@
 - Das erste Bild des Image-Slider auf der Startseiten-Vorlage wurde fälschlicherweise gespiegelt. Dies passiert jetzt nur noch beim Demo-Bild.
 - Die Anzeige der Kategorie-Ansicht auf kleinen Geräten wurde verbessert.
 
+### Geändert
+
+- Auf mobilen Geräten wurde der "In den Warenkorb" Button prominenter gestaltet.
+
 ## v.1.0.6
 
 ### Behoben
