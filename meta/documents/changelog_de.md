@@ -11,6 +11,7 @@
 ### Geändert
 
 - Auf mobilen Geräten wurde der "In den Warenkorb" Button prominenter gestaltet.
+- Die Farbeinstellungen des Plugins sind jetzt nicht mehr als veraltet markiert und die dazugehörige Anleitung wurde ergänzt.
 
 ### Entfernt
 
