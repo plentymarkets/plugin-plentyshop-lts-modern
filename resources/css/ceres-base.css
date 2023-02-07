@@ -14678,10 +14678,10 @@ html.safari .controls-list i {
   font-size: 100%; }
 
 html.safari .top-bar .search-submit::after {
-  content: none; }
+  content: none !important; }
 
 html.firefox .top-bar .search-submit::after {
-  content: none; }
+  content: none !important; }
 
 .widget {
   margin-bottom: 2rem; }

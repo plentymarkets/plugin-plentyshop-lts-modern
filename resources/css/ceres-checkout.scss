@@ -16390,13 +16390,13 @@ html.safari { // stylelint-disable-next-line selector-no-qualifying-type
     }
 
     .top-bar .search-submit::after {
-        content: none;
+        content: none !important;
     }
 }
 
 html.firefox { // stylelint-disable-next-line selector-no-qualifying-type
     .top-bar .search-submit::after {
-        content: none;
+        content: none !important;
     }
 }
 
