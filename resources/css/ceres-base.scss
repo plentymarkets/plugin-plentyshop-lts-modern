@@ -12326,16 +12326,7 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
         vertical-align: top;
 
         &.font-weight-bold {
-            font-weight: $font-weight-normal !important; // override utility class
-        }
-    }
-
-    .totalSum {
-        dt,
-        dd {
-            &.font-weight-bold {
-                font-weight: $font-weight-bolder !important; // override utility class
-            }
+            font-weight: $font-weight-bolder !important; // override utility class
         }
     }
 
@@ -16324,6 +16315,12 @@ html.firefox { // stylelint-disable-next-line selector-no-qualifying-type
     max-width: none !important;
     margin-right: 0;
     margin-left: 0;
+
+    &.widget-grid {
+        width: calc(100vw + 30px) !important; // stylelint-disable-line function-blacklist, declaration-no-important
+        margin-right: -15px;
+        margin-left: -15px;
+    }
 }
 
 @include media-breakpoint-down(sm) {

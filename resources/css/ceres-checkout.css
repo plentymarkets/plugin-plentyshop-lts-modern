@@ -11037,11 +11037,7 @@ html.ios .basket-preview-content .totals {
   vertical-align: top; }
   .cmp-totals dt.font-weight-bold,
   .cmp-totals dd.font-weight-bold {
-    font-weight: 400 !important; }
-
-.cmp-totals .totalSum dt.font-weight-bold,
-.cmp-totals .totalSum dd.font-weight-bold {
-  font-weight: 600 !important; }
+    font-weight: 600 !important; }
 
 .cmp-totals dt {
   width: 70%; }
@@ -14683,6 +14679,10 @@ html.firefox .top-bar .search-submit::after {
   max-width: none !important;
   margin-right: 0;
   margin-left: 0; }
+  .widget-fw.widget-grid {
+    width: calc(100vw + 30px) !important;
+    margin-right: -15px;
+    margin-left: -15px; }
 
 @media (max-width: 767.98px) {
   .widget {
