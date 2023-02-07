@@ -11,6 +11,7 @@
 ### Changed
 
 - On mobile devices, the "Add to Cart" button has been made more prominent.
+- The plugin's color settings are now no longer marked as deprecated, and the corresponding instructions have been updated.
 
 ### Removed
 
