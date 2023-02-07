@@ -5,16 +5,7 @@
         vertical-align: top;
 
         &.font-weight-bold {
-            font-weight: $font-weight-normal !important; // override utility class
-        }
-    }
-
-    .totalSum {
-        dt,
-        dd {
-            &.font-weight-bold {
-                font-weight: $font-weight-bolder !important; // override utility class
-            }
+            font-weight: $font-weight-bolder !important; // override utility class
         }
     }
 
