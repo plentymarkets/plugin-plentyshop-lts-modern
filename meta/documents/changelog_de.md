@@ -12,6 +12,11 @@
 
 - Auf mobilen Geräten wurde der "In den Warenkorb" Button prominenter gestaltet.
 
+### Entfernt
+
+- Es wurde ungenutztes CSS des Item-Grid entfernt
+- Ungenutzte SCSS Dateien wurden entfernt (_legacy.scss, _home.scss)
+
 ## v.1.0.6
 
 ### Behoben

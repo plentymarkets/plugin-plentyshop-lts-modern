@@ -12,6 +12,11 @@
 
 - On mobile devices, the "Add to Cart" button has been made more prominent.
 
+### Removed
+
+- Removed unused CSS of the item grid
+- Removed unused SCSS files (_legacy.scss, _home.scss)
+
 ## v.1.0.6
 
 ### Fixed
