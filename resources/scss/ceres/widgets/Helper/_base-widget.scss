@@ -18,6 +18,12 @@
     max-width: none !important;
     margin-right: 0;
     margin-left: 0;
+
+    &.widget-grid {
+        width: calc(100vw + 30px) !important; // stylelint-disable-line function-blacklist, declaration-no-important
+        margin-right: -15px;
+        margin-left: -15px;
+    }
 }
 
 @include media-breakpoint-down(sm) {
