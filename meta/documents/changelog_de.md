@@ -1,9 +1,10 @@
 # Release Notes für plentyShop LTS Modern
 
-## v.1.0.7
+## v.1.0.6
 
 ### Behoben
 
+- Unter bestimmten Umständen konnte das Sticky-Container-Widget in der Artikelansicht wackeln. Dies wurde behoben.
 - Die Abstände der Filterauswahl auf der Kategorie-Ansicht wurde vereinheitlicht.
 - Das erste Bild des Image-Slider auf der Startseiten-Vorlage wurde fälschlicherweise gespiegelt. Dies passiert jetzt nur noch beim Demo-Bild.
 - Die Anzeige der Kategorie-Ansicht auf kleinen Geräten wurde verbessert.
@@ -17,12 +18,6 @@
 
 - Es wurde ungenutztes CSS des Item-Grid entfernt
 - Ungenutzte SCSS Dateien wurden entfernt (_legacy.scss, _home.scss)
-
-## v.1.0.6
-
-### Behoben
-
-- Unter bestimmten Umständen konnte das Sticky-Container-Widget in der Artikelansicht wackeln. Dies wurde behoben.
 
 ## v.1.0.5
 

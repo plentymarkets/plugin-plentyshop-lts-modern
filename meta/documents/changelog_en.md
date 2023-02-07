@@ -1,9 +1,10 @@
 # Release Notes for plentyShop LTS Modern
 
-## v.1.0.7
+## v.1.0.6
 
 ### Fixed
 
+- Under some conditions, the sticky container widget on the article view could wobble. This was fixed.
 - The spacing of the filter selection on the category view has been unified.
 - The first image of the image slider on the home page template was incorrectly mirrored. This now only happens with the demo image.
 - Improved the display of the category-view on small devices.
@@ -17,12 +18,6 @@
 
 - Removed unused CSS of the item grid
 - Removed unused SCSS files (_legacy.scss, _home.scss)
-
-## v.1.0.6
-
-### Fixed
-
-- Under some conditions, the sticky container widget on the article view could wobble. This was fixed.
 
 ## v.1.0.5
 
