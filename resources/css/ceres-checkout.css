@@ -14709,6 +14709,12 @@ html.ie .mobile-navigation .mainmenu .nav-direction {
 html.safari .controls-list i {
   font-size: 100%; }
 
+html.safari .search-submit::after {
+  display: none; }
+
+html.firefox .search-submit::after {
+  display: none; }
+
 .widget {
   margin-bottom: 2rem; }
   .widget .widget-inner {
