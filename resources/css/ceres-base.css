@@ -14677,11 +14677,11 @@ html.ie .mobile-navigation .mainmenu .nav-direction {
 html.safari .controls-list i {
   font-size: 100%; }
 
-html.safari .search-submit::after {
-  display: none; }
+html.safari .top-bar .search-submit::after {
+  content: none; }
 
-html.firefox .search-submit::after {
-  display: none; }
+html.firefox .top-bar .search-submit::after {
+  content: none; }
 
 .widget {
   margin-bottom: 2rem; }

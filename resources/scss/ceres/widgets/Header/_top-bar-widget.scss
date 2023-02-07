@@ -417,13 +417,13 @@ html.safari { // stylelint-disable-next-line selector-no-qualifying-type
         font-size: 100%;
     }
 
-    .search-submit::after {
-        display: none;
+    .top-bar .search-submit::after {
+        content: none;
     }
 }
 
 html.firefox { // stylelint-disable-next-line selector-no-qualifying-type
-    .search-submit::after {
-        display: none;
+    .top-bar .search-submit::after {
+        content: none;
     }
 }
