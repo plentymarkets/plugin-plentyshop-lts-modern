@@ -416,4 +416,14 @@ html.safari { // stylelint-disable-next-line selector-no-qualifying-type
     .controls-list i {
         font-size: 100%;
     }
+
+    .top-bar .search-submit::after {
+        content: none !important;
+    }
+}
+
+html.firefox { // stylelint-disable-next-line selector-no-qualifying-type
+    .top-bar .search-submit::after {
+        content: none !important;
+    }
 }
