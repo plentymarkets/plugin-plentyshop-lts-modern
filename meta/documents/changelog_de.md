@@ -1,5 +1,12 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.7
+
+### Behoben
+
+- Wurden Filter innerhalb des Toolbar-Widgets platziert, waren die Texte der Filter unter Umständen nicht sichtbar. Dies wurde behoben.
+- Bei der Verwendung des Bilder-Box-Widget mit der Einstellung "Bild ohne Text" wurde fälschlicherweise Text angezeigt. Dies wurde behoben.
+
 ## v.1.0.6
 
 ### Behoben
