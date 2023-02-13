@@ -11507,8 +11507,7 @@ html.crios .parallax-img-container .parallax-img-container-inner[style^="backgro
 .list-controls {
   position: relative; }
   .list-controls .list-controls-inner {
-    background: transparent;
-    font-size: 0; }
+    background: transparent; }
     .list-controls .list-controls-inner .p-2 {
       padding: 0 !important; }
   .list-controls .list-sort,
