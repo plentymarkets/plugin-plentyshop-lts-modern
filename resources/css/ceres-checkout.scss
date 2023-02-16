@@ -9518,13 +9518,18 @@ i.fa-lg {
 .sticky-element {
     display: inline-block; // Fix sticky-container height miscalculation and resulting shaking
 
+    .widget-inner {
+        display: inline-block; // Fix sticky-container height miscalculation and resulting shaking
+    }
+
     p:empty {
         margin-bottom: 0; // remove margin of empty paragraph for correct height detection
     }
-}
 
-.sticky-element.is-sticky {
-    z-index: $zindex-sticky !important; // stylelint-disable-line declaration-no-important
+    // Needed for elements below not to overlap sticky
+    &.is-sticky {
+        z-index: $zindex-sticky !important; // stylelint-disable-line declaration-no-important
+    }
 }
 
 // Proportional Boxes

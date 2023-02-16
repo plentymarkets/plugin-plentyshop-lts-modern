@@ -8328,11 +8328,12 @@ i.fa-lg {
 
 .sticky-element {
   display: inline-block; }
+  .sticky-element .widget-inner {
+    display: inline-block; }
   .sticky-element p:empty {
     margin-bottom: 0; }
-
-.sticky-element.is-sticky {
-  z-index: 1020 !important; }
+  .sticky-element.is-sticky {
+    z-index: 1020 !important; }
 
 [class^="prop-"] {
   position: relative;
