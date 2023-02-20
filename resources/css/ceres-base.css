@@ -8326,14 +8326,15 @@ i.fa-lg {
   .mh-xl-5 {
     min-height: 496px !important; } }
 
-.sticky-element {
-  display: inline-block; }
-  .sticky-element .widget-inner {
-    display: inline-block; }
-  .sticky-element p:empty {
-    margin-bottom: 0; }
-  .sticky-element.is-sticky {
-    z-index: 1020 !important; }
+.sticky-element > .widget-inner {
+  display: inline-block;
+  width: 100%; }
+
+.sticky-element p:empty {
+  margin-bottom: 0; }
+
+.sticky-element.is-sticky {
+  z-index: 1020 !important; }
 
 [class^="prop-"] {
   position: relative;
