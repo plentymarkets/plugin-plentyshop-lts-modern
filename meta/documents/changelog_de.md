@@ -1,5 +1,11 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.8
+
+### Behoben
+
+- Unter bestimmten Umständen konnte das Sticky-Container-Widget in der Artikelansicht wackeln. Dies wurde behoben.
+
 ## v.1.0.7
 
 ### Behoben
