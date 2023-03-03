@@ -1,19 +1,19 @@
 # Release Notes für plentyShop LTS Modern
 
-## v.1.0.8
+## v.1.0.8 (2023-03-01) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.7...1.0.8" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
 ### Behoben
 
 - Unter bestimmten Umständen konnte das Sticky-Container-Widget in der Artikelansicht wackeln. Dies wurde behoben.
 
-## v.1.0.7
+## v.1.0.7 (2023-02-14) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.6...1.0.7" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
 ### Behoben
 
 - Wurden Filter innerhalb des Toolbar-Widgets platziert, waren die Texte der Filter unter Umständen nicht sichtbar. Dies wurde behoben.
 - Bei der Verwendung des Bilder-Box-Widget mit der Einstellung "Bild ohne Text" wurde fälschlicherweise Text angezeigt. Dies wurde behoben.
 
-## v.1.0.6
+## v.1.0.6 (2023-02-07)
 
 ### Behoben
 
