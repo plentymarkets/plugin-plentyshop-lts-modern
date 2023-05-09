@@ -120,18 +120,34 @@
         }
     }
 
-    .order-property-selection-info-popper {
-        position: relative !important;
-        margin-left: map-get($spacers, 1);
+    .order-property-slider-inner {
+        .position-relative {
+            display: flex;
+            justify-content: space-between;
 
-        .btn {
-            @extend .btn-md;
-            @include btn-appearance($color: $dark, $outline: true);
-            border-radius: 0;
-            width: inherit;
-            height: inherit;
-            min-width: $input-btn-height;
-            margin-bottom: map-get($spacers, 2);
+            .form-check {
+                margin: map-get($spacers, 1) 0;
+            }
+
+            .order-property-selection-info-popper {
+                position: relative !important;
+                margin-left: map-get($spacers, 1);
+
+                .btn {
+                    @extend .btn-md;
+                    @include btn-appearance($color: $dark, $outline: true);
+                    border-radius: 0;
+                    width: inherit;
+                    height: inherit;
+                    min-width: $input-btn-height;
+                    margin-bottom: map-get($spacers, 2);
+                }
+            }
+
+            > .d-flex,
+            > div[class=""] {
+                width: 100%;
+            }
         }
     }
 }
