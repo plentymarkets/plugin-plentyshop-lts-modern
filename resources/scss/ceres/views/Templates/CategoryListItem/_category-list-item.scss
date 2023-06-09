@@ -5,12 +5,21 @@
     overflow: hidden;
     @include theme() { background-color: theme-get('white'); }
 
-    > div {
-        display: flex;
-        flex-grow: 1;
-
-        @include media-breakpoint-up(xs) {
+    @include media-breakpoint-up(sm) {
+        > div {
+            display: flex;
+            flex-grow: 1;
             flex-direction: column;
+        }
+    }
+
+    @include media-breakpoint-only(xs) {
+        .thumb-image {
+            width: 120px;
+        }
+
+        .special-tags {
+            padding: 0 !important;
         }
     }
 
