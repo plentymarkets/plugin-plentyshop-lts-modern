@@ -1,5 +1,15 @@
 # Release Notes for plentyShop LTS Modern
 
+## v.1.0.9 (2023-12-06) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### Changed
+
+- Optimized the view of article grid and article list on mobile devices.
+
+### Removed
+
+- Unused CSS has been removed.
+
 ## v.1.0.8 (2023-03-01) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.7...1.0.8" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Fixed

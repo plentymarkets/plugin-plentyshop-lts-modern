@@ -1,5 +1,15 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.9 (2023-12-06) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
+
+### Geändert
+
+- Auf mobilen Geräten wurde die Ansicht von Artikelraster und Artikelliste optimiert.
+
+### Entfernt
+
+- Es wurde ungenutztes CSS entfernt.
+
 ## v.1.0.8 (2023-03-01) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.7...1.0.8" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
 ### Behoben
