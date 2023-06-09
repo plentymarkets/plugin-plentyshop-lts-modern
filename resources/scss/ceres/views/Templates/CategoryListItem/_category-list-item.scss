@@ -1,11 +1,12 @@
 .cmp-product-thumb {
-    display: flex;
     width: 100%;
     margin-bottom: $grid-gutter-width / 2;
     overflow: hidden;
     @include theme() { background-color: theme-get('white'); }
 
     @include media-breakpoint-up(sm) {
+        display: flex;
+
         > div {
             display: flex;
             flex-grow: 1;
@@ -16,6 +17,8 @@
     @include media-breakpoint-only(xs) {
         .thumb-image {
             width: 120px;
+            margin-right: 10px;
+            float: left;
         }
 
         .special-tags {
@@ -195,12 +198,6 @@
     @include media-breakpoint-down(md) {
         .btn-group {
             width: 100%;
-        }
-    }
-
-    @include media-breakpoint-down(xs) {
-        .thumb-image {
-            float: left;
         }
     }
 }
