@@ -11043,7 +11043,6 @@ html.ios .basket-preview-content .totals {
       width: 100%; }
 
 .cmp-product-thumb {
-  display: flex;
   width: 100%;
   margin-bottom: 12px;
   overflow: hidden; }
@@ -11051,10 +11050,20 @@ html.ios .basket-preview-content .totals {
     background-color: #ffffff; }
   .dark-theme .cmp-product-thumb {
     background-color: #111313; }
-  .cmp-product-thumb > div {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column; }
+  @media (min-width: 576px) {
+    .cmp-product-thumb {
+      display: flex; }
+      .cmp-product-thumb > div {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column; } }
+  @media (max-width: 575.98px) {
+    .cmp-product-thumb .thumb-image {
+      width: 120px;
+      margin-right: 10px;
+      float: left; }
+    .cmp-product-thumb .special-tags {
+      padding: 0 !important; } }
   .cmp-product-thumb .add-to-basket-lg-container {
     position: absolute;
     top: 0;
@@ -11227,9 +11236,6 @@ html.ios .basket-preview-content .totals {
   @media (max-width: 991.98px) {
     .cmp-product-thumb .btn-group {
       width: 100%; } }
-  @media (max-width: 575.98px) {
-    .cmp-product-thumb .thumb-image {
-      float: left; } }
 
 .no-pointer-events {
   pointer-events: none; }
