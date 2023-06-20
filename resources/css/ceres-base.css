@@ -8985,12 +8985,12 @@ html.ie .single-carousel .owl-item > div {
       content: '';
       min-height: calc(36px - 4px);
       font-size: 0; }
-  .btn.btn-md, .single .pt-2 .position-relative .order-property-selection-info-popper .btn,
-  .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+  .btn.btn-md, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn,
+  .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
     min-height: 48px;
     padding: 0 calc(12px * 1.5); }
-    .btn.btn-md::after, .single .pt-2 .position-relative .order-property-selection-info-popper .btn::after,
-    .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn::after {
+    .btn.btn-md::after, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn::after,
+    .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn::after {
       content: '';
       min-height: calc(48px - 4px);
       font-size: 0; }
@@ -11930,19 +11930,19 @@ html.crios .parallax-img-container .parallax-img-container-inner[style^="backgro
   .page-singleitem .order-property-input.active {
     border-color: #a8d080; }
 
-.single .pt-2 .position-relative,
-.page-singleitem .pt-2 .position-relative {
+.single .order-property-slider-inner .position-relative,
+.page-singleitem .order-property-slider-inner .position-relative {
   display: flex;
   justify-content: space-between; }
-  .single .pt-2 .position-relative .form-check,
-  .page-singleitem .pt-2 .position-relative .form-check {
+  .single .order-property-slider-inner .position-relative .form-check,
+  .page-singleitem .order-property-slider-inner .position-relative .form-check {
     margin: 6px 0; }
-  .single .pt-2 .position-relative .order-property-selection-info-popper,
-  .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper {
+  .single .order-property-slider-inner .position-relative .order-property-selection-info-popper,
+  .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper {
     position: relative !important;
     margin-left: 6px; }
-    .single .pt-2 .position-relative .order-property-selection-info-popper .btn,
-    .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+    .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn,
+    .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
       color: #ffffff;
       background-color: #3e4346;
       border-color: #3e4346;
@@ -11953,122 +11953,122 @@ html.crios .parallax-img-container .parallax-img-container-inner[style^="backgro
       height: inherit;
       min-width: 48px;
       margin-bottom: 12px; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         color: #ffffff;
         background-color: #d51317;
         border-color: #d51317; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:focus, .single .pt-2 .position-relative .order-property-selection-info-popper .btn.focus,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:focus,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn.focus {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:focus, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.focus,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:focus,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.focus {
         color: #ffffff;
         background-color: #d51317;
         border-color: #d51317;
         box-shadow: 0 0 0 0.2rem rgba(91, 95, 98, 0.5); }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn.disabled, .single .pt-2 .position-relative .order-property-selection-info-popper .btn:disabled,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn.disabled,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:disabled {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.disabled, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:disabled,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.disabled,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:disabled {
         color: #ffffff;
         background-color: #3e4346;
         border-color: #3e4346; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active, .single .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active,
-      .show > .single .pt-2 .position-relative .order-property-selection-info-popper .btn.dropdown-toggle,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active,
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active,
+      .show > .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.dropdown-toggle,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active,
       .show >
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn.dropdown-toggle {
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.dropdown-toggle {
         color: #ffffff;
         background-color: #d51317;
         border-color: #d51317; }
-        .single .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active:focus, .single .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active:focus,
-        .show > .single .pt-2 .position-relative .order-property-selection-info-popper .btn.dropdown-toggle:focus,
-        .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active:focus,
-        .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active:focus,
+        .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active:focus, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active:focus,
+        .show > .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.dropdown-toggle:focus,
+        .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active:focus,
+        .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active:focus,
         .show >
-        .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn.dropdown-toggle:focus {
+        .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.dropdown-toggle:focus {
           box-shadow: 0 0 0 0.2rem rgba(91, 95, 98, 0.5); }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
         background-color: #3e4346; }
-      .dark-theme .single .pt-2 .position-relative .order-property-selection-info-popper .btn, .dark-theme
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+      .dark-theme .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn, .dark-theme
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
         background-color: #575d60; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
         border-color: #3e4346; }
-      .dark-theme .single .pt-2 .position-relative .order-property-selection-info-popper .btn, .dark-theme
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+      .dark-theme .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn, .dark-theme
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
         border-color: #575d60; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         color: #ffffff !important; }
-      .dark-theme .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover, .dark-theme
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .dark-theme .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover, .dark-theme
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         color: #ffffff !important; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         background-color: #d51317; }
-      .dark-theme .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover, .dark-theme
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .dark-theme .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover, .dark-theme
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         background-color: #d51317; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         border-color: #d51317; }
-      .dark-theme .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover, .dark-theme
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .dark-theme .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover, .dark-theme
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         border-color: #d51317; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
         background-color: transparent; }
-      .dark-theme .single .pt-2 .position-relative .order-property-selection-info-popper .btn, .dark-theme
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+      .dark-theme .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn, .dark-theme
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
         background-color: transparent; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         color: #ffffff;
         background-color: #d51317;
         border-color: #d51317; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:focus, .single .pt-2 .position-relative .order-property-selection-info-popper .btn.focus,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:focus,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn.focus {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:focus, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.focus,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:focus,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.focus {
         box-shadow: 0 0 0 0.2rem rgba(62, 67, 70, 0.5); }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn.disabled, .single .pt-2 .position-relative .order-property-selection-info-popper .btn:disabled,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn.disabled,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:disabled {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.disabled, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:disabled,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.disabled,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:disabled {
         color: #3e4346;
         background-color: transparent; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active, .single .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active,
-      .show > .single .pt-2 .position-relative .order-property-selection-info-popper .btn.dropdown-toggle,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active,
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active,
+      .show > .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.dropdown-toggle,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active,
       .show >
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn.dropdown-toggle {
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.dropdown-toggle {
         color: #ffffff;
         background-color: #d51317;
         border-color: #d51317; }
-        .single .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active:focus, .single .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active:focus,
-        .show > .single .pt-2 .position-relative .order-property-selection-info-popper .btn.dropdown-toggle:focus,
-        .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active:focus,
-        .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active:focus,
+        .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active:focus, .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active:focus,
+        .show > .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.dropdown-toggle:focus,
+        .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled):active:focus,
+        .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:not(:disabled):not(.disabled).active:focus,
         .show >
-        .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn.dropdown-toggle:focus {
+        .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn.dropdown-toggle:focus {
           box-shadow: 0 0 0 0.2rem rgba(62, 67, 70, 0.5); }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
         color: #3e4346 !important; }
-      .dark-theme .single .pt-2 .position-relative .order-property-selection-info-popper .btn, .dark-theme
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn {
+      .dark-theme .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn, .dark-theme
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn {
         color: #575d60 !important; }
-      .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover,
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover,
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         color: #ffffff !important; }
-      .dark-theme .single .pt-2 .position-relative .order-property-selection-info-popper .btn:hover, .dark-theme
-      .page-singleitem .pt-2 .position-relative .order-property-selection-info-popper .btn:hover {
+      .dark-theme .single .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover, .dark-theme
+      .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         color: #ffffff !important; }
-  .single .pt-2 .position-relative > .d-flex,
-  .single .pt-2 .position-relative > div[class=""],
-  .page-singleitem .pt-2 .position-relative > .d-flex,
-  .page-singleitem .pt-2 .position-relative > div[class=""] {
+  .single .order-property-slider-inner .position-relative > .d-flex,
+  .single .order-property-slider-inner .position-relative > div[class=""],
+  .page-singleitem .order-property-slider-inner .position-relative > .d-flex,
+  .page-singleitem .order-property-slider-inner .position-relative > div[class=""] {
     width: 100%; }
 
 .availability-1 {
@@ -13055,8 +13055,7 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
         min-width: 100%;
         min-height: 100%;
         -o-object-fit: cover;
-           object-fit: cover;
-        font-family: 'object-fit: cover;'; }
+           object-fit: cover; }
   .widget-image-carousel .widget-inner .carousel-indicators {
     bottom: 0;
     padding: 1rem 1rem; }

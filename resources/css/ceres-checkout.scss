@@ -13357,7 +13357,7 @@ $sidebar-indent: $input-btn-height;
         }
     }
 
-    .pt-2 {
+    .order-property-slider-inner {
         .position-relative {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -14473,7 +14473,6 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
                     min-height: 100%;
                     -o-object-fit: cover;
                        object-fit: cover;
-                    font-family: 'object-fit: cover;';
                 }
             }
             // stylelint-enable selector-no-qualifying-type
