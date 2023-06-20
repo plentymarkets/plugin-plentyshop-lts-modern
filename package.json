@@ -1,7 +1,7 @@
 {
   "name": "plentyshop-lts-modern",
   "license": "AGPL-3.0",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/plentymarkets/plugin-plentyshop-lts-modern.git"
