@@ -1,10 +1,14 @@
 # Release Notes for plentyShop LTS Modern
 
-## v.1.0.9 (2023-12-06) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+## v.1.0.9 (2023-20-06) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Changed
 
 - Optimized the view of article grid and article list on mobile devices.
+
+### Fixed
+
+- In case of multiple addresses, the address selection contained unnecessary spacing. This has been fixed.
 
 ### Removed
 
