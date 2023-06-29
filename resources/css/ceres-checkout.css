@@ -12811,7 +12811,9 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
   @media (max-width: 575.98px) {
     .widget-image-box {
       min-height: 10rem;
-      padding-bottom: 0; } }
+      padding-bottom: 0; }
+      .widget-image-box.widget-retain-aspect-ratio {
+        min-height: auto !important; } }
   .widget-image-box img {
     position: absolute;
     top: 50%;
