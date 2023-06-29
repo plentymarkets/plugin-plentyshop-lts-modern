@@ -1,6 +1,12 @@
 # Release Notes for plentyShop LTS Modern
 
-## v.1.0.9 (2023-20-06) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+## v.1.0.10 (2023-XX-XX) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.9...1.0.10" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### Changed
+
+- For the Image Box widget, if **Maintain Aspect Ratio** is selected for the **Aspect Ratio** setting, a minimum height for the image is no longer specified on mobile devices.
+
+## v.1.0.9 (2023-06-20) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Changed
 
