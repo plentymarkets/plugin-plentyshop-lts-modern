@@ -6,6 +6,10 @@
 
 - For the Image Box widget, if **Maintain Aspect Ratio** is selected for the **Aspect Ratio** setting, a minimum height for the image is no longer specified on mobile devices.
 
+### Fixed
+
+- The tiles for displaying payment providers in Checkout were displayed too large on older iOS devices. This has been fixed.
+
 ## v.1.0.9 (2023-06-20) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Changed
