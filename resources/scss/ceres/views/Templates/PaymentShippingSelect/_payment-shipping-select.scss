@@ -61,7 +61,6 @@
             // fix image proportions for safari of the payment/shipping icons
             > img {
                 object-fit: contain;
-                font-family: 'object-fit: contain;'; // IE polyfill
             }
         }
 
@@ -80,7 +79,6 @@
             padding-left: .5rem;
         }
         .icon {
-            display: flex;
             width: 4rem;
             max-height: 100%;
             overflow: hidden;

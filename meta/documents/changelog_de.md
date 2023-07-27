@@ -1,9 +1,14 @@
 # Release Notes für plentyShop LTS Modern
 
 ## v.1.0.10 (2023-XX-XX) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.9...1.0.10" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
+
 ### Geändert
 
 - Wenn beim Bilderbox-Widget für die Einstellung **Seitenverhältnis** die Option **Seitenverhältnis beibehalten** ausgewählt ist, wird auf mobilen Geräten keine Mindesthöhe mehr für das Bild angegeben.
+
+### Fixed
+
+- Die Kacheln zur Anzeige von Zahlungsanbietern im Checkout wurde auf älteren iOS Geräten zu groß dargestellt. Dies wurde behoben.
 
 ## v.1.0.9 (2023-06-20) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
