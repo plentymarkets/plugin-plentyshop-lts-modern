@@ -18526,8 +18526,7 @@ html.ie .confirmation-order-list .cmp-order-item {
     .cmp-method-list .method-list-item .content > img,
     .cmp-method-list .method-list-item .icon > img {
       -o-object-fit: contain;
-         object-fit: contain;
-      font-family: 'object-fit: contain;'; }
+         object-fit: contain; }
   .cmp-method-list .method-list-item .content {
     width: calc(100% - 3.5rem);
     padding-left: .5rem; }
@@ -18541,7 +18540,6 @@ html.ie .confirmation-order-list .cmp-order-item {
   padding-left: .5rem; }
 
 .cmp-method-list.list .icon {
-  display: flex;
   width: 4rem;
   max-height: 100%;
   overflow: hidden;
