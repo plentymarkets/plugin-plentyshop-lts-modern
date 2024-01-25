@@ -5,6 +5,7 @@
 ### Changed
 
 - For the Image Box widget, if **Maintain Aspect Ratio** is selected for the **Aspect Ratio** setting, a minimum height for the image is no longer specified on mobile devices.
+- The styling for the header has been adjusted to match a [change in plentyShop LTS](https://github.com/plentymarkets/plugin-ceres/pull/3467).
 
 ### Fixed
 
