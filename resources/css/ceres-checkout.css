@@ -18050,9 +18050,12 @@ header .widget {
       .cmp-address-list .items .item-inner .item-content span {
         display: block; }
     .cmp-address-list .items .item-inner .item-controls {
-      display: flex; }
-      .cmp-address-list .items .item-inner .item-controls .btn i.fa-trash-o {
-        margin: 0; }
+      display: flex;
+      gap: .5rem; }
+      .cmp-address-list .items .item-inner .item-controls .btn {
+        width: 100% !important; }
+        .cmp-address-list .items .item-inner .item-controls .btn i.fa-trash-o {
+          margin: 0; }
 
 .widget-account-settings .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .widget-account-settings .card, .widget-account-settings .card,
 .widget-account-settings .cmp-address-list .items > div:first-child, .cmp-address-list .widget-account-settings .items > div:first-child,
