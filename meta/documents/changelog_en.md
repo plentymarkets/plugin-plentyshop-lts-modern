@@ -9,6 +9,7 @@
 ### Fixed
 
 - The tiles for displaying payment providers in Checkout were displayed too large on older iOS devices. This has been fixed.
+- Order properties with the type select were not correclty displayed. This has been fixed.
 
 ## v.1.0.9 (2023-06-20) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 

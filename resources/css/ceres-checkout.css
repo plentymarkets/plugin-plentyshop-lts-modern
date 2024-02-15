@@ -12094,9 +12094,9 @@ html.crios .parallax-img-container .parallax-img-container-inner[style^="backgro
       .page-singleitem .order-property-slider-inner .position-relative .order-property-selection-info-popper .btn:hover {
         color: #ffffff !important; }
   .single .order-property-slider-inner .position-relative > .d-flex,
-  .single .order-property-slider-inner .position-relative > div[class=""],
+  .single .order-property-slider-inner .position-relative > div,
   .page-singleitem .order-property-slider-inner .position-relative > .d-flex,
-  .page-singleitem .order-property-slider-inner .position-relative > div[class=""] {
+  .page-singleitem .order-property-slider-inner .position-relative > div {
     width: 100%; }
 
 .availability-1 {

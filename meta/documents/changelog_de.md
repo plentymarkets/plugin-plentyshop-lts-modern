@@ -9,6 +9,7 @@
 ### Fixed
 
 - Die Kacheln zur Anzeige von Zahlungsanbietern im Checkout wurde auf älteren iOS Geräten zu groß dargestellt. Dies wurde behoben.
+- Bestelleigenschaften vom Typ select wurden nicht korrekt angezeigt. Dies wurde behoben.
 
 ## v.1.0.9 (2023-06-20) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.8...1.0.9" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
