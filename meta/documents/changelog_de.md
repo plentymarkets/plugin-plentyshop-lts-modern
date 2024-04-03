@@ -5,6 +5,7 @@
 ### Geändert
 
 - Wenn beim Bilderbox-Widget für die Einstellung **Seitenverhältnis** die Option **Seitenverhältnis beibehalten** ausgewählt ist, wird auf mobilen Geräten keine Mindesthöhe mehr für das Bild angegeben.
+- Das Styling des Headers wurde entsprechend einer [Änderung in plentyShop LTS](https://github.com/plentymarkets/plugin-ceres/pull/3467) angepasst..
 
 ### Fixed
 
