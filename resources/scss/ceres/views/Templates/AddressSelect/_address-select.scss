@@ -90,8 +90,10 @@
 
             .item-controls {
                 display: flex;
+                gap: .5rem;
 
                 .btn {
+                    width: 100% !important;
                     i.fa-trash-o {
                         margin: 0;
                     }
