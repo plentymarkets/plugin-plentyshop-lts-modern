@@ -6,7 +6,7 @@
     "en": "plentyShop LTS Modern"
   },
   "type": "theme",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "pluginIcon": "icon_plugin_xs.png",
   "price": 0.00,
   "shortDescription": {
@@ -23,8 +23,8 @@
   "email": "sales@plentysystems.com",
   "phone": "+49 561 98 681 100",
   "require": {
-    "Ceres": "~5.0.48",
-    "IO": "~5.0.48"
+    "Ceres": "~5.0.62",
+    "IO": "~5.0.62"
   },
   "platform": {
     "php": ">=7.3 <8.1"
