@@ -1,5 +1,11 @@
 # Release Notes for plentyShop LTS Modern
 
+## v.1.0.11 (2024-04-11) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.10...1.0.11" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### Fixed
+
+- If the entire header is sticky, scrolling now changes the background colour of all header elements.
+
 ## v.1.0.10 (2024-04-03) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.9...1.0.10" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Changed

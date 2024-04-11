@@ -1,13 +1,19 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.11 (2024-04-11) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.10...1.0.11" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
+
+### Behoben
+
+- Wenn der komplette Header fixiert ist, wird beim Scrollen jetzt die Hintergrundfarbe aller Header-Elemente angepasst.
+
 ## v.1.0.10 (2024-04-03) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.9...1.0.10" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
 ### Geändert
 
 - Wenn beim Bilderbox-Widget für die Einstellung **Seitenverhältnis** die Option **Seitenverhältnis beibehalten** ausgewählt ist, wird auf mobilen Geräten keine Mindesthöhe mehr für das Bild angegeben.
-- Das Styling des Headers wurde entsprechend einer [Änderung in plentyShop LTS](https://github.com/plentymarkets/plugin-ceres/pull/3467) angepasst..
+- Das Styling des Headers wurde entsprechend einer [Änderung in plentyShop LTS](https://github.com/plentymarkets/plugin-ceres/pull/3467) angepasst.
 
-### Fixed
+### Behoben
 
 - Die Kacheln zur Anzeige von Zahlungsanbietern im Checkout wurde auf älteren iOS Geräten zu groß dargestellt. Dies wurde behoben.
 - Bestelleigenschaften vom Typ select wurden nicht korrekt angezeigt. Dies wurde behoben.
