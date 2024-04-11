@@ -58,9 +58,29 @@ export default class PlentyShopLTSModern {
      * update header backgrounds
      */
     updateHeaderBackgrounds() {
+        if (this.hasStickyHeader()) {
+            this.updateElementsBackgrounds(this.headerElements);
+        } else {
+            this.updateElementsBackgrounds(this.unfixedHeaderElements);
+        }
+    }
+
+    hasStickyHeader() {
+        const headerElement = document.getElementById('page-header');
+        const headerClassList = headerElement.classList;
+        const stickyClass = 'sticky-top';
+
+        if (headerClassList.contains(stickyClass)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    updateElementsBackgrounds(elements) {
         const hasUnfixedElementsPassed = window.pageYOffset > this.unfixedElementsHeight;
 
-        this.unfixedHeaderElements.forEach((element) =>
+        elements.forEach((element) =>
             element.classList.toggle("bg-transparent", !hasUnfixedElementsPassed)
         );
     }
