@@ -9609,6 +9609,10 @@ a {
     z-index: $zindex-9;
 }
 
+div#page-body {
+    overflow-x: clip;
+}
+
 .center-xy {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14364,7 +14368,6 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
             img {
                 -webkit-transform: scale(1.05);
                         transform: scale(1.05);
-                
             }
         }
         img {

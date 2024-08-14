@@ -8479,6 +8479,9 @@ a {
 .tooltip {
   z-index: 1090; }
 
+div#page-body {
+  overflow-x: clip; }
+
 .center-xy {
   display: flex;
   flex-flow: row nowrap;
