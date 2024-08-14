@@ -1,5 +1,11 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.12 (2024-08-14) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.11...1.0.12" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
+
+### Geändert
+
+- Changes to stylesheets have been done to match new plentyShop LTS Version
+
 ## v.1.0.11 (2024-04-11) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.10...1.0.11" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
 ### Behoben
