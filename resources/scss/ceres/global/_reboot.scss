@@ -54,6 +54,10 @@ a {
     z-index: $zindex-9;
 }
 
+div#page-body {
+    overflow-x: clip;
+}
+
 .center-xy {
     display: flex;
     flex-flow: row nowrap;
