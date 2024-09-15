@@ -1,5 +1,11 @@
 # Release Notes for plentyShop LTS Modern
 
+## v.1.0.13 (2024-08-20) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.12...1.0.13" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### Fixed
+
+- A change in version 1.0.12 could lead to horizontal scrolling behaviour. This change has been reversed.
+
 ## v.1.0.12 (2024-08-19) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.11...1.0.12" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Changed
