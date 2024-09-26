@@ -12810,36 +12810,36 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
       -o-object-fit: cover;
          object-fit: cover;
       font-family: 'object-fit: cover;'; }
-  .widget-image-box > .widget-inner {
+  .widget-image-box .widget-inner {
     display: flex;
     padding: 24px; }
-    .widget-image-box > .widget-inner .widget-caption {
+    .widget-image-box .widget-inner .widget-caption {
       padding: 12px 24px;
       word-break: break-word;
       transition: 300ms all ease; }
       @media (prefers-reduced-motion: reduce) {
-        .widget-image-box > .widget-inner .widget-caption {
+        .widget-image-box .widget-inner .widget-caption {
           transition: none; } }
-      .widget-image-box > .widget-inner .widget-caption.widget-image-box-caption h1,
-      .widget-image-box > .widget-inner .widget-caption.widget-image-box-caption h2,
-      .widget-image-box > .widget-inner .widget-caption.widget-image-box-caption h3,
-      .widget-image-box > .widget-inner .widget-caption.widget-image-box-caption p {
+      .widget-image-box .widget-inner .widget-caption.widget-image-box-caption h1,
+      .widget-image-box .widget-inner .widget-caption.widget-image-box-caption h2,
+      .widget-image-box .widget-inner .widget-caption.widget-image-box-caption h3,
+      .widget-image-box .widget-inner .widget-caption.widget-image-box-caption p {
         margin: 0;
         text-transform: uppercase;
         font-weight: 600; }
-  .widget-image-box.widget-image-box-fullwidth > .widget-inner .widget-caption {
+  .widget-image-box.widget-image-box-fullwidth .widget-inner .widget-caption {
     display: flex;
     align-items: center;
     width: 100%;
     text-align: center; }
-    .widget-image-box.widget-image-box-fullwidth > .widget-inner .widget-caption > div {
+    .widget-image-box.widget-image-box-fullwidth .widget-inner .widget-caption > div {
       display: block;
       width: 100%; }
-  .widget-image-box.widget-image-box-inline-caption > .widget-inner {
+  .widget-image-box.widget-image-box-inline-caption .widget-inner {
     align-items: flex-end; }
-  .widget-image-box.widget-image-box-block-caption > .widget-inner {
+  .widget-image-box.widget-image-box-block-caption .widget-inner {
     padding: 0; }
-    .widget-image-box.widget-image-box-block-caption > .widget-inner .widget-caption {
+    .widget-image-box.widget-image-box-block-caption .widget-inner .widget-caption {
       position: absolute;
       right: 0;
       bottom: 0;

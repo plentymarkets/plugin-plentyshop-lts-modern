@@ -14247,7 +14247,7 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
         }
     }
 
-    > .widget-inner {
+    .widget-inner {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -14272,7 +14272,7 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
     }
 
     &.widget-image-box-fullwidth {
-        > .widget-inner {
+        .widget-inner {
             .widget-caption {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -14292,7 +14292,7 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
     }
 
     &.widget-image-box-inline-caption {
-        > .widget-inner {
+        .widget-inner {
             -webkit-box-align: end;
                 -ms-flex-align: end;
                     align-items: flex-end;
@@ -14300,7 +14300,7 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
     }
 
     &.widget-image-box-block-caption {
-        > .widget-inner {
+        .widget-inner {
             padding: 0;
 
             .widget-caption {
