@@ -319,9 +319,9 @@ class DefaultSingleItemPreset implements ContentPreset
     private function createTabWidget()
     {
         $uuidGenerator = pluginApp(UniqueId::class);
-        $uuidTabDescription  = $uuidGenerator->generateUniqueId();
-        $uuidTabTechData     = $uuidGenerator->generateUniqueId();
-        $uuidTabMoreDetails  = $uuidGenerator->generateUniqueId();
+        $uuidTabDescription         = $uuidGenerator->generateUniqueId();
+        $uuidTabTechData            = $uuidGenerator->generateUniqueId();
+        $uuidTabMoreDetails         = $uuidGenerator->generateUniqueId();
         $uuidEuResponsiblePerson    = $uuidGenerator->generateUniqueId();
         $titleTabDescription = $this->translator->trans("Ceres::Template.singleItemDescription");
         $titleTabTechData    = $this->translator->trans("Ceres::Template.singleItemTechnicalData");
@@ -408,7 +408,7 @@ class DefaultSingleItemPreset implements ContentPreset
                 'text',
                 $this->getShopBuilderDataFieldProvider(
                     'ManufacturerDataFieldProvider::responsibleEmail',
-                    ['item.manufacturer.email', null, null]
+                    ['item.manufacturer.responsibleEmail', null, null]
                 )
             );
 
