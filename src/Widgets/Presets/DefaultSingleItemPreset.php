@@ -393,7 +393,7 @@ class DefaultSingleItemPreset implements ContentPreset
                 )
             );
 
-        foreach (ManufacturerDataFieldProvider::getFields() as $field) {
+        foreach (ManufacturerDataFieldProvider::getEuResponsibleFields() as $field) {
             $this->tabWidget->createChild($uuidEuResponsiblePerson, 'Ceres::InlineTextWidget')
                 ->withSetting('appearance','none')
                 ->withSetting('spacing.customPadding', true)
