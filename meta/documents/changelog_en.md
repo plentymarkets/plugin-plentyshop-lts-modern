@@ -6,6 +6,7 @@
 
 - Changes to stylesheets have been done to match new plentyShop LTS Version 5.0.68
 - A change in version 1.0.12 could lead to horizontal scrolling behaviour. This change has been reversed.
+- The default single item view now includes a new tab for displaying information about the EU-Responsible Person in order to be GPSR-compliant.
 
 ## v.1.0.12 (2024-08-19) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.11...1.0.12" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 

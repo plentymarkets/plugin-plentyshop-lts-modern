@@ -6,6 +6,7 @@
 
 - Änderungen an den Stylesheets wurden vorgenommen, um sie an die neue plentyShop LTS Version 5.0.68 anzupassen
 - Eine Änderung in der Version 1.0.12 konnte zu horizontalem scrollverhalten führen. Diese Änderung wurde rückgängig gemacht.
+- Die Standardartikelansicht enthält nun ein neues Tab, in dem Informationen zur EU-verantwortlichen Person angezeigt werden, um die Anforderungen Produktsicherheitsverordnung (GPSR) zu erfüllen.
 
 ## v.1.0.12 (2024-08-19) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.11...1.0.12" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
