@@ -5,7 +5,6 @@ namespace plentyShopLTSModern\Widgets\Presets;
 use Ceres\Builders\EuManufacturer\EuManufacturerBuilder;
 use Ceres\Config\CeresConfig;
 use Ceres\Helper\ShopBuilderHelper;
-use Ceres\ShopBuilder\DataFieldProvider\Item\ManufacturerDataFieldProvider;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
 use Ceres\Widgets\Helper\PresetHelper;
 use Plenty\Modules\ShopBuilder\Contracts\ContentPreset;
