@@ -1,5 +1,11 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.14 (2024-11-14) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.13...1.0.14" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
+
+### Geändert
+
+- Die ShopBuilder-Vorlage für die Artikelansicht enthält nun ein neues Tab, in dem Informationen zur EU-verantwortlichen Person angezeigt werden, um die Anforderungen Produktsicherheitsverordnung (GPSR) zu erfüllen.
+
 ## v.1.0.13 (2024-09-27) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.12...1.0.13" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
 ### Geändert
