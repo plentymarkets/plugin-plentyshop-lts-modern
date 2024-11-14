@@ -6,7 +6,7 @@
     "en": "plentyShop LTS Modern"
   },
   "type": "theme",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "pluginIcon": "icon_plugin_xs.png",
   "price": 0.00,
   "shortDescription": {
@@ -31,6 +31,8 @@
   },
   "keywords": [
     "plentymarkets",
+    "plentyONE",
+    "plenty",
     "plentyShop LTS Modern",
     "theme",
     "plentyShop LTS",
