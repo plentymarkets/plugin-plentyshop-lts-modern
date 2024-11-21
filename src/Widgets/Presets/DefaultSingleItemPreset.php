@@ -3,6 +3,7 @@
 namespace plentyShopLTSModern\Widgets\Presets;
 
 use Ceres\Builders\EuManufacturer\EuManufacturerBuilder;
+use Ceres\Builders\Manufacturer\ManufacturerBuilder;
 use Ceres\Config\CeresConfig;
 use Ceres\Helper\ShopBuilderHelper;
 use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
@@ -60,15 +61,21 @@ class DefaultSingleItemPreset implements ContentPreset
     /** @var EuManufacturerBuilder */
     private EuManufacturerBuilder $euManufacturerBuilder;
 
+    /** @var ManufacturerBuilder $manufacturerBuilder */
+    private ManufacturerBuilder $manufacturerBuilder;
+
     /**
      * @param ShopBuilderHelper $shopBuilderHelper
      * @param EuManufacturerBuilder $euManufacturerBuilder
+     * @param ManufacturerBuilder $manufacturerBuilder
      */
     public function __construct(ShopBuilderHelper $shopBuilderHelper,
-                                EuManufacturerBuilder $euManufacturerBuilder)
+                                EuManufacturerBuilder $euManufacturerBuilder,
+                                ManufacturerBuilder $manufacturerBuilder)
     {
         $this->shopBuilderHelper = $shopBuilderHelper;
         $this->euManufacturerBuilder = $euManufacturerBuilder;
+        $this->manufacturerBuilder   = $manufacturerBuilder;
     }
 
     /**
@@ -341,15 +348,18 @@ class DefaultSingleItemPreset implements ContentPreset
         $uuidTabTechData            = $uuidGenerator->generateUniqueId();
         $uuidTabMoreDetails         = $uuidGenerator->generateUniqueId();
         $uuidEuResponsiblePerson    = $uuidGenerator->generateUniqueId();
+        $uuidManufacturer           = $uuidGenerator->generateUniqueId();
         $titleTabDescription = $this->translator->trans("Ceres::Template.singleItemDescription");
         $titleTabTechData    = $this->translator->trans("Ceres::Template.singleItemTechnicalData");
         $titleTabMoreDetails = $this->translator->trans("Ceres::Template.singleItemMoreDetails");
         $titleTabEuResponsiblePerson = $this->translator->trans("Ceres::Template.singleItemEuResponsiblePerson");
+        $titleTabManufacturer = $this->translator->trans("Ceres::Template.singleItemManufacturer");
         $tabs = array(
             array("title" => $titleTabDescription, "uuid" => $uuidTabDescription),
             array("title" => $titleTabTechData, "uuid" => $uuidTabTechData),
             array("title" => $titleTabMoreDetails, "uuid" => $uuidTabMoreDetails),
             array('title' => $titleTabEuResponsiblePerson, 'uuid' => $uuidEuResponsiblePerson),
+            array('title' => $titleTabManufacturer, 'uuid' => $uuidManufacturer),
         );
 
         $this->tabWidget = $this->preset->createWidget("Ceres::TabWidget")
@@ -411,12 +421,23 @@ class DefaultSingleItemPreset implements ContentPreset
                 )
             );
 
+        /* Generates EU Manufacturer fields */
         $this->euManufacturerBuilder->withName();
         $this->euManufacturerBuilder->withDetailedAddress();
         $this->euManufacturerBuilder->withGeneralAddress();
         $this->euManufacturerBuilder->withMail();
         $this->euManufacturerBuilder->withPhoneNumber();
         $this->euManufacturerBuilder->build($this->tabWidget, $uuidEuResponsiblePerson);
+
+        /* Generates base manufacturer fields */
+        $this->manufacturerBuilder->withName();
+        $this->manufacturerBuilder->withDetailedAddress();
+        $this->manufacturerBuilder->withGeneralAddress();
+        $this->manufacturerBuilder->withEmail();
+        $this->manufacturerBuilder->withHomepage();
+        $this->manufacturerBuilder->withPhoneNumber();
+        $this->manufacturerBuilder->withFaxNumber();
+        $this->manufacturerBuilder->build($this->tabWidget, $uuidManufacturer);
     }
 
     private function createAttributeWidget()
