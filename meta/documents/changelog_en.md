@@ -15,6 +15,7 @@
 - The default single item view now includes a new tab for displaying information about the EU-Responsible Person in order to be GPSR-compliant.
 - The ShopBuilder preset for the single item view now includes a new tab for displaying information about the manufacturer.
 - The default template for the single item view now includes a new tab for displaying information about the manufacturer.
+- Added additional fields for EU Manufacturer and Manufacturer tabs of the ShopBuilder.
 
 ## v.1.0.12 (2024-08-19) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.11...1.0.12" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
