@@ -15,24 +15,6 @@
 - The default single item view now includes a new tab for displaying information about the EU-Responsible Person in order to be GPSR-compliant.
 - The ShopBuilder preset for the single item view now includes a new tab for displaying information about the manufacturer.
 - The default template for the single item view now includes a new tab for displaying information about the manufacturer.
-  Placeholders have been added to the ShopBuilder. These can be freely placed in the Text widget.
-  Legal Name
-  Homepage
-  Contact form
-  Street
-  House No.
-  Postcode
-  Town
-  Country
-  Telephone number
-  Fax number
-  Email
-  EU-Responsible Contact form
-
-The plentyShop LTS assistant now contains a new setting which determines which manufacturer data is made available in the frontend.
-The ShopBuilder preset for the item view now contains a new tab in the Tab widget in which the manufacturer data is displayed.
-The standard template for the item view now contains a new tab in which the manufacturer data is displayed.
-The placeholder for „The EU-Responsible Contact form“ was added to the standard template and ShopBuilder preset of the item view.
 
 ## v.1.0.12 (2024-08-19) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.11...1.0.12" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
