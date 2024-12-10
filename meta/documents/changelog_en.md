@@ -5,6 +5,7 @@
 ### Changed
 
 - The ShopBuilder preset for the single item view now includes a new tab for displaying information about the EU-Responsible Person in order to be GPSR-compliant.
+- The placeholder for “Contact form”, “Legal name” and “EU responsible contact form” was added to the ShopBuilder preset of the item view.
 
 ## v.1.0.13 (2024-09-27) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.12...1.0.13" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
