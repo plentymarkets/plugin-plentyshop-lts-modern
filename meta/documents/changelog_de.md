@@ -1,5 +1,11 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.15 (2025-XX-XX) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.13...1.0.14" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### Geändert
+
+- Widget anstelle von Datenfeldern für Hersteller- und EU-Verantwortliche-Registerkarten hinzugefügt.
+
 ## v.1.0.14 (2024-11-14) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.13...1.0.14" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
 ### Geändert
