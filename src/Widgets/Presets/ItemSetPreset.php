@@ -473,7 +473,7 @@ class ItemSetPreset implements ContentPreset
     private function createLegalInformation()
     {
         $text = "* {% if services.customer.showNetPrices() %}{{ trans(\"Ceres::Template.singleItemExclVAT\") }}{% else %}{{ trans(\"Ceres::Template.singleItemInclVAT\") }}{% endif %} {{ trans(\"Ceres::Template.singleItemExclusive\") }}";
-        $text .= "<a {% if ceresConfig.global.shippingCostsCategoryId > 0 %} data-toggle=\"modal\" href=\"#shippingscosts\"{% endif %} title=\"{{ trans(\"Ceres::Template.singleItemShippingCosts\") }}\"> {{ trans(\"Ceres::Template.singleItemShippingCosts\") }}</a>";
+        $text .= "<a {% if ceresConfig.global.shippingCostsCategoryId > 0 %} data-toggle=\"modal\" href=\"#shippingscosts\"{% endif %}> {{ trans(\"Ceres::Template.singleItemShippingCosts\") }}</a>";
         $this->preset->createWidget("Ceres::CodeWidget")
             ->withSetting("customClass", "vat small text-muted text-right w-100")
             ->withSetting("text", "<span>$text</span>")
