@@ -5,6 +5,7 @@
 ### Changed
 
 - Added widget instead of datafields for manufacturer and eu responsible tabs.
+- Removed title from default link text.
 
 ## v.1.0.14 (2024-11-14) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.13...1.0.14" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
