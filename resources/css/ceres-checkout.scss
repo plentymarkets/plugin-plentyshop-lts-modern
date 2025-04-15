@@ -16201,7 +16201,7 @@ html.ie { // stylelint-disable-line selector-no-qualifying-type
                     @include theme() { color: theme-get('font-color-primary'); }
 
                     .small {
-                        color: $gray-600;
+                        color: $gray-700;
                     }
 
                     &.compact .small {
