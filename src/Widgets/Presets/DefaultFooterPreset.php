@@ -227,23 +227,23 @@ class DefaultFooterPreset implements ContentPreset
         $enterprise = [
             [
                 "text" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterAboutUs"),
-                "urlDE" => "https://www.plentymarkets.com/de/unternehmen/",
-                "urlEN" => "https://www.plentymarkets.com/company/"
+                "urlDE" => "https://www.plentyone.com/de/",
+                "urlEN" => "https://www.plentyone.com/"
             ],
             [
                 "text" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterCareer"),
-                "urlDE" => "https://www.plentymarkets.com/de/karriere/",
-                "urlEN" => "https://www.plentymarkets.com/careers/"
+                "urlDE" => "https://www.plentyone.com/de/",
+                "urlEN" => "https://www.plentyone.com/"
             ],
             [
                 "text" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterPress"),
-                "urlDE" => "https://www.plentymarkets.com/de/presse/",
-                "urlEN" => "https://www.plentymarkets.com/press/"
+                "urlDE" => "https://www.plentyone.com/de/",
+                "urlEN" => "https://www.plentyone.com/"
             ],
             [
                 "text" => $this->translator->trans("plentyShopLTSModern::Widget.presetFooterBlog"),
-                "urlDE" => "https://www.plentymarkets.eu/blog/",
-                "urlEN" => "https://www.plentymarkets.co.uk/blog/"
+                "urlDE" => "https://www.plentyone.com/de/",
+                "urlEN" => "https://www.plentyone.com/"
             ]
         ];
 
@@ -312,13 +312,12 @@ class DefaultFooterPreset implements ContentPreset
     {
         $defaultText = "
             <div class=\"text-center align-self-center mb-2\">
-                <a href=\"https://www.instagram.com/plentysystems\" target=\"_blank\" class=\"fa fa-lg fa-instagram pl-2 px-1\"></a>
-                <a href=\"https://www.facebook.com/plentymarkets/\" target=\"_blank\" class=\"fa fa-lg fa-facebook-f pl-2 px-1\"></a>
-                <a href=\"https://twitter.com/plentymarkets\" target=\"_blank\" class=\"fa fa-lg fa-twitter pl-2 px-1\"></a>
+                <a href=\"https://www.facebook.com/plentyonecommerce\" target=\"_blank\" class=\"fa fa-lg fa-facebook-f pl-2 px-1\"></a>
+                <a href=\"https://x.com/PlentyONE\" target=\"_blank\" class=\"fa fa-lg fa-twitter pl-2 px-1\"></a>
             </div>
             <div class=\"copyright text-center\">
-                <!--<a class=\"d-inline-block mb-2\" rel=\"nofollow\" href=\"https://www.plentymarkets.eu\">
-                    <img alt=\"Plentymarkets GmbH Logo\" class=\"svg plenty-brand\" src=\"{{ plugin_path(\"Ceres\") }}/images/plentymarkets-logo.svg\" rel=\"nofollow\">
+                <!--<a class=\"d-inline-block mb-2\" rel=\"nofollow\" href=\"https://www.plentyone.com/\">
+                    <img alt=\"PlentyONE Logo\" class=\"svg plenty-brand\" src=\"https://cdn01.plentymarkets.com/avw8j9fg70hi/frontend/plentyShop_LTS/PlentyONE_Logo_Black_RGB.svg" rel=\"nofollow\">
                 </a>-->
                 <small class=\"d-block\">&copy; Copyright {{ \"now\" | date(\"Y\") }} | {{ trans(\"Ceres::Template.footerAllRightsReserved\") }}</small>
             </div>
