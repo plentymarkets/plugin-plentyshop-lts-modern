@@ -1,11 +1,11 @@
 # Release Notes for plentyShop LTS Modern
 
-## v.1.0.15 (2025-XX-XX) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.13...1.0.14" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+## v.1.0.15 (2025-04-15) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.14...1.0.15" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Changed
 
-- Added widget instead of datafields for manufacturer and eu responsible tabs.
-- Removed title from default link text.
+- Added widget instead of datafields for manufacturer and eu responsible tabs to the default presets.
+- Changes to stylesheets have been done to match new plentyShop LTS Version 5.0.72
 
 ## v.1.0.14 (2024-11-14) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.13...1.0.14" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
