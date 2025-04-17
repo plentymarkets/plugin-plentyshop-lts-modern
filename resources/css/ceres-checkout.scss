@@ -12549,7 +12549,7 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
                     text-align: right;
 
                     .crossprice {
-                        opacity: 0.7;
+                        opacity: 0.8;
                     }
                 }
 
@@ -16201,7 +16201,7 @@ html.ie { // stylelint-disable-line selector-no-qualifying-type
                     @include theme() { color: theme-get('font-color-primary'); }
 
                     .small {
-                        color: $gray-700;
+                        color: $gray-600;
                     }
 
                     &.compact .small {
