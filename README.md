@@ -1,8 +1,8 @@
-![plentymarkets Logo](http://www.plentymarkets.eu/layout/pm/images/logo/plentymarkets-logo.jpg)
+![PlentyONE Logo](https://cdn01.plentymarkets.com/avw8j9fg70hi/frontend/plentyShop_LTS/PlentyONE_Logo_Black_RGB.svg)
 
 # plentyShop LTS Modern theme plugin
 
-This is the official **plentyShop LTS Modern** theme plugin developed by plentymarkets. **plentyShop LTS Modern** is the default theme plugin for [plentymarkets](https://www.plentymarkets.eu/tour/) online stores.
+This is the official **plentyShop LTS Modern** theme plugin developed by PlentyONE. **plentyShop LTS Modern** is the default theme plugin for [PlentyONE](https://www.plentyone.com/) online stores.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ This is a theme plugin for [plentyShop LTS](https://github.com/plentymarkets/plu
 
 ## Installing
 
-For detailed information about plugin provisioning refer to [plentymarkets developers](https://developers.plentymarkets.com/dev-doc/basics#plugin-provisioning).
+For detailed information about plugin provisioning refer to [PlentyONE developers](https://developers.plentymarkets.com/dev-doc/basics#plugin-provisioning).
 
 ## Quick start
 
@@ -25,11 +25,11 @@ Your Javascript, widget and SCSS changes have now been assembled locally.
 
 ## Plugin documentation
 
-- Learn how to create your [first plentymarkets plugin](https://developers.plentymarkets.com/tutorials/helloworld)
+- Learn how to create your [first PlentyONE plugin](https://developers.plentymarkets.com/tutorials/helloworld)
 - Installing a [template](https://developers.plentymarkets.com/tutorials/design)
 - Developing [template plugins](https://developers.plentymarkets.com/dev-doc/template-plugins)
-- The plentymarkets [plugin interface](https://developers.plentymarkets.com/dev-doc/basics#introduction-interface)
-- The plentymarkets [REST API](https://developers.plentymarkets.com/rest-doc/introduction)
+- The PlentyONE [plugin interface](https://developers.plentymarkets.com/dev-doc/basics#introduction-interface)
+- The PlentyONE [REST API](https://developers.plentymarkets.com/rest-doc/introduction)
 
 ## Join our community
 

@@ -1,11 +1,11 @@
 # plentyShop LTS Modern – Das offizielle Theme-Plugin für plentyShop LTS
 
-**plentyShop LTS Modern** ist das offizielle Theme-Plugin für den Standard-Webshop von plentymarkets. plentyShop LTS Modern ist kompatibel mit allen plentyShop LTS Versionen ab 5.0.48.
+**plentyShop LTS Modern** ist das offizielle Theme-Plugin für den Standard-Webshop von PlentyONE. plentyShop LTS Modern ist kompatibel mit allen plentyShop LTS Versionen ab 5.0.48.
 
 ## plentyShop LTS Modern installieren
 
 1. Lade das Plugin **plentyShop LTS Modern** im plentyMarketplace herunter.
-2. Öffne im plentyMarkets-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
+2. Öffne im PlentyONE-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
 3. Öffne das Plugin-Set, in dem du das Theme verwenden willst.
 4. Klicke auf **Plugin hinzufügen**.
 5. Gib "plentyShop LTS Modern" in die Suche ein oder wähle das Plugin aus der Liste.
@@ -19,7 +19,7 @@ Das Plugin wird installiert und ist nach dem nächsten **Bereitstellen** des Plu
 
 plentyShop LTS Modern verwendet CSS, das das normale CSS von plentyShops überschreibt. Dafür ist eine Container-Verknüpfung notwendig. Gehe wie folgt vor, um den richtigen Container zuzuweisen:
 
-1. Öffne im plentyMarkets-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
+1. Öffne im PlentyONE-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
 2. Öffne das Plugin-Set, in dem du das Theme verwendest.
 3. Öffne das Plugin **plentyShop LTS Mordern** indem du darauf klickst.
 4. Öffne das Tab **Container-Verknüpfungen**.
@@ -34,7 +34,7 @@ plentyShop LTS Modern verwendet CSS, das das normale CSS von plentyShops übersc
 
 Gehe wie folgt vor, um den Stil des Themes zu ändern:
 
-1. Öffne im plentyMarkets-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
+1. Öffne im PlentyONE-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
 2. Öffne das Plugin-Set, in dem du das Theme verwendest.
 3. Öffne das Plugin **plentyShop LTS Mordern** indem du darauf klickst.
 4. Die Design-Einstellungen des Plugins werden geöffnet.
@@ -47,7 +47,7 @@ In **plentyShop LTS Modern** kannst du 6 Farben hinterlegen, auf die ShopBuilder
 
 Gehe wie folgt vor, um Farbeinstellungen vorzunehmen:
 
-1. Öffne im plentyMarkets-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
+1. Öffne im PlentyONE-Backend das Menü **Plugins » Plugin-Set-Übersicht**.
 2. Öffne das Plugin-Set, in dem du das Theme verwendest.
 3. Öffne das Plugin **plentyShop LTS Mordern** indem du darauf klickst.
 4. Die Design-Einstellungen des Plugins werden geöffnet.
