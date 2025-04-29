@@ -316,9 +316,9 @@ class DefaultFooterPreset implements ContentPreset
                 <a href=\"https://x.com/PlentyONE\" target=\"_blank\" class=\"fa fa-lg fa-twitter pl-2 px-1\"></a>
             </div>
             <div class=\"copyright text-center\">
-                <!--<a class=\"d-inline-block mb-2\" rel=\"nofollow\" href=\"https://www.plentyone.com/\">
-                    <img alt=\"PlentyONE Logo\" class=\"svg plenty-brand\" src=\"https://cdn01.plentymarkets.com/avw8j9fg70hi/frontend/plentyShop_LTS/PlentyONE_Logo_Black_RGB.svg" rel=\"nofollow\">
-                </a>-->
+                <a class=\"d-inline-block mb-2\" rel=\"nofollow\" href=\"https://www.plentyone.com/\">
+                    <img alt=\"PlentyONE Logo\" class=\"svg plenty-brand\" src=\"https://cdn01.plentymarkets.com/avw8j9fg70hi/frontend/plentyShop_LTS/PlentyONE_Logo_Black_RGB.svg\" rel=\"nofollow\">
+                </a>
                 <small class=\"d-block\">&copy; Copyright {{ \"now\" | date(\"Y\") }} | {{ trans(\"Ceres::Template.footerAllRightsReserved\") }}</small>
             </div>
         ";
