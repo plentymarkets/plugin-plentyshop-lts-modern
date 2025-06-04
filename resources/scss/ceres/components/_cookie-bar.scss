@@ -23,7 +23,7 @@
         .privacy-settings-body {
             .card {
                 @extend .card;
-                @include theme() { background-color: theme-get('gray-100'); }
+                @include theme() { background-color: yellow }
                 border: none;
                 margin-bottom: map_get($spacers, 3);
             }
