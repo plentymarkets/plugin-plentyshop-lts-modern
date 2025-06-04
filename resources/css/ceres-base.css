@@ -9597,9 +9597,9 @@ button:focus {
     border: none;
     margin-bottom: 24px; }
     .cookie-bar .privacy-settings .privacy-settings-body .card {
-      background-color: #f4f4f6; }
+      background-color: yellow; }
     .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .card {
-      background-color: #1b1d1e; }
+      background-color: yellow; }
 
 .cookie-bar .container-max {
   max-height: 100vh;

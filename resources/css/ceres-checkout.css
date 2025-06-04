@@ -9623,10 +9623,10 @@ button:focus {
     margin-bottom: 24px; }
     .cookie-bar .privacy-settings .privacy-settings-body .card,
     .cookie-bar .privacy-settings .privacy-settings-body .cmp-address-list .items > div:first-child, .cmp-address-list .cookie-bar .privacy-settings .privacy-settings-body .items > div:first-child {
-      background-color: #f4f4f6; }
+      background-color: yellow; }
     .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .card,
     .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .cmp-address-list .items > div:first-child, .cmp-address-list .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .items > div:first-child {
-      background-color: #1b1d1e; }
+      background-color: yellow; }
 
 .cookie-bar .container-max {
   max-height: 100vh;
