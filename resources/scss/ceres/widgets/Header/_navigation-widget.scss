@@ -222,8 +222,7 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
             }
 
             &:hover,
-            &.hover,
-            &[aria-expanded="true"] {
+            &.hover {
                 > ul {
                     overflow-y: auto; // show the overflow-y only when the menu is visible / required for safari (desktop)
                     visibility: visible;
