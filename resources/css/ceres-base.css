@@ -14298,9 +14298,9 @@ html.ie .mobile-navigation .mainmenu .nav-direction {
   .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link {
     color: #3e4346; }
   .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link:hover, .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
-    color: blue; }
+    color: #d51317; }
   .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link:hover, .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
-    color: blue; }
+    color: #d51317; }
   .top-bar .top-bar-items {
     max-width: 100%; }
   .top-bar > .container-max.pr-lg-3 {
@@ -14341,9 +14341,9 @@ html.ie .mobile-navigation .mainmenu .nav-direction {
           font-size: 1.25rem;
           min-width: 20px; }
         .top-bar .controls-list .list-inline-item .nav-link:hover, .top-bar .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
-          color: pink; }
+          color: #d51317; }
         .dark-theme .top-bar .controls-list .list-inline-item .nav-link:hover, .dark-theme .top-bar .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
-          color: pink; }
+          color: #d51317; }
       .top-bar .controls-list .list-inline-item.control-user .position-relative {
         display: flex;
         align-items: center; }
