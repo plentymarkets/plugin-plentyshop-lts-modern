@@ -13821,6 +13821,10 @@ body.menu-is-visible {
 
 .normalmenu .mainmenu > li {
   position: relative; }
+  .normalmenu .mainmenu > li :hover {
+    color: #d51317; }
+  .dark-theme .normalmenu .mainmenu > li :hover {
+    color: #d51317; }
 
 .normalmenu .collapse {
   position: absolute;

@@ -15200,6 +15200,10 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
     .mainmenu {
         > li {
             position: relative;
+
+            :hover {
+                @include theme() { color: $primary; }
+            }
         }
     }
 
