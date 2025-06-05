@@ -13892,14 +13892,14 @@ body.menu-is-visible {
     height: 100%; }
     .main-navbar-collapsable .mainmenu > li > a {
       padding: 24px; }
-    .main-navbar-collapsable .mainmenu > li:hover > ul, .main-navbar-collapsable .mainmenu > li.hover > ul, .main-navbar-collapsable .mainmenu > li[aria-expanded="true"] > ul {
+    .main-navbar-collapsable .mainmenu > li:hover > ul, .main-navbar-collapsable .mainmenu > li.hover > ul {
       overflow-y: auto;
       visibility: visible;
       opacity: 1;
       z-index: 1090; }
-      .main-navbar-collapsable .mainmenu > li:hover > ul, .main-navbar-collapsable .mainmenu > li.hover > ul, .main-navbar-collapsable .mainmenu > li[aria-expanded="true"] > ul {
+      .main-navbar-collapsable .mainmenu > li:hover > ul, .main-navbar-collapsable .mainmenu > li.hover > ul {
         color: #d51317; }
-      .dark-theme .main-navbar-collapsable .mainmenu > li:hover > ul, .dark-theme .main-navbar-collapsable .mainmenu > li.hover > ul, .dark-theme .main-navbar-collapsable .mainmenu > li[aria-expanded="true"] > ul {
+      .dark-theme .main-navbar-collapsable .mainmenu > li:hover > ul, .dark-theme .main-navbar-collapsable .mainmenu > li.hover > ul {
         color: #d51317; }
   .main-navbar-collapsable .ddown > a::after {
     padding-left: .5em;
