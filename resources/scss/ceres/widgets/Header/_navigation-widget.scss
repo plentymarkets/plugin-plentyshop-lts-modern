@@ -360,7 +360,7 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
                 @include theme() { color: theme-get('top-bar-color'); }
     
                 &:hover {
-                    @include theme() { color: theme-get('link-primary-hover'); }
+                    @include theme() { color: $primary; }
                 }
             }
 
