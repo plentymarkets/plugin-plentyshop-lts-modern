@@ -102,10 +102,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
     .mainmenu {
         > li {
             position: relative;
-
-            :hover {
-                @include theme() { color: $primary; }
-            }
         }
     }
 
@@ -138,6 +134,9 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
             &.hover {
                 > ul {
                     display: block;
+                    &:hover {
+                        @include theme() { color: $primary; }
+                    }
                 }
             }
         }
@@ -407,6 +406,16 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
 
 .mainmenu[class*=" animate-"] {
     display: block !important; // stylelint-disable-line declaration-no-important
+
+    li {
+        a {
+            &:hover {
+                        &:hover {
+                        @include theme() { color: $primary; }
+                    }
+            }
+        }
+    }
 }
 
 .animate-out-to-right .ddown {

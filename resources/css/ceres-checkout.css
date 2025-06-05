@@ -13821,10 +13821,6 @@ body.menu-is-visible {
 
 .normalmenu .mainmenu > li {
   position: relative; }
-  .normalmenu .mainmenu > li :hover {
-    color: #d51317; }
-  .dark-theme .normalmenu .mainmenu > li :hover {
-    color: #d51317; }
 
 .normalmenu .collapse {
   position: absolute;
@@ -13848,6 +13844,10 @@ body.menu-is-visible {
 
 .megamenu .mainmenu > li:hover > ul, .megamenu .mainmenu > li.hover > ul {
   display: block; }
+  .megamenu .mainmenu > li:hover > ul:hover, .megamenu .mainmenu > li.hover > ul:hover {
+    color: #d51317; }
+  .dark-theme .megamenu .mainmenu > li:hover > ul:hover, .dark-theme .megamenu .mainmenu > li.hover > ul:hover {
+    color: #d51317; }
 
 .megamenu .collapse {
   position: absolute;
@@ -14114,6 +14114,10 @@ body.menu-is-visible {
 
 .mainmenu[class*=" animate-"] {
   display: block !important; }
+  .mainmenu[class*=" animate-"] li a:hover:hover {
+    color: #d51317; }
+  .dark-theme .mainmenu[class*=" animate-"] li a:hover:hover {
+    color: #d51317; }
 
 .animate-out-to-right .ddown {
   -webkit-animation: out-to-right 0.2s both cubic-bezier(0.7, 0, 0.3, 1);
