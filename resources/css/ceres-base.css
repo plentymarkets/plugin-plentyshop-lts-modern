@@ -3363,7 +3363,7 @@ input[type="button"].btn-block {
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #ffffff; }
 
-.card, .cookie-bar .privacy-settings .privacy-settings-body .card {
+.card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -3373,13 +3373,13 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0; }
-  .card > hr, .cookie-bar .privacy-settings .privacy-settings-body .card > hr {
+  .card > hr {
     margin-right: 0;
     margin-left: 0; }
-  .card > .list-group:first-child .list-group-item:first-child, .cookie-bar .privacy-settings .privacy-settings-body .card > .list-group:first-child .list-group-item:first-child {
+  .card > .list-group:first-child .list-group-item:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
-  .card > .list-group:last-child .list-group-item:last-child, .cookie-bar .privacy-settings .privacy-settings-body .card > .list-group:last-child .list-group-item:last-child {
+  .card > .list-group:last-child .list-group-item:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
 
@@ -3455,7 +3455,7 @@ input[type="button"].btn-block {
   border-bottom-right-radius: -1px;
   border-bottom-left-radius: -1px; }
 
-.card-deck .card, .card-deck .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .card-deck .card {
+.card-deck .card {
   margin-bottom: 12px; }
 
 @media (min-width: 576px) {
@@ -3464,49 +3464,45 @@ input[type="button"].btn-block {
     flex-flow: row wrap;
     margin-right: -12px;
     margin-left: -12px; }
-    .card-deck .card, .card-deck .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .card-deck .card {
+    .card-deck .card {
       flex: 1 0 0%;
       margin-right: 12px;
       margin-bottom: 0;
       margin-left: 12px; } }
 
-.card-group > .card, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card {
+.card-group > .card {
   margin-bottom: 12px; }
 
 @media (min-width: 576px) {
   .card-group {
     display: flex;
     flex-flow: row wrap; }
-    .card-group > .card, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card {
+    .card-group > .card {
       flex: 1 0 0%;
       margin-bottom: 0; }
-      .card-group > .card + .card, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card + .card {
+      .card-group > .card + .card {
         margin-left: 0;
         border-left: 0; }
-      .card-group > .card:not(:last-child), .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) {
+      .card-group > .card:not(:last-child) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0; }
-        .card-group > .card:not(:last-child) .card-img-top, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) .card-img-top,
-        .card-group > .card:not(:last-child) .card-header,
-        .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) .card-header {
+        .card-group > .card:not(:last-child) .card-img-top,
+        .card-group > .card:not(:last-child) .card-header {
           border-top-right-radius: 0; }
-        .card-group > .card:not(:last-child) .card-img-bottom, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) .card-img-bottom,
-        .card-group > .card:not(:last-child) .card-footer,
-        .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) .card-footer {
+        .card-group > .card:not(:last-child) .card-img-bottom,
+        .card-group > .card:not(:last-child) .card-footer {
           border-bottom-right-radius: 0; }
-      .card-group > .card:not(:first-child), .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) {
+      .card-group > .card:not(:first-child) {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0; }
-        .card-group > .card:not(:first-child) .card-img-top, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) .card-img-top,
-        .card-group > .card:not(:first-child) .card-header,
-        .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) .card-header {
+        .card-group > .card:not(:first-child) .card-img-top,
+        .card-group > .card:not(:first-child) .card-header {
           border-top-left-radius: 0; }
-        .card-group > .card:not(:first-child) .card-img-bottom, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) .card-img-bottom,
-        .card-group > .card:not(:first-child) .card-footer,
-        .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) .card-footer {
+        .card-group > .card:not(:first-child) .card-img-bottom,
+        .card-group > .card:not(:first-child) .card-footer {
           border-bottom-left-radius: 0; } }
 
-.card-columns .card, .card-columns .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .card-columns .card {
+.card-columns .card {
   margin-bottom: 0.75rem; }
 
 @media (min-width: 576px) {
@@ -3517,20 +3513,20 @@ input[type="button"].btn-block {
             column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
-    .card-columns .card, .card-columns .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .card-columns .card {
+    .card-columns .card {
       display: inline-block;
       width: 100%; } }
 
-.accordion > .card, .cookie-bar .privacy-settings .privacy-settings-body .accordion > .card {
+.accordion > .card {
   overflow: hidden; }
-  .accordion > .card:not(:last-of-type), .cookie-bar .privacy-settings .privacy-settings-body .accordion > .card:not(:last-of-type) {
+  .accordion > .card:not(:last-of-type) {
     border-bottom: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .accordion > .card:not(:first-of-type), .cookie-bar .privacy-settings .privacy-settings-body .accordion > .card:not(:first-of-type) {
+  .accordion > .card:not(:first-of-type) {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
-  .accordion > .card > .card-header, .cookie-bar .privacy-settings .privacy-settings-body .accordion > .card > .card-header {
+  .accordion > .card > .card-header {
     border-radius: 0;
     margin-bottom: -1px; }
 
@@ -9184,10 +9180,10 @@ button:focus {
   .input-group.extended .input-group-btn {
     width: auto; }
 
-.card, .cookie-bar .privacy-settings .privacy-settings-body .card {
+.card {
   background-color: #ffffff; }
 
-.dark-theme .card, .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .dark-theme .card {
+.dark-theme .card {
   background-color: #111313; }
 
 .notification-wrapper .alert {
@@ -9580,37 +9576,9 @@ button:focus {
     .show > .popper-handle .btn-group-sm > .btn.btn-icon.btn-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(226, 227, 227, 0.5); }
 
-.cookie-bar.out {
-  left: 24px; }
-  .cookie-bar.out.fixed-bottom {
-    right: initial; }
-
-.cookie-bar.border-top {
-  border: none !important; }
-
-.cookie-bar > .container-max > .row {
-  padding: 12px; }
-
-.cookie-bar .privacy-settings {
-  max-height: 50vh; }
-  .cookie-bar .privacy-settings .privacy-settings-body .card {
-    border: none;
-    margin-bottom: 24px; }
-    .cookie-bar .privacy-settings .privacy-settings-body .card {
-      background-color: yellow; }
-    .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .card {
-      background-color: yellow; }
-
-.cookie-bar .container-max {
-  max-height: 100vh;
-  overflow-y: auto; }
-
-.cookie-bar i.fa-shield {
-  margin-right: 0; }
-
-@media (min-width: 576px) {
-  .cookie-bar i.fa-shield {
-    margin-right: 12px; } }
+.cookie-bar {
+  background: orange;
+  background-color: orange; }
 
 .button-order {
   display: grid;
@@ -12747,18 +12715,18 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
   .dark-theme .widget-print-button.widget-dark .btn-primary:hover {
     border-color: #d51317; }
 
-.widget-accordion .card, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card {
+.widget-accordion .card {
   border-bottom: 0; }
-  .widget-accordion .card:last-child, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card:last-child, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card:last-child {
+  .widget-accordion .card:last-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .widget-accordion .card button, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button {
+  .widget-accordion .card button {
     padding: 1.25rem;
     text-align: left;
     border-top-width: 0; }
-    .widget-accordion .card button h5, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button h5, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button h5 {
+    .widget-accordion .card button h5 {
       position: relative;
       font-weight: 500; }
-    .widget-accordion .card button .fa, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button .fa, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button .fa {
+    .widget-accordion .card button .fa {
       position: absolute;
       top: -4px;
       right: 0;
@@ -12772,10 +12740,8 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
     .widget-accordion .card button.collapsed .fa {
       -webkit-transform: scaleY(1);
               transform: scaleY(1); }
-  .widget-accordion .card button:hover, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button:hover, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button:hover,
-  .widget-accordion .card button:focus,
-  .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button:focus,
-  .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button:focus {
+  .widget-accordion .card button:hover,
+  .widget-accordion .card button:focus {
     color: #000000; }
 
 .widget-accordion .card-body {
