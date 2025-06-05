@@ -15334,12 +15334,14 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
             }
 
             &:hover,
-            &.hover {
+            &.hover,
+            &[aria-expanded="true"] {
                 > ul {
                     overflow-y: auto; // show the overflow-y only when the menu is visible / required for safari (desktop)
                     visibility: visible;
                     opacity: 1;
                     z-index: $zindex-9;
+                    @include theme() { color: $primary; }
                 }
             }
         }
