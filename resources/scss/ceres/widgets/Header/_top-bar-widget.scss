@@ -22,7 +22,7 @@
                         @include theme() { color: theme-get('top-bar-transparent-color'); }
                         &:hover,
                         &[aria-expanded="true"] {
-                            @include theme() { color: theme-get('link-primary-hover'); }
+                            @include theme() { color: blue; }
                         }
                     }
                 }
