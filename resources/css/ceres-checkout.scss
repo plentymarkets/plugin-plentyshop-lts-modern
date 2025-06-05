@@ -15925,7 +15925,7 @@ html.ie { // stylelint-disable-line selector-no-qualifying-type
 
                 &:hover,
                 &[aria-expanded="true"] {
-                    @include theme() { color: theme-get('link-primary-hover'); }
+                    @include theme() { color: pink; }
                 }
             }
 

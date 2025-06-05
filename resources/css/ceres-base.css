@@ -14341,9 +14341,9 @@ html.ie .mobile-navigation .mainmenu .nav-direction {
           font-size: 1.25rem;
           min-width: 20px; }
         .top-bar .controls-list .list-inline-item .nav-link:hover, .top-bar .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
-          color: #d51317; }
+          color: pink; }
         .dark-theme .top-bar .controls-list .list-inline-item .nav-link:hover, .dark-theme .top-bar .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
-          color: #d51317; }
+          color: pink; }
       .top-bar .controls-list .list-inline-item.control-user .position-relative {
         display: flex;
         align-items: center; }
