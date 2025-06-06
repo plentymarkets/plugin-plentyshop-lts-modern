@@ -29,6 +29,16 @@
             }
         }
     }
+    .controls-list {
+        .list-inline-item {
+            .nav-link {
+                :hover,
+                &[aria-expanded="true"] {
+                    @include theme() { color: $primary; }
+                }
+            }
+        }
+    }
 
     .top-bar-items {
         max-width: 100%;
