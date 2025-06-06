@@ -3363,7 +3363,7 @@ input[type="button"].btn-block {
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #ffffff; }
 
-.card, .widget-account-settings .card,
+.card, .cookie-bar .privacy-settings .privacy-settings-body .card, .widget-account-settings .card,
 .cmp-address-list .items > div:first-child {
   position: relative;
   display: flex;
@@ -3374,13 +3374,13 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0; }
-  .card > hr, .widget-account-settings .card > hr, .cmp-address-list .items > div:first-child > hr {
+  .card > hr, .cookie-bar .privacy-settings .privacy-settings-body .card > hr, .widget-account-settings .card > hr, .cmp-address-list .items > div:first-child > hr {
     margin-right: 0;
     margin-left: 0; }
-  .card > .list-group:first-child .list-group-item:first-child, .widget-account-settings .card > .list-group:first-child .list-group-item:first-child, .cmp-address-list .items > div:first-child > .list-group:first-child .list-group-item:first-child {
+  .card > .list-group:first-child .list-group-item:first-child, .cookie-bar .privacy-settings .privacy-settings-body .card > .list-group:first-child .list-group-item:first-child, .widget-account-settings .card > .list-group:first-child .list-group-item:first-child, .cmp-address-list .items > div:first-child > .list-group:first-child .list-group-item:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
-  .card > .list-group:last-child .list-group-item:last-child, .widget-account-settings .card > .list-group:last-child .list-group-item:last-child, .cmp-address-list .items > div:first-child > .list-group:last-child .list-group-item:last-child {
+  .card > .list-group:last-child .list-group-item:last-child, .cookie-bar .privacy-settings .privacy-settings-body .card > .list-group:last-child .list-group-item:last-child, .widget-account-settings .card > .list-group:last-child .list-group-item:last-child, .cmp-address-list .items > div:first-child > .list-group:last-child .list-group-item:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
 
@@ -3456,7 +3456,7 @@ input[type="button"].btn-block {
   border-bottom-right-radius: -1px;
   border-bottom-left-radius: -1px; }
 
-.card-deck .card,
+.card-deck .card, .card-deck .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .card-deck .card,
 .card-deck .cmp-address-list .items > div:first-child, .cmp-address-list .card-deck .items > div:first-child {
   margin-bottom: 12px; }
 
@@ -3466,14 +3466,14 @@ input[type="button"].btn-block {
     flex-flow: row wrap;
     margin-right: -12px;
     margin-left: -12px; }
-    .card-deck .card,
+    .card-deck .card, .card-deck .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .card-deck .card,
     .card-deck .cmp-address-list .items > div:first-child, .cmp-address-list .card-deck .items > div:first-child {
       flex: 1 0 0%;
       margin-right: 12px;
       margin-bottom: 0;
       margin-left: 12px; } }
 
-.card-group > .card, .widget-account-settings .card-group > .card,
+.card-group > .card, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card, .widget-account-settings .card-group > .card,
 .cmp-address-list .items.card-group > div:first-child {
   margin-bottom: 12px; }
 
@@ -3481,45 +3481,49 @@ input[type="button"].btn-block {
   .card-group {
     display: flex;
     flex-flow: row wrap; }
-    .card-group > .card, .widget-account-settings .card-group > .card,
+    .card-group > .card, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card, .widget-account-settings .card-group > .card,
     .cmp-address-list .items.card-group > div:first-child {
       flex: 1 0 0%;
       margin-bottom: 0; }
-      .card-group > .card + .card, .cmp-address-list .items.card-group > div:first-child + .card, .widget-account-settings .card-group > .card + .card, .cmp-address-list .widget-account-settings .items.card-group > div:first-child + .card,
-      .cmp-address-list .items.card-group > .card + div:first-child, .cmp-address-list .widget-account-settings .items.card-group > .card + div:first-child,
+      .card-group > .card + .card, .cmp-address-list .items.card-group > div:first-child + .card, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card + .card, .cmp-address-list .cookie-bar .privacy-settings .privacy-settings-body .items.card-group > div:first-child + .card, .widget-account-settings .card-group > .card + .card, .cmp-address-list .widget-account-settings .items.card-group > div:first-child + .card,
+      .cmp-address-list .items.card-group > .card + div:first-child, .cmp-address-list .cookie-bar .privacy-settings .privacy-settings-body .items.card-group > .card + div:first-child, .cmp-address-list .widget-account-settings .items.card-group > .card + div:first-child,
       .cmp-address-list .items.card-group > div:first-child + div:first-child {
         margin-left: 0;
         border-left: 0; }
-      .card-group > .card:not(:last-child), .widget-account-settings .card-group > .card:not(:last-child),
+      .card-group > .card:not(:last-child), .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child), .widget-account-settings .card-group > .card:not(:last-child),
       .cmp-address-list .items.card-group > div:not(:last-child):first-child {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0; }
-        .card-group > .card:not(:last-child) .card-img-top, .widget-account-settings .card-group > .card:not(:last-child) .card-img-top, .cmp-address-list .items.card-group > div:not(:last-child):first-child .card-img-top,
+        .card-group > .card:not(:last-child) .card-img-top, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) .card-img-top, .widget-account-settings .card-group > .card:not(:last-child) .card-img-top, .cmp-address-list .items.card-group > div:not(:last-child):first-child .card-img-top,
         .card-group > .card:not(:last-child) .card-header,
+        .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) .card-header,
         .widget-account-settings .card-group > .card:not(:last-child) .card-header,
         .cmp-address-list .items.card-group > div:not(:last-child):first-child .card-header {
           border-top-right-radius: 0; }
-        .card-group > .card:not(:last-child) .card-img-bottom, .widget-account-settings .card-group > .card:not(:last-child) .card-img-bottom, .cmp-address-list .items.card-group > div:not(:last-child):first-child .card-img-bottom,
+        .card-group > .card:not(:last-child) .card-img-bottom, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) .card-img-bottom, .widget-account-settings .card-group > .card:not(:last-child) .card-img-bottom, .cmp-address-list .items.card-group > div:not(:last-child):first-child .card-img-bottom,
         .card-group > .card:not(:last-child) .card-footer,
+        .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:last-child) .card-footer,
         .widget-account-settings .card-group > .card:not(:last-child) .card-footer,
         .cmp-address-list .items.card-group > div:not(:last-child):first-child .card-footer {
           border-bottom-right-radius: 0; }
-      .card-group > .card:not(:first-child), .widget-account-settings .card-group > .card:not(:first-child),
+      .card-group > .card:not(:first-child), .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child), .widget-account-settings .card-group > .card:not(:first-child),
       .cmp-address-list .items.card-group > div:not(:first-child):first-child {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0; }
-        .card-group > .card:not(:first-child) .card-img-top, .widget-account-settings .card-group > .card:not(:first-child) .card-img-top, .cmp-address-list .items.card-group > div:not(:first-child):first-child .card-img-top,
+        .card-group > .card:not(:first-child) .card-img-top, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) .card-img-top, .widget-account-settings .card-group > .card:not(:first-child) .card-img-top, .cmp-address-list .items.card-group > div:not(:first-child):first-child .card-img-top,
         .card-group > .card:not(:first-child) .card-header,
+        .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) .card-header,
         .widget-account-settings .card-group > .card:not(:first-child) .card-header,
         .cmp-address-list .items.card-group > div:not(:first-child):first-child .card-header {
           border-top-left-radius: 0; }
-        .card-group > .card:not(:first-child) .card-img-bottom, .widget-account-settings .card-group > .card:not(:first-child) .card-img-bottom, .cmp-address-list .items.card-group > div:not(:first-child):first-child .card-img-bottom,
+        .card-group > .card:not(:first-child) .card-img-bottom, .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) .card-img-bottom, .widget-account-settings .card-group > .card:not(:first-child) .card-img-bottom, .cmp-address-list .items.card-group > div:not(:first-child):first-child .card-img-bottom,
         .card-group > .card:not(:first-child) .card-footer,
+        .cookie-bar .privacy-settings .privacy-settings-body .card-group > .card:not(:first-child) .card-footer,
         .widget-account-settings .card-group > .card:not(:first-child) .card-footer,
         .cmp-address-list .items.card-group > div:not(:first-child):first-child .card-footer {
           border-bottom-left-radius: 0; } }
 
-.card-columns .card,
+.card-columns .card, .card-columns .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .card-columns .card,
 .card-columns .cmp-address-list .items > div:first-child, .cmp-address-list .card-columns .items > div:first-child {
   margin-bottom: 0.75rem; }
 
@@ -3531,24 +3535,24 @@ input[type="button"].btn-block {
             column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
-    .card-columns .card,
+    .card-columns .card, .card-columns .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .card-columns .card,
     .card-columns .cmp-address-list .items > div:first-child, .cmp-address-list .card-columns .items > div:first-child {
       display: inline-block;
       width: 100%; } }
 
-.accordion > .card, .widget-account-settings .accordion > .card,
+.accordion > .card, .cookie-bar .privacy-settings .privacy-settings-body .accordion > .card, .widget-account-settings .accordion > .card,
 .cmp-address-list .items.accordion > div:first-child {
   overflow: hidden; }
-  .accordion > .card:not(:last-of-type), .widget-account-settings .accordion > .card:not(:last-of-type),
+  .accordion > .card:not(:last-of-type), .cookie-bar .privacy-settings .privacy-settings-body .accordion > .card:not(:last-of-type), .widget-account-settings .accordion > .card:not(:last-of-type),
   .cmp-address-list .items.accordion > div:not(:last-of-type):first-child {
     border-bottom: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .accordion > .card:not(:first-of-type), .widget-account-settings .accordion > .card:not(:first-of-type),
+  .accordion > .card:not(:first-of-type), .cookie-bar .privacy-settings .privacy-settings-body .accordion > .card:not(:first-of-type), .widget-account-settings .accordion > .card:not(:first-of-type),
   .cmp-address-list .items.accordion > div:not(:first-of-type):first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
-  .accordion > .card > .card-header, .widget-account-settings .accordion > .card > .card-header, .cmp-address-list .items.accordion > div:first-child > .card-header {
+  .accordion > .card > .card-header, .cookie-bar .privacy-settings .privacy-settings-body .accordion > .card > .card-header, .widget-account-settings .accordion > .card > .card-header, .cmp-address-list .items.accordion > div:first-child > .card-header {
     border-radius: 0;
     margin-bottom: -1px; }
 
@@ -9202,11 +9206,11 @@ button:focus {
   .input-group.extended .input-group-btn {
     width: auto; }
 
-.card, .widget-account-settings .card,
+.card, .cookie-bar .privacy-settings .privacy-settings-body .card, .widget-account-settings .card,
 .cmp-address-list .items > div:first-child {
   background-color: #ffffff; }
 
-.dark-theme .card,
+.dark-theme .card, .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .dark-theme .card,
 .dark-theme .cmp-address-list .items > div:first-child, .cmp-address-list .dark-theme .items > div:first-child {
   background-color: #111313; }
 
@@ -9600,9 +9604,40 @@ button:focus {
     .show > .popper-handle .btn-group-sm > .btn.btn-icon.btn-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(226, 227, 227, 0.5); }
 
-.cookie-bar {
-  background: orange;
-  background-color: orange; }
+.cookie-bar.out {
+  left: 24px; }
+  .cookie-bar.out.fixed-bottom {
+    right: initial; }
+
+.cookie-bar.border-top {
+  border: none !important; }
+
+.cookie-bar > .container-max > .row {
+  padding: 12px; }
+
+.cookie-bar .privacy-settings {
+  max-height: 50vh; }
+  .cookie-bar .privacy-settings .privacy-settings-body .card,
+  .cookie-bar .privacy-settings .privacy-settings-body .cmp-address-list .items > div:first-child, .cmp-address-list .cookie-bar .privacy-settings .privacy-settings-body .items > div:first-child {
+    border: none;
+    margin-bottom: 24px; }
+    .cookie-bar .privacy-settings .privacy-settings-body .card,
+    .cookie-bar .privacy-settings .privacy-settings-body .cmp-address-list .items > div:first-child, .cmp-address-list .cookie-bar .privacy-settings .privacy-settings-body .items > div:first-child {
+      background-color: #f4f4f6; }
+    .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .card,
+    .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .cmp-address-list .items > div:first-child, .cmp-address-list .dark-theme .cookie-bar .privacy-settings .privacy-settings-body .items > div:first-child {
+      background-color: #1b1d1e; }
+
+.cookie-bar .container-max {
+  max-height: 100vh;
+  overflow-y: auto; }
+
+.cookie-bar i.fa-shield {
+  margin-right: 0; }
+
+@media (min-width: 576px) {
+  .cookie-bar i.fa-shield {
+    margin-right: 12px; } }
 
 .button-order {
   display: grid;
@@ -12740,20 +12775,20 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
   .dark-theme .widget-print-button.widget-dark .btn-primary:hover {
     border-color: #d51317; }
 
-.widget-accordion .card,
+.widget-accordion .card, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card,
 .widget-accordion .cmp-address-list .items > div:first-child, .cmp-address-list .widget-accordion .items > div:first-child {
   border-bottom: 0; }
-  .widget-accordion .card:last-child,
+  .widget-accordion .card:last-child, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card:last-child, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card:last-child,
   .widget-accordion .cmp-address-list .items > div:last-child:first-child, .cmp-address-list .widget-accordion .items > div:last-child:first-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .widget-accordion .card button, .widget-accordion .cmp-address-list .items > div:first-child button, .cmp-address-list .widget-accordion .items > div:first-child button {
+  .widget-accordion .card button, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button, .widget-accordion .cmp-address-list .items > div:first-child button, .cmp-address-list .widget-accordion .items > div:first-child button {
     padding: 1.25rem;
     text-align: left;
     border-top-width: 0; }
-    .widget-accordion .card button h5, .widget-accordion .cmp-address-list .items > div:first-child button h5, .cmp-address-list .widget-accordion .items > div:first-child button h5 {
+    .widget-accordion .card button h5, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button h5, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button h5, .widget-accordion .cmp-address-list .items > div:first-child button h5, .cmp-address-list .widget-accordion .items > div:first-child button h5 {
       position: relative;
       font-weight: 500; }
-    .widget-accordion .card button .fa, .widget-accordion .cmp-address-list .items > div:first-child button .fa, .cmp-address-list .widget-accordion .items > div:first-child button .fa {
+    .widget-accordion .card button .fa, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button .fa, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button .fa, .widget-accordion .cmp-address-list .items > div:first-child button .fa, .cmp-address-list .widget-accordion .items > div:first-child button .fa {
       position: absolute;
       top: -4px;
       right: 0;
@@ -12767,8 +12802,10 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
     .widget-accordion .card button.collapsed .fa, .widget-accordion .cmp-address-list .items > div:first-child button.collapsed .fa, .cmp-address-list .widget-accordion .items > div:first-child button.collapsed .fa {
       -webkit-transform: scaleY(1);
               transform: scaleY(1); }
-  .widget-accordion .card button:hover, .widget-accordion .cmp-address-list .items > div:first-child button:hover, .cmp-address-list .widget-accordion .items > div:first-child button:hover,
+  .widget-accordion .card button:hover, .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button:hover, .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button:hover, .widget-accordion .cmp-address-list .items > div:first-child button:hover, .cmp-address-list .widget-accordion .items > div:first-child button:hover,
   .widget-accordion .card button:focus,
+  .widget-accordion .cookie-bar .privacy-settings .privacy-settings-body .card button:focus,
+  .cookie-bar .privacy-settings .privacy-settings-body .widget-accordion .card button:focus,
   .widget-accordion .cmp-address-list .items > div:first-child button:focus,
   .cmp-address-list .widget-accordion .items > div:first-child button:focus {
     color: #000000; }
@@ -13822,12 +13859,6 @@ body.menu-is-visible {
 .normalmenu .mainmenu > li {
   position: relative; }
 
-.normalmenu .mainmenu:hover, .normalmenu .mainmenu[aria-expanded="true"] {
-  color: #d51317; }
-
-.dark-theme .normalmenu .mainmenu:hover, .dark-theme .normalmenu .mainmenu[aria-expanded="true"] {
-  color: #d51317; }
-
 .normalmenu .collapse {
   position: absolute;
   display: block;
@@ -13850,10 +13881,6 @@ body.menu-is-visible {
 
 .megamenu .mainmenu > li:hover > ul, .megamenu .mainmenu > li.hover > ul {
   display: block; }
-  .megamenu .mainmenu > li:hover > ul:hover, .megamenu .mainmenu > li.hover > ul:hover {
-    color: #d51317; }
-  .dark-theme .megamenu .mainmenu > li:hover > ul:hover, .dark-theme .megamenu .mainmenu > li.hover > ul:hover {
-    color: #d51317; }
 
 .megamenu .collapse {
   position: absolute;
@@ -13936,10 +13963,6 @@ body.menu-is-visible {
       visibility: visible;
       opacity: 1;
       z-index: 1090; }
-      .main-navbar-collapsable .mainmenu > li:hover > ul, .main-navbar-collapsable .mainmenu > li.hover > ul {
-        color: #d51317; }
-      .dark-theme .main-navbar-collapsable .mainmenu > li:hover > ul, .dark-theme .main-navbar-collapsable .mainmenu > li.hover > ul {
-        color: #d51317; }
   .main-navbar-collapsable .ddown > a::after {
     padding-left: .5em;
     content: "";
@@ -14120,10 +14143,6 @@ body.menu-is-visible {
 
 .mainmenu[class*=" animate-"] {
   display: block !important; }
-  .mainmenu[class*=" animate-"] li a:hover:hover {
-    color: #d51317; }
-  .dark-theme .mainmenu[class*=" animate-"] li a:hover:hover {
-    color: #d51317; }
 
 .animate-out-to-right .ddown {
   -webkit-animation: out-to-right 0.2s both cubic-bezier(0.7, 0, 0.3, 1);
@@ -18052,23 +18071,23 @@ header .widget {
         .cmp-address-list .items .item-inner .item-controls .btn i.fa-trash-o {
           margin: 0; }
 
-.widget-account-settings .card,
+.widget-account-settings .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .widget-account-settings .card, .widget-account-settings .card,
 .widget-account-settings .cmp-address-list .items > div:first-child, .cmp-address-list .widget-account-settings .items > div:first-child,
 .cmp-address-list .items > div:first-child {
   border: none;
   min-height: 200px;
   margin-bottom: 0;
   padding-right: calc((6px * 2) + 48px); }
-  .widget-account-settings .card,
+  .widget-account-settings .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .widget-account-settings .card, .widget-account-settings .card,
   .widget-account-settings .cmp-address-list .items > div:first-child, .cmp-address-list .widget-account-settings .items > div:first-child,
   .cmp-address-list .items > div:first-child {
     background-color: #f4f4f6; }
-  .dark-theme .widget-account-settings .card,
+  .dark-theme .widget-account-settings .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .dark-theme .widget-account-settings .card, .dark-theme .widget-account-settings .card,
   .dark-theme .widget-account-settings .cmp-address-list .items > div:first-child, .cmp-address-list .dark-theme .widget-account-settings .items > div:first-child, .dark-theme
   .cmp-address-list .items > div:first-child {
     background-color: #1b1d1e; }
   @media (min-width: 576px) {
-    .widget-account-settings .card,
+    .widget-account-settings .cookie-bar .privacy-settings .privacy-settings-body .card, .cookie-bar .privacy-settings .privacy-settings-body .widget-account-settings .card, .widget-account-settings .card,
     .widget-account-settings .cmp-address-list .items > div:first-child, .cmp-address-list .widget-account-settings .items > div:first-child,
     .cmp-address-list .items > div:first-child {
       padding-right: calc((12px * 2) + 48px); } }

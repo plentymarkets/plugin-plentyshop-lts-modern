@@ -10832,8 +10832,51 @@ button {
 }
 
 .cookie-bar {
-  background: orange;
-  background-color: orange;
+    &.out {
+        left: map-get($spacers, 3);
+
+        &.fixed-bottom {
+            right: initial; // otherwise the privacy button will block the whole bottom click area
+        }
+    }
+
+    &.border-top { // overwrite utility class in template
+        border: none !important; // stylelint-disable-line declaration-no-important
+    }
+
+    > .container-max {
+        > .row {
+            padding: map-get($spacers, 2);
+        }
+    }
+    
+    .privacy-settings {
+        max-height: 50vh;
+        
+        .privacy-settings-body {
+            .card {
+                @extend .card;
+                @include theme() { background-color: theme-get('gray-100'); }
+                border: none;
+                margin-bottom: map_get($spacers, 3);
+            }
+        }
+    }
+
+    .container-max {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+    
+    i.fa-shield {
+        margin-right: 0;
+    }
+    
+    @include media-breakpoint-up(sm) {
+        i.fa-shield {
+            margin-right: map_get($spacers, 2);
+        }
+    }
 }
 
 .button-order {
@@ -15201,10 +15244,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
         > li {
             position: relative;
         }
-        &:hover,
-        &[aria-expanded="true"] {
-            @include theme() { color: $primary; }
-        }
     }
 
     .collapse {
@@ -15237,9 +15276,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
             &.hover {
                 > ul {
                     display: block;
-                    &:hover {
-                        @include theme() { color: $primary; }
-                    }
                 }
             }
         }
@@ -15347,7 +15383,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
                     visibility: visible;
                     opacity: 1;
                     z-index: $zindex-9;
-                    @include theme() { color: $primary; }
                 }
             }
         }
@@ -15553,16 +15588,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
 
 .mainmenu[class*=" animate-"] {
     display: block !important; // stylelint-disable-line declaration-no-important
-
-    li {
-        a {
-            &:hover {
-                        &:hover {
-                        @include theme() { color: $primary; }
-                    }
-            }
-        }
-    }
 }
 
 .animate-out-to-right .ddown {
