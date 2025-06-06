@@ -15108,7 +15108,7 @@ html.safari .widget-grid .widget-inner-stacked .widget-inner { // stylelint-disa
     
                 &:hover {
                     @include theme() {
-                        color: theme-get('link-primary-hover');
+                        color: $primary;
                     }
                 }
             }
@@ -15120,7 +15120,7 @@ html.safari .widget-grid .widget-inner-stacked .widget-inner { // stylelint-disa
         
                 &:hover {
                     @include theme() {
-                        color: theme-get('link-primary-hover');
+                        color: $primary;
                     }
                 }
             }
@@ -15131,7 +15131,7 @@ html.safari .widget-grid .widget-inner-stacked .widget-inner { // stylelint-disa
     &.megamenu a {
         @include theme() { color: theme-get('top-bar-color'); }
         &:hover {
-            @include theme() { color: theme-get('link-primary-hover'); }
+            @include theme() { color: $primary; }
         }
     }
 
