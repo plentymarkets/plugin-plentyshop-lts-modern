@@ -13793,6 +13793,12 @@ body.menu-is-visible {
 .normalmenu .mainmenu > li {
   position: relative; }
 
+.normalmenu .mainmenu:hover, .normalmenu .mainmenu[aria-expanded="true"] {
+  color: #d51317; }
+
+.dark-theme .normalmenu .mainmenu:hover, .dark-theme .normalmenu .mainmenu[aria-expanded="true"] {
+  color: #d51317; }
+
 .normalmenu .collapse {
   position: absolute;
   display: block;
@@ -14312,10 +14318,6 @@ html.ie .mobile-navigation .mainmenu .nav-direction {
   .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link:hover, .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
     color: #d51317; }
   .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link:hover, .dark-theme .top-bar.bg-transparent:not(.default-font-color) .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
-    color: #d51317; }
-  .top-bar .controls-list .list-inline-item .nav-link :hover, .top-bar .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
-    color: #d51317; }
-  .dark-theme .top-bar .controls-list .list-inline-item .nav-link :hover, .dark-theme .top-bar .controls-list .list-inline-item .nav-link[aria-expanded="true"] {
     color: #d51317; }
   .top-bar .top-bar-items {
     max-width: 100%; }

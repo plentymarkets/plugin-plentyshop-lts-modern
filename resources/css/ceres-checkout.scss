@@ -15201,6 +15201,10 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
         > li {
             position: relative;
         }
+        &:hover,
+        &[aria-expanded="true"] {
+            @include theme() { color: $primary; }
+        }
     }
 
     .collapse {
@@ -15860,16 +15864,6 @@ html.ie { // stylelint-disable-line selector-no-qualifying-type
                             @include theme() { color: $primary; }
                         }
                     }
-                }
-            }
-        }
-    }
-    .controls-list {
-        .list-inline-item {
-            .nav-link {
-                :hover,
-                &[aria-expanded="true"] {
-                    @include theme() { color: $primary; }
                 }
             }
         }
