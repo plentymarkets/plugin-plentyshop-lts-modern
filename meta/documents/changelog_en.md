@@ -1,5 +1,11 @@
 # Release Notes for plentyShop LTS Modern
 
+## v.1.0.16 (2025-xx-xx)
+
+### Fixed
+
+- Fixed an issue where the primary color was not used for the navigation menu items.
+
 ## v.1.0.15 (2025-04-15) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.14...1.0.15" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Changed
