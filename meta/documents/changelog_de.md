@@ -1,5 +1,12 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.16 (2025-08-22) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.15...1.0.16" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### Behoben
+
+- Ein Problem wurde behoben, bei dem die Primärfarbe nicht für die Elemente des Navigationsmenüs verwendet wurde.
+- Im Kontaktform wurde fälschlicherweise ein Platzhalter eines Labels angezeigt. Dies wurde behoben.
+
 ## v.1.0.15 (2025-04-15) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.14...1.0.15" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Geändert
