@@ -1,6 +1,6 @@
 # Release Notes for plentyShop LTS Modern
 
-## v.1.0.16 (2025-08-21) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.15...1.0.16" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+## v.1.0.16 (2025-08-22) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.15...1.0.16" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Fixed
 
