@@ -7,6 +7,7 @@
     "url": "https://github.com/plentymarkets/plugin-plentyshop-lts-modern.git"
   },
   "scripts": {
+    "setup": "bash scripts/npm-install.sh",
     "start": "webpack --watch --progress",
     "build": "npm run build:prod && npm run build:dev",
     "build:dev": "webpack --progress",
@@ -24,6 +25,7 @@
     "ie >= 11"
   ],
   "devDependencies": {
+    "@babel/core": "^7.29.7",
     "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^8.6.5",
     "babel-loader": "^8.2.4",
@@ -34,10 +36,10 @@
     "expose-loader": "^0.7.5",
     "glob": "^7.1.6",
     "mini-css-extract-plugin": "^0.8.2",
-    "node-sass": "^4.14.1",
     "postcss": "^6.0.21",
     "postcss-loader": "^3.0.0",
     "postcss-scss": "^1.0.5",
+    "sass": "^1.105.1",
     "sass-loader": "^7.3.1",
     "stylelint": "^12.0.1",
     "stylelint-config-twbs-bootstrap": "^1.1.0",

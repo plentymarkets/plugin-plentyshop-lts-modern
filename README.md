@@ -16,10 +16,11 @@ For detailed information about plugin provisioning refer to [PlentyONE developer
 
 If you want make your own individual changes to the **plentyShop LTS Modern** plugin, you need to follow the following steps.
 
-1. Install node.js in the LTS version from [nodejs.org](https://nodejs.org/en/).
-2. Open your console and navigate to the **plentyShop LTS Modern** directory.
-3. Run the command **npm install**.
-4. After you have integrated your changes, run the command **npm run build**.
+1. Install Node.js 14 (e.g. via [nvm](https://github.com/nvm-sh/nvm)): `nvm install 14`. The project pins this version in `.nvmrc`.
+2. Make sure a real Python 2 is available, since the native `node-sass` dependency needs it to build and macOS no longer ships one. Install it via [pyenv](https://github.com/pyenv/pyenv): `brew install pyenv && pyenv install 2.7.18`.
+3. Open your console and navigate to the **plentyShop LTS Modern** directory.
+4. Run the command **npm run setup** (instead of `npm install`). This switches to the pinned Node version and makes the pyenv Python 2 available for the `node-sass` build.
+5. After you have integrated your changes, run the command **npm run build**.
 
 Your Javascript, widget and SCSS changes have now been assembled locally. 
 
