@@ -7148,7 +7148,8 @@ a.close.disabled {
   border: $toast-border-width solid $toast-border-color;
   -webkit-box-shadow: $toast-box-shadow;
           box-shadow: $toast-box-shadow;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   opacity: 0;
   @include border-radius($toast-border-radius);
 
@@ -14639,7 +14640,8 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
                     .h2 {
                         background: #ffffff60;
                         color: $dark;
-                        backdrop-filter: blur(8px);
+                        -webkit-backdrop-filter: blur(8px);
+                                backdrop-filter: blur(8px);
                     }
                 }
                 .carousel-indicators li {
