@@ -90,6 +90,7 @@ class DefaultSingleItemPreset implements ContentPreset
         $this->createAddToWishListWiget();
         $this->createLegalInformation();
         $this->createIsRequieredFootnote();
+        $this->createGuaranteeLabelWidget();
         $this->createTabWidget();
         $this->createTextWidget();
         $this->createItemShowcase();
@@ -466,6 +467,11 @@ class DefaultSingleItemPreset implements ContentPreset
             ->withSetting("spacing.margin.bottom.value", 3)
             ->withSetting("spacing.margin.bottom.unit", null)
             ->withSetting("forceContent", false);
+    }
+
+    private function createGuaranteeLabelWidget()
+    {
+        $this->stickyContainer->createChild("sticky", "Ceres::GuaranteeLabelWidget");
     }
 
     private function createTagsWidget()

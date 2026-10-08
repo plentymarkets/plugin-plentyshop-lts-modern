@@ -1,5 +1,15 @@
 # Release Notes für plentyShop LTS Modern
 
+## v.1.0.17 (2026-10-08) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.16...1.0.17" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### Geändert
+
+- Das ShopBuilder-Preset für die Einzelartikelansicht enthält jetzt das Garantie-Label-Widget.
+
+### Behoben
+
+- Das Garantie-Label wurde als schwarzer Kasten angezeigt. Das fehlende Stylesheet für das Garantie-Label-Widget wurde hinzugefügt.
+
 ## v.1.0.16 (2025-08-22) <a href="https://github.com/plentymarkets/plugin-plentyshop-lts-modern/compare/1.0.15...1.0.16" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Behoben
